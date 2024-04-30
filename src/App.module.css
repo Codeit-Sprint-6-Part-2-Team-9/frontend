@@ -1,0 +1,10 @@
+.title {
+  color: black;
+  font-size: 100px;
+  font-weight: 900;
+  border: 1px solid black;
+}
+  
+.text {
+  border: 1px solid black;
+}
