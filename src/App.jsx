@@ -1,6 +1,7 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import classes from './App.module.css';
-import HomePage from './pages/HomePage';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import classes from "./App.module.css";
+import HomePage from "./pages/HomePage";
+import RoundCardComponent from "./components/RoundCardComponent";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <div className={classes.app}>
         <Routes>
           <Route index element={<HomePage />} />
+          <Route index element={<RoundCardComponent />} />
         </Routes>
       </div>
     </BrowserRouter>
