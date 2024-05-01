@@ -9,7 +9,6 @@
 .wrapper {
   width: 100%;
   margin: 44px 24px 0;
-  padding-bottom: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,6 +18,7 @@
 .logo {
   width: 108px;
   height: 20.58px;
+  margin-bottom: 5px;
 }
 
 .profile {
@@ -27,27 +27,29 @@
   border-radius: 100%;
   position: absolute;
   right: 0;
+  bottom: 0;
 }
 
 @media (min-width: 768px) {
   .wrapper {
     width: 100%;
-    margin-top: 0;
     height: 81px;
+    margin-top: 0;
   }
 
   .logo {
     width: 120px;
-    height: 22.87px;
+    height: 23px;
   }
 
   .profile {
-    bottom: auto;
+    bottom: 25px;
   }
 }
 
 @media (min-width: 1280px) {
   .wrapper {
+    margin: 0;
     width: 1200px;
     height: 80px;
   }
