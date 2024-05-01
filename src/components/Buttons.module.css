@@ -1,0 +1,117 @@
+.landingPCTablet {
+  width: 477px;
+  height: 48px;
+  padding: 11px 0px;
+  gap: 8px;
+  border-radius: 3px;
+  border: none;
+}
+
+.landingPhone {
+  width: 230px;
+  height: 48px;
+  padding: 11px 76px;
+  gap: 8px;
+  border-radius: 3px;
+  border: none;
+}
+
+.donatePCTablet {
+  width: 234px;
+  height: 40px;
+  padding: 2px 16px;
+  gap: 8px;
+  border-radius: 3px;
+  border: none;
+}
+
+.donatePhone {
+  width: 142px;
+  height: 31px;
+  padding: 2px 16px;
+  gap: 8px;
+  border-radius: 3px;
+  border: none;
+}
+
+.vote {
+  width: 128px;
+  height: 32px;
+  padding: 2px 16px;
+  gap: 4px;
+  border-radius: 3px;
+  border: none;
+}
+
+.more {
+  width: 330px;
+  height: 42px;
+  padding: 8px 143px;
+  gap: 8px;
+  border-radius: 3px;
+  border: 1px solid #f1eef9cc;
+}
+
+.recharge {
+  width: 295px;
+  height: 42px;
+  padding: 8px 0px;
+  gap: 8px;
+  border-radius: 3px;
+  border: none;
+}
+
+.modalDonate {
+  width: 295px;
+  height: 42px;
+  padding: 8px 0px;
+  gap: 8px;
+  border-radius: 3px;
+  border: none;
+}
+
+.modalVotePCTablet {
+  width: 477px;
+  height: 42px;
+  padding: 8px 0px;
+  gap: 8px;
+  border-radius: 3px;
+  border: none;
+}
+
+.modalVotePhone {
+  width: 327px;
+  height: 42px;
+  padding: 8px 0px;
+  gap: 8px;
+  border-radius: 3px;
+  border: none;
+}
+
+.donation {
+  width: 295px;
+  height: 42px;
+  padding: 8px 0px;
+  gap: 8px;
+  border-radius: 3px;
+  border: none;
+}
+
+.add {
+  width: 255px;
+  height: 48px;
+  border-radius: 24px;
+  border: none;
+}
+
+.red {
+  background: linear-gradient(91.18deg, #f77063 3.33%, #fe5790 99.37%);
+}
+
+.grey {
+  background: #828282;
+}
+
+.black {
+  background: transparent;
+}

@@ -1,7 +1,12 @@
-const HomePage = () => {
-    return (
-        <div>Home Page</div>
-    );
-}
+import Buttons from "../components/Buttons";
 
-export default HomePage
+const HomePage = () => {
+  return (
+    <div>
+      <h1>Home Page</h1>
+      <Buttons size="landingPCTablet" color="red" text="투표하기" />
+    </div>
+  );
+};
+
+export default HomePage;
