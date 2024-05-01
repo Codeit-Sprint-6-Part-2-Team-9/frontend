@@ -1,9 +1,9 @@
 function List() {
     return (
         <div>
-            List;
+            List
         </div>
     );
 }
 
-export default List
+export default List;

@@ -1,9 +1,9 @@
 function MyPage() {
     return (
         <div>
-            MyPage;
+            MyPage
         </div>
     );
 }
 
-export default MyPage
+export default MyPage;
