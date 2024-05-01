@@ -1,14 +1,16 @@
-import { Title, Text } from '@mantine/core';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import classes from './App.module.css';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
-    <div>
-      <Title className={classes.title}>
-        <Text className={classes.text}>Welecome to Mantine</Text>
-      </Title>
-    </div>
+    <BrowserRouter>
+      <div className={classes.app}>
+        <Routes>
+          <Route index element={<HomePage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
