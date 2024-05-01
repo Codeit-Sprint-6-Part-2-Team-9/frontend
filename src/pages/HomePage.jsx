@@ -1,6 +1,8 @@
-const HomePage = () => {
+function HomePage() {
     return (
-        <div>Home Page</div>
+        <div>
+            HomePage;
+        </div>
     );
 }
 

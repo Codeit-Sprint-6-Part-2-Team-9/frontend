@@ -8,6 +8,8 @@ function App() {
       <div className={classes.app}>
         <Routes>
           <Route index element={<HomePage />} />
+          <Route path='/list' element={<List />} />
+          <Route path='/mypage' element={<MyPage />} />
         </Routes>
       </div>
     </BrowserRouter>
