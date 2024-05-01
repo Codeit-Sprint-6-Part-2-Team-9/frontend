@@ -1,0 +1,59 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 44px 24px 0;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  width: 108px;
+  height: 20.58px;
+}
+
+.profile {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  position: absolute;
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 100%;
+    margin-top: 0;
+    height: 81px;
+  }
+
+  .logo {
+    width: 120px;
+    height: 22.87px;
+  }
+
+  .profile {
+    bottom: auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .wrapper {
+    width: 1200px;
+    height: 80px;
+  }
+
+  .logo {
+    width: 168px;
+    height: 32px;
+  }
+}
