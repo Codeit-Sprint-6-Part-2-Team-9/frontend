@@ -1,7 +1,6 @@
 import { createTheme } from '@mantine/core';
 
 const theme = createTheme({
-    fontFamily: 'Pretendard',
     colors: {
         black: [
             '#02000E',
