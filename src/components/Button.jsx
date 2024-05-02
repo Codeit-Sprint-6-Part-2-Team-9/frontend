@@ -5,19 +5,25 @@ import styles from "../components/Buttons.module.css";
 function Buttons({ icon, size, color, children }) {
   let selectedIcon;
 
-  const iconMap = {
-    graph: IconGraph,
-    plus: IconPlus,
-    diamonds: IconDiamonds,
-  };
-
-  const SelectedIcon = iconMap[icon] || null;
+  switch (icon) {
+    case "graph":
+      selectedIcon = <IconGraph size={24} />;
+      break;
+    case "plus":
+      selectedIcon = <IconPlus size={24} />;
+      break;
+    case "diamonds":
+      selectedIcon = <IconDiamonds size={13} />;
+      break;
+    default:
+      selectedIcon = null;
+  }
 
   return (
     <Group>
       <Button
-        className={`${styles.voteButton} ${styles[size]} ${styles[color]}`}
-        leftSection={SelectedIcon && <SelectedIcon size={13} />}
+        className={`${styles.Buttons} ${styles[size]} ${styles[color]}`}
+        leftSection={selectedIcon}
       >
         {children}
       </Button>
