@@ -1,5 +1,11 @@
+import RoundCard from "../components/RoundCard";
+
 const HomePage = () => {
-  return <div> HomePage</div>;
+  return (
+    <div>
+      <RoundCard />
+    </div>
+  );
 };
 
 export default HomePage;
