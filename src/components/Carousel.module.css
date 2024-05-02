@@ -1,0 +1,22 @@
+.card {
+}
+
+.title {
+}
+
+.image {
+  width: 282px;
+  height: 293px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.stats {
+}
+
+.progressSection {
+}
+
+.progressTrack {
+  background-color: var(--mantine-color-blue-3);
+}
