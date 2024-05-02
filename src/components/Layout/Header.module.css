@@ -1,17 +1,17 @@
 .header {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .wrapper {
-  width: 100%;
-  margin: 44px 24px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  width: 100%;
+  margin: 44px 24px 0;
 }
 
 .logo {
@@ -21,12 +21,12 @@
 }
 
 .profile {
-  width: 32px;
-  height: 32px;
-  border-radius: 100%;
   position: absolute;
   right: 0;
   bottom: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
 }
 
 @media (min-width: 768px) {
@@ -48,9 +48,9 @@
 
 @media (min-width: 1280px) {
   .wrapper {
-    margin: 0;
     width: 1200px;
     height: 80px;
+    margin: 0;
   }
 
   .logo {
