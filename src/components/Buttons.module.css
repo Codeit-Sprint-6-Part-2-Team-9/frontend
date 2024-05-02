@@ -1,13 +1,4 @@
-.landingPCTablet {
-  width: 477px;
-  height: 48px;
-  padding: 11px 0px;
-  gap: 8px;
-  border-radius: 3px;
-  border: none;
-}
-
-.landingPhone {
+.landing {
   width: 230px;
   height: 48px;
   padding: 11px 76px;
@@ -16,22 +7,27 @@
   border: none;
 }
 
-.donatePCTablet {
-  width: 234px;
-  height: 40px;
-  padding: 2px 16px;
-  gap: 8px;
-  border-radius: 3px;
-  border: none;
+@media (min-width: 768px) {
+  .landing {
+    width: 477px;
+    padding: 11px 0px;
+  }
 }
 
-.donatePhone {
+.donate {
   width: 142px;
   height: 31px;
   padding: 2px 16px;
   gap: 8px;
   border-radius: 3px;
   border: none;
+}
+
+@media (min-width: 768px) {
+  .donate {
+    width: 234px;
+    height: 40px;
+  }
 }
 
 .vote {
@@ -70,8 +66,8 @@
   border: none;
 }
 
-.modalVotePCTablet {
-  width: 477px;
+.modalVote {
+  width: 327px;
   height: 42px;
   padding: 8px 0px;
   gap: 8px;
@@ -79,13 +75,10 @@
   border: none;
 }
 
-.modalVotePhone {
-  width: 327px;
-  height: 42px;
-  padding: 8px 0px;
-  gap: 8px;
-  border-radius: 3px;
-  border: none;
+@media (min-width: 768px) {
+  .modalVote {
+    width: 477px;
+  }
 }
 
 .donation {

@@ -4,7 +4,9 @@ const HomePage = () => {
   return (
     <div>
       <h1>Home Page</h1>
-      <Buttons size="landingPCTablet" color="red" text="투표하기" />
+      <Buttons size="vote" color="red">
+        으아아asd
+      </Buttons>
     </div>
   );
 };
