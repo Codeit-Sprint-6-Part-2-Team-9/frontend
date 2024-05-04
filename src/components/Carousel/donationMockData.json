@@ -1,0 +1,195 @@
+{
+  "list": [
+    {
+      "id": 40,
+      "idolId": 59,
+      "title": "F(X) 엠버 솔로앨범 응원 조공",
+      "subtitle": "앨범 성공기원 이벤트",
+      "targetDonation": 2000000,
+      "receivedDonations": 0,
+      "createdAt": "2024-05-02T11:22:53.916Z",
+      "deadline": "2024-06-28T23:59:59.000Z",
+      "status": true,
+      "idol": {
+        "id": 59,
+        "name": "엠버",
+        "gender": "female",
+        "group": "F(X)",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714492216998/f(x)_amber.png",
+        "totalVotes": 0
+      }
+    },
+    {
+      "id": 39,
+      "idolId": 217,
+      "title": "샤이니 키 나혼자산다 밥차 조공",
+      "subtitle": "나혼자산다 응원 이벤트",
+      "targetDonation": 500000,
+      "receivedDonations": 0,
+      "createdAt": "2024-05-02T11:20:55.993Z",
+      "deadline": "2024-06-10T23:59:59.000Z",
+      "status": true,
+      "idol": {
+        "id": 217,
+        "name": "키",
+        "gender": "male",
+        "group": "샤이니",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714638976570/shinee-key.png",
+        "totalVotes": 0
+      }
+    },
+    {
+      "id": 36,
+      "idolId": 204,
+      "title": "백현 솔로컴백 응원 조공",
+      "subtitle": "앨범 성공기원 이벤트",
+      "targetDonation": 4000000,
+      "receivedDonations": 0,
+      "createdAt": "2024-05-02T11:08:51.464Z",
+      "deadline": "2024-05-27T23:59:59.000Z",
+      "status": true,
+      "idol": {
+        "id": 204,
+        "name": "백현",
+        "gender": "male",
+        "group": "EXO",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714636687520/exo_baeckhyun.png",
+        "totalVotes": 0
+      }
+    },
+    {
+      "id": 35,
+      "idolId": 52,
+      "title": "소녀시대 서현 커피차 조공",
+      "subtitle": "드라마 성공기원 이벤트",
+      "targetDonation": 300000,
+      "receivedDonations": 0,
+      "createdAt": "2024-05-02T11:06:36.935Z",
+      "deadline": "2024-05-20T23:59:59.000Z",
+      "status": true,
+      "idol": {
+        "id": 52,
+        "name": "서현",
+        "gender": "female",
+        "group": "소녀시대",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714489076851/girls-generation_seohyun.png",
+        "totalVotes": 0
+      }
+    },
+    {
+      "id": 34,
+      "idolId": 196,
+      "title": "비스트 손동운 생일카페",
+      "subtitle": "손동운 생일 조공",
+      "targetDonation": 900000,
+      "receivedDonations": 0,
+      "createdAt": "2024-05-02T11:03:58.344Z",
+      "deadline": "2024-06-06T23:59:59.000Z",
+      "status": true,
+      "idol": {
+        "id": 196,
+        "name": "손동운",
+        "gender": "male",
+        "group": "비스트",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714636393634/beast_dongwoon.png",
+        "totalVotes": 0
+      }
+    },
+    {
+      "id": 33,
+      "idolId": 188,
+      "title": "트와이쓰 쯔위 생일카페",
+      "subtitle": "쯔위 생일 조공",
+      "targetDonation": 800000,
+      "receivedDonations": 0,
+      "createdAt": "2024-05-02T11:03:12.687Z",
+      "deadline": "2024-06-14T23:59:59.000Z",
+      "status": true,
+      "idol": {
+        "id": 188,
+        "name": "쯔위",
+        "gender": "female",
+        "group": "트와이스",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714635948062/twice_tzuyu.png",
+        "totalVotes": 0
+      }
+    },
+    {
+      "id": 29,
+      "idolId": 55,
+      "title": "2NE1 씨엘 광고",
+      "subtitle": "뉴욕 타임스퀘어",
+      "targetDonation": 50000000,
+      "receivedDonations": 0,
+      "createdAt": "2024-05-02T10:57:21.461Z",
+      "deadline": "2024-06-16T23:59:59.000Z",
+      "status": true,
+      "idol": {
+        "id": 55,
+        "name": "씨엘",
+        "gender": "female",
+        "group": "2NE1",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714490336946/2ne1_cl.png",
+        "totalVotes": 0
+      }
+    },
+    {
+      "id": 27,
+      "idolId": 184,
+      "title": "트와이스 지효 광고",
+      "subtitle": "분당선 서울숲역",
+      "targetDonation": 1000000,
+      "receivedDonations": 0,
+      "createdAt": "2024-05-02T10:54:19.257Z",
+      "deadline": "2024-06-02T23:59:59.000Z",
+      "status": true,
+      "idol": {
+        "id": 184,
+        "name": "지효",
+        "gender": "female",
+        "group": "트와이스",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714635752156/twice_jihyo.png",
+        "totalVotes": 0
+      }
+    },
+    {
+      "id": 26,
+      "idolId": 45,
+      "title": "유리 지하철 광고",
+      "subtitle": "홍대입구역 광고",
+      "targetDonation": 100000,
+      "receivedDonations": 2000,
+      "createdAt": "2024-05-02T07:07:20.487Z",
+      "deadline": "2024-06-20T23:59:59.000Z",
+      "status": true,
+      "idol": {
+        "id": 45,
+        "name": "유리",
+        "gender": "female",
+        "group": "소녀시대",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714488746255/girls-generation_yuri.png",
+        "totalVotes": 0
+      }
+    },
+    {
+      "id": 22,
+      "idolId": 42,
+      "title": "선미 지하철 광고",
+      "subtitle": "강남역 광고",
+      "targetDonation": 100000,
+      "receivedDonations": 1000,
+      "createdAt": "2024-05-02T06:45:16.422Z",
+      "deadline": "2024-05-30T23:59:59.000Z",
+      "status": true,
+      "idol": {
+        "id": 42,
+        "name": "선미",
+        "gender": "female",
+        "group": "원더걸스",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714487942722/wondergirls_sunmi.jpg",
+        "totalVotes": 0
+      }
+    }
+  ],
+  "nextCursor": 22
+}
