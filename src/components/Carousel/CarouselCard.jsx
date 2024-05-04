@@ -1,8 +1,8 @@
 import { Progress } from "@mantine/core";
 import classes from "./Carousel.module.css";
-import creditIcon from "../assets/creditIcon.svg";
-import coverArtistImage from "../assets/coverDonation.svg";
-import Typography from "./Typography";
+import creditIcon from "../../assets/creditIcon.svg";
+import coverArtistImage from "../../assets/coverDonation.svg";
+import Typography from "../Typography";
 
 const CarouselCard = ({ card }) => {
   const percentAchieved = (card.receivedDonations / card.targetDonation) * 100;
