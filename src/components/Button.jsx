@@ -1,28 +1,22 @@
 import { Group, Button } from "@mantine/core";
-import { IconGraph, IconPlus, IconDiamonds } from "@tabler/icons-react";
-import styles from "../components/Buttons.module.css";
+import ChartIcon from "../assets/chartIcon.png";
+import CreditIcon from "../assets/creditIcon.png";
+import PlusIcon from "../assets/plusIcon.png";
+import classes from "../components/Buttons.module.css";
 
 function Buttons({ icon, size, color, children }) {
-  let selectedIcon;
+  const icons = {
+    chart: <img src={ChartIcon} alt="Chart" />,
+    plus: <img src={PlusIcon} alt="Plus" />,
+    credit: <img src={CreditIcon} alt="Credit" />,
+  };
 
-  switch (icon) {
-    case "graph":
-      selectedIcon = <IconGraph size={24} />;
-      break;
-    case "plus":
-      selectedIcon = <IconPlus size={24} />;
-      break;
-    case "diamonds":
-      selectedIcon = <IconDiamonds size={13} />;
-      break;
-    default:
-      selectedIcon = null;
-  }
+  const selectedIcon = icons[icon] || null;
 
   return (
     <Group>
       <Button
-        className={`${styles.Buttons} ${styles[size]} ${styles[color]}`}
+        className={`${classes.Buttons} ${classes[size]} ${classes[color]}`}
         leftSection={selectedIcon}
       >
         {children}
