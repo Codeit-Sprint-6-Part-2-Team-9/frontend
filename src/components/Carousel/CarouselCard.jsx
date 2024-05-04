@@ -32,10 +32,10 @@ const CarouselCard = ({ card }) => {
       </div>
 
       <div className={classes.progressbarSection}>
-        <Typography type="bol6lh18ls017" style={{ color: "#f7f7f8" }}>
+        <Typography type="bol6lh18ls017" style={{ color: "#A3A5A8" }}>
           {card.title}
         </Typography>
-        <Typography type="medium18" style={{ color: "#FFFFFF" }}>
+        <Typography type="medium18" style={{ color: "#F7F7F8" }}>
           {card.subtitle}
         </Typography>
         <div className={classes.progressbarTextSection}>
@@ -49,13 +49,14 @@ const CarouselCard = ({ card }) => {
               {card.receivedDonations}
             </Typography>
           </div>
-          <Typography type="medium12lh18ls017" style={{ color: "#FFFFFF" }}>
+          <Typography type="medium12lh18ls017" style={{ color: "#F7F7F8" }}>
             {timeRemaining}
           </Typography>
         </div>
         <Progress
           value={percentAchieved}
           mt={10}
+          mb={100}
           size={1}
           radius={1}
           color="#F96D69"

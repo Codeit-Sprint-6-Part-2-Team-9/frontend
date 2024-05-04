@@ -52,7 +52,6 @@
 .progressbarCreditSection {
   display: flex;
   align-items: center;
-  gap: 0;
 }
 
 .creditIcon {
