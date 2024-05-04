@@ -1,31 +1,10 @@
 import { Modal, Button } from "@mantine/core";
 import classes from "./ModalComponent.module.css";
 
-import Typography from "./Typography";
-import CREDIT_WARN_SVG from "../assets/credit_warn.svg";
-
-const CreditWarnModalContent = () => {
-  return (
-    <div>
-      <img src={CREDIT_WARN_SVG} alt="크레딧 부족 이미지" />
-      <Typography>앗! 투표하기 위한 크레딧이 부족해요</Typography>
-    </div>
-  );
-};
-const CreditChargeModalContent = () => {
-  return (
-    <div>
-      <Typography>크레딧 충전하기</Typography>
-    </div>
-  );
-};
-const CreditDonationModalContent = () => {
-  return (
-    <div>
-      <Typography>후원하기</Typography>
-    </div>
-  );
-};
+// Modal Content
+import CreditChargeModalBody from "./CreditChargeModalBody";
+import CreditWarnModalBody from "./CreditWarnModalBody";
+import CreditDonationModalBody from "./CreditDonationModalBody";
 
 const ModalComponent = ({ opened, close, modalDataState }) => {
   return (
@@ -49,13 +28,13 @@ const ModalComponent = ({ opened, close, modalDataState }) => {
         </Modal.Header>
         <Modal.Body className={classes.ModalBody}>
           {modalDataState === "creditWarn" ? (
-            <CreditWarnModalContent />
+            <CreditWarnModalBody />
           ) : modalDataState === "creditCharge" ? (
-            <CreditChargeModalContent />
+            <CreditChargeModalBody />
           ) : (
-            <CreditDonationModalContent />
+            <CreditDonationModalBody />
           )}
-          <Button>확인</Button>
+          <Button style={{ width: "100%" }}>확인</Button>
         </Modal.Body>
       </Modal.Content>
     </Modal.Root>

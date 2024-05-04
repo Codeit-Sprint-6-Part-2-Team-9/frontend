@@ -1,0 +1,14 @@
+.CreditWarnModalBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.CreditImg {
+  width: 113px;
+}
+
+.accent {
+  color: var(--mantine-color-brand-0);
+}

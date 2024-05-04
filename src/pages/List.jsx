@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDisclosure } from "@mantine/hooks";
 import { Button } from "@mantine/core";
 
-import ModalComponent from "../components/ModalComponent";
+import ModalComponent from "../components/Modal/ModalComponent";
 
 function List() {
   const [opened, { open, close }] = useDisclosure(false);

@@ -1,6 +1,8 @@
 .ModalRoot {
   color: var(--mantine-color-white-1);
 }
+.ModalContent {
+}
 .ModalTitle {
   font-weight: 800;
 }
@@ -8,10 +10,10 @@
   color: #8b8e92;
 }
 .ModalCloseButton:hover {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 .ModalHeader {
-  background-color: var(--mantine-color-black-1);
+  background-color: var(--mantine-color-black-1) !important;
 }
 .ModalBody {
   background-color: var(--mantine-color-black-1);
