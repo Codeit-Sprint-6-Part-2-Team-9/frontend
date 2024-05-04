@@ -15,15 +15,15 @@
 .rank {
   font-size: 16px;
   font-weight: 400;
-  line-height: 19.09px;
-  color: #f96d69;
+  line-height: 19px;
+  color: var(--mantine-color-brand-0);
   opacity: 0.6;
 }
 
 .name {
   font-size: 16px;
   font-weight: 500;
-  line-height: 19.09px;
+  line-height: 19px;
   color: #ffffff;
   opacity: 0.87;
 }
@@ -31,7 +31,7 @@
 .totalVotes {
   font-size: 16px;
   font-size: 400;
-  line-height: 19.09px;
+  line-height: 19px;
   color: #ffffff;
   opacity: 0.6;
 }
@@ -42,15 +42,15 @@
   }
   .rank {
     font-size: 14px;
-    line-height: 16.71px;
+    line-height: 17px;
   }
   .name {
     font-size: 14px;
-    line-height: 16.71px;
+    line-height: 17px;
   }
   .totalVotes {
     font-size: 14px;
-    line-height: 16.71px;
+    line-height: 17px;
   }
 }
 
@@ -60,14 +60,14 @@
   }
   .rank {
     font-size: 16px;
-    line-height: 19.09px;
+    line-height: 19px;
   }
   .name {
     font-size: 16px;
-    line-height: 19.09px;
+    line-height: 19px;
   }
   .totalVotes {
     font-size: 16px;
-    line-height: 19.09px;
+    line-height: 19px;
   }
 }
