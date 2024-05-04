@@ -32,10 +32,16 @@ const CarouselCard = ({ card }) => {
       </div>
 
       <div className={classes.progressbarSection}>
-        <Typography type="bol6lh18ls017" style={{ color: "#A3A5A8" }}>
+        <Typography
+          type="bol6lh18ls017"
+          style={{ color: "var(--mantine-color-gray-0)" }}
+        >
           {card.title}
         </Typography>
-        <Typography type="medium18" style={{ color: "#F7F7F8" }}>
+        <Typography
+          type="medium18"
+          style={{ color: "var(--mantine-color-white-0)" }}
+        >
           {card.subtitle}
         </Typography>
         <div className={classes.progressbarTextSection}>
@@ -45,11 +51,17 @@ const CarouselCard = ({ card }) => {
               alt="credit icon"
               className={classes.creditIcon}
             />
-            <Typography type="medium12lh18ls017" style={{ color: "#F96D69" }}>
+            <Typography
+              type="medium12lh18ls017"
+              style={{ color: "var(--mantine-color-brand-0)" }}
+            >
               {card.receivedDonations}
             </Typography>
           </div>
-          <Typography type="medium12lh18ls017" style={{ color: "#F7F7F8" }}>
+          <Typography
+            type="medium12lh18ls017"
+            style={{ color: "var(--mantine-color-white-0)" }}
+          >
             {timeRemaining}
           </Typography>
         </div>
@@ -60,7 +72,7 @@ const CarouselCard = ({ card }) => {
           size={1}
           radius={1}
           color="#F96D69"
-          style={{ backgroundColor: "white" }}
+          style={{ backgroundColor: "var(--mantine-color-white-0)" }}
         />
       </div>
     </div>

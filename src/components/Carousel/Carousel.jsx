@@ -14,7 +14,7 @@ const Carousel = () => {
   }
 
   return (
-    <div>
+    <div style={{ backgroundColor: "black" }}>
       {cardData.map((card) => (
         <CarouselCard key={card.id} card={card} />
       ))}
