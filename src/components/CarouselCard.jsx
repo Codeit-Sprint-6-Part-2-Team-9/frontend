@@ -1,68 +1,69 @@
-import { Text, Progress, Card } from "@mantine/core";
+import { Progress } from "@mantine/core";
 import classes from "./Carousel.module.css";
 import creditIcon from "../assets/creditIcon.svg";
+import coverArtistImage from "../assets/coverDonation.svg";
+import Typography from "./Typography";
 
-function CarouselCard({ card }) {
+const CarouselCard = ({ card }) => {
   const percentAchieved = (card.receivedDonations / card.targetDonation) * 100;
 
-  const deadline = new Date(card.deadline);
-  const now = new Date();
-  const diffMs = deadline - now;
-  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-  const timeRemaining = diffDays > 0 ? `${diffDays}일 남음` : "달성";
+  const calculateTimeRemaining = (deadline) => {
+    const diffMs = deadline - new Date();
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    return diffDays > 0 ? `${diffDays}일 남음` : "달성";
+  };
+
+  const timeRemaining = calculateTimeRemaining(new Date(card.deadline));
 
   return (
-    <Card radius="md" p="xl" className={classes.card}>
-      <div className="container">
+    <div>
+      <div className={classes.imageSection}>
         <img
           src={card.idol.profilePicture}
           alt={card.title}
-          className={classes.image}
+          className={classes.artistImage}
         />
-        {/* <img
-          className="overlay-image"
-        /> */}
-        <button>후원하기</button>
+        <img
+          src={coverArtistImage}
+          alt="cover artist image"
+          className={classes.overlayImage}
+        />
+        <button className={classes.btn}>후원하기</button>
       </div>
 
-      <Text fz="xs" tt="uppercase" fw={700} className={classes.title}>
-        {card.subtitle}
-      </Text>
-      <Text fz="xs" tt="uppercase" fw={700} className={classes.title}>
-        {card.title}
-      </Text>
-      <div>
-        <div>
-          <img src={creditIcon} alt="credit icon" />
-          <Text fz="lg" fw={500} className={classes.stats}>
-            {card.receivedDonations}
-          </Text>
+      <div className={classes.progressbarSection}>
+        <Typography type="bol6lh18ls017" style={{ color: "#f7f7f8" }}>
+          {card.title}
+        </Typography>
+        <Typography type="medium12" style={{ color: "#FFFFFF" }}>
+          {card.subtitle}
+        </Typography>
+        <div className={classes.progressbarTextSection}>
+          <div className={classes.progressbarCreditSection}>
+            <img
+              src={creditIcon}
+              alt="credit icon"
+              className={classes.creditIcon}
+            />
+            <Typography type="medium12lh18ls017" style={{ color: "#F96D69" }}>
+              {card.receivedDonations}
+            </Typography>
+          </div>
+          <Typography type="medium12lh18ls017" style={{ color: "#FFFFFF" }}>
+            {timeRemaining}
+          </Typography>
         </div>
-        <Text fz="xs" fw={500}>
-          {timeRemaining}
-        </Text>
+        <Progress
+          value={percentAchieved}
+          mt={10}
+          size={1}
+          radius={1}
+          color="#F96D69"
+          style={{ backgroundColor: "white" }}
+        />
       </div>
-
-      <Progress
-        value={percentAchieved}
-        mt="md"
-        size="lg"
-        radius="xl"
-        color="blue"
-        classNames={{
-          root: classes.progressTrack,
-          section: classes.progressSection,
-        }}
-      />
-      <Text
-        fz="xs"
-        fw={500}
-        style={{ position: "absolute", top: "-25px", right: "10px" }}
-      >
-        {card.deadline}
-      </Text>
-    </Card>
+    </div>
   );
-}
+};
 
 export default CarouselCard;

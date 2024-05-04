@@ -1,22 +1,58 @@
-.card {
+.imageSection {
+  position: relative;
+  width: 158px;
+  height: 206px;
+  margin: 0;
 }
 
-.title {
-}
-
-.image {
-  width: 282px;
-  height: 293px;
+.artistImage {
+  width: 158px;
+  height: 206px;
   object-fit: cover;
   object-position: top;
+  border-radius: 8px;
 }
 
-.stats {
+.overlayImage {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px;
+  width: 158px;
 }
 
-.progressSection {
+.btn {
+  position: absolute;
+  right: 24px;
+  bottom: 20px;
+  width: 124px;
+  height: 40px;
+  background-color: #f86f65;
 }
 
-.progressTrack {
-  background-color: var(--mantine-color-blue-3);
+.progressbarSection {
+  width: 154px;
+  height: auto;
+  margin-top: 12px;
+}
+
+.progressbarTextSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progressbarCreditSection {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.creditIcon {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+@media() {
 }
