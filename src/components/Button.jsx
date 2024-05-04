@@ -1,35 +1,31 @@
 import { Group, Button } from "@mantine/core";
-import ChartIcon from "../assets/chartIcon.png";
-import CreditIcon from "../assets/creditIcon.png";
-import PlusIcon from "../assets/plusIcon.png";
+import ChartIcon from "../assets/chart.svg";
+import CreditIcon from "../assets/credit.svg";
+import PlusIcon from "../assets/plus.svg";
 import classes from "../components/Buttons.module.css";
 
 export default function Test(props) {
   const { type, icon, children } = props;
 
   const icons = {
-    chart: <img src={ChartIcon} alt="Chart" />,
-    plus: <img src={PlusIcon} alt="Plus" />,
-    credit: <img src={CreditIcon} alt="Credit" />,
+    chart: <img className={classes.chartGap} src={ChartIcon} alt="Chart" />,
+    credit: <img className={classes.creditGap} src={CreditIcon} alt="Credit" />,
+    plus: <img className={classes.plusGap} src={PlusIcon} alt="Plus" />,
   };
 
   const selectedIcon = icons[icon] || null;
 
   const BUTTONS = {
     landing: (
-      <Button className={`${classes[type]} ${classes.red}`} size="lg">
-        {children}
-      </Button>
+      <Button className={`${classes[type]} ${classes.red}`}>{children}</Button>
     ),
     donate: (
-      <Button className={`${classes[type]} ${classes.red}`} size="lg">
-        {children}
-      </Button>
+      <Button className={`${classes[type]} ${classes.red}`}>{children}</Button>
     ),
     vote: (
       <Group>
         <Button
-          className={`${classes.Buttons} ${classes[type]} ${classes.red}`}
+          className={`${classes[type]} ${classes.red}`}
           leftSection={selectedIcon}
         >
           {children}
@@ -37,39 +33,33 @@ export default function Test(props) {
       </Group>
     ),
     more: (
-      <Button className={`${classes[type]} ${classes.black}`} size="lg">
+      <Button className={`${classes[type]} ${classes.black}`}>
         {children}
       </Button>
     ),
     recharge: (
       <Group>
         <Button
-          className={`${classes.Buttons} ${classes[type]} ${classes.red}`}
+          className={`${classes[type]} ${classes.red}`}
           leftSection={selectedIcon}
         >
           {children}
         </Button>
       </Group>
     ),
-    modaldonate: (
-      <Button className={`${classes[type]} ${classes.grey}`} size="lg">
-        {children}
-      </Button>
+    modalDonate: (
+      <Button className={`${classes[type]} ${classes.grey}`}>{children}</Button>
     ),
-    modalvote: (
-      <Button className={`${classes[type]} ${classes.red}`} size="lg">
-        {children}
-      </Button>
+    modalVote: (
+      <Button className={`${classes[type]} ${classes.red}`}>{children}</Button>
     ),
-    donation: (
-      <Button className={`${classes[type]} ${classes.red}`} size="lg">
-        {children}
-      </Button>
+    confirm: (
+      <Button className={`${classes[type]} ${classes.red}`}>{children}</Button>
     ),
     add: (
       <Group>
         <Button
-          className={`${classes.Buttons} ${classes[type]} ${classes.red}`}
+          className={`${classes[type]} ${classes.red}`}
           leftSection={selectedIcon}
         >
           {children}
