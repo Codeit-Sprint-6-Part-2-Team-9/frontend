@@ -5,35 +5,43 @@
   margin: 0;
 }
 
-.artistImage {
-  width: 158px;
-  height: 206px;
-  object-fit: cover;
-  object-position: top;
-  border-radius: 8px;
-}
-
 .overlayImage {
   position: absolute;
   right: 0;
   bottom: 0;
   border-radius: 8px;
-  width: 158px;
+  width: 100%;
 }
 
 .btn {
   position: absolute;
-  right: 24px;
-  bottom: 20px;
+  margin: 8px 20px;
+  right: 0;
+  bottom: 0;
   width: 124px;
-  height: 40px;
+  height: 31px;
   background-color: #f86f65;
 }
 
 .progressbarSection {
-  width: 154px;
+  width: 158px;
   height: auto;
   margin-top: 12px;
+  background-color: black;
+}
+
+.artistImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 8px;
+}
+
+.btn {
+  width: 124px;
+  height: 31px;
+  margin: 8px 20px;
 }
 
 .progressbarTextSection {
@@ -54,5 +62,19 @@
   padding: 0;
 }
 
-@media() {
+@media (min-width: 768px) {
+  .imageSection {
+    width: 282px;
+    height: 402px;
+  }
+
+  .btn {
+    width: 234px;
+    height: 40px;
+    margin: 20px 24px;
+  }
+
+  .progressbarSection {
+    width: 282px;
+  }
 }

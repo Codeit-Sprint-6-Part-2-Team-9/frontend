@@ -35,7 +35,7 @@ const CarouselCard = ({ card }) => {
         <Typography type="bol6lh18ls017" style={{ color: "#f7f7f8" }}>
           {card.title}
         </Typography>
-        <Typography type="medium12" style={{ color: "#FFFFFF" }}>
+        <Typography type="medium18" style={{ color: "#FFFFFF" }}>
           {card.subtitle}
         </Typography>
         <div className={classes.progressbarTextSection}>
