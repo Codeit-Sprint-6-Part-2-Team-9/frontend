@@ -4,21 +4,19 @@ const HomePage = () => {
   return (
     <div>
       <h1>HomePage</h1>
-      <Buttons type="add" icon="plus" color="red">
+      <Buttons type="add" icon="plus">
         추가하기
       </Buttons>
       <br />
-      <Buttons type="vote" icon="chart" color="red">
-        차트 투표하기
+      <Buttons type="vote" icon="chart">
+        투표
       </Buttons>
       <br />
-      <Buttons type="recharge" icon="credit" color="red">
+      <Buttons type="recharge" icon="credit">
         충전하기
       </Buttons>
       <br />
-      <Buttons type="landing" color="red">
-        지금 시작하기
-      </Buttons>
+      <Buttons type="landing">지금 시작하기</Buttons>
       <br />
     </div>
   );

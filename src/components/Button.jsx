@@ -5,7 +5,7 @@ import PlusIcon from "../assets/plusIcon.png";
 import classes from "../components/Buttons.module.css";
 
 export default function Test(props) {
-  const { type, icon, color, children } = props;
+  const { type, icon, children } = props;
 
   const icons = {
     chart: <img src={ChartIcon} alt="Chart" />,
@@ -17,19 +17,19 @@ export default function Test(props) {
 
   const BUTTONS = {
     landing: (
-      <Button className={`${classes[type]} ${classes[color]}`} size="lg">
+      <Button className={`${classes[type]} ${classes.red}`} size="lg">
         {children}
       </Button>
     ),
     donate: (
-      <Button className={`${classes[type]} ${classes[color]}`} size="lg">
+      <Button className={`${classes[type]} ${classes.red}`} size="lg">
         {children}
       </Button>
     ),
     vote: (
       <Group>
         <Button
-          className={`${classes.Buttons} ${classes[type]} ${classes[color]}`}
+          className={`${classes.Buttons} ${classes[type]} ${classes.red}`}
           leftSection={selectedIcon}
         >
           {children}
@@ -37,14 +37,14 @@ export default function Test(props) {
       </Group>
     ),
     more: (
-      <Button className={`${classes[type]} ${classes[color]}`} size="lg">
+      <Button className={`${classes[type]} ${classes.black}`} size="lg">
         {children}
       </Button>
     ),
     recharge: (
       <Group>
         <Button
-          className={`${classes.Buttons} ${classes[type]} ${classes[color]}`}
+          className={`${classes.Buttons} ${classes[type]} ${classes.red}`}
           leftSection={selectedIcon}
         >
           {children}
@@ -52,24 +52,24 @@ export default function Test(props) {
       </Group>
     ),
     modaldonate: (
-      <Button className={`${classes[type]} ${classes[color]}`} size="lg">
+      <Button className={`${classes[type]} ${classes.grey}`} size="lg">
         {children}
       </Button>
     ),
     modalvote: (
-      <Button className={`${classes[type]} ${classes[color]}`} size="lg">
+      <Button className={`${classes[type]} ${classes.red}`} size="lg">
         {children}
       </Button>
     ),
     donation: (
-      <Button className={`${classes[type]} ${classes[color]}`} size="lg">
+      <Button className={`${classes[type]} ${classes.red}`} size="lg">
         {children}
       </Button>
     ),
     add: (
       <Group>
         <Button
-          className={`${classes.Buttons} ${classes[type]} ${classes[color]}`}
+          className={`${classes.Buttons} ${classes[type]} ${classes.red}`}
           leftSection={selectedIcon}
         >
           {children}
