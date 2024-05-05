@@ -1,6 +1,6 @@
 import { Progress } from "@mantine/core";
 import classes from "./Carousel.module.css";
-import calculateTimeRemaining from "../../utils/formatDate.jsx";
+import calculateTimeRemaining from "../../utils/calculateTimeRemaining.jsx";
 import creditIcon from "../../assets/creditIcon.svg";
 import coverArtistImage from "../../assets/coverDonation.svg";
 import Typography from "../Typography";
