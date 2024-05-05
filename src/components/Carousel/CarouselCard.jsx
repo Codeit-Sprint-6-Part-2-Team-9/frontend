@@ -6,16 +6,18 @@ import coverArtistImage from "../../assets/coverDonation.svg";
 import Typography from "../Typography";
 
 const CarouselCard = ({ card }) => {
-  const percentAchieved = (card.receivedDonations / card.targetDonation) * 100;
+  const { idol, receivedDonations, targetDonation, deadline, title, subtitle } =
+    card;
 
-  const timeRemaining = calculateTimeRemaining(card.deadline);
+  const percentAchieved = (receivedDonations / targetDonation) * 100;
+  const timeRemaining = calculateTimeRemaining(deadline);
 
   return (
     <div>
       <div className={classes.imageSection}>
         <img
-          src={card.idol.profilePicture}
-          alt={card.title}
+          src={idol.profilePicture}
+          alt={title}
           className={classes.artistImage}
         />
         <img
@@ -31,13 +33,13 @@ const CarouselCard = ({ card }) => {
           type="bol6lh18ls017"
           style={{ color: "var(--mantine-color-gray-0)" }}
         >
-          {card.title}
+          {title}
         </Typography>
         <Typography
           type="medium18"
           style={{ color: "var(--mantine-color-white-0)" }}
         >
-          {card.subtitle}
+          {subtitle}
         </Typography>
         <div className={classes.progressbarTextSection}>
           <div className={classes.progressbarCreditSection}>
@@ -50,7 +52,7 @@ const CarouselCard = ({ card }) => {
               type="medium12lh18ls017"
               style={{ color: "var(--mantine-color-brand-0)" }}
             >
-              {card.receivedDonations}
+              {receivedDonations}
             </Typography>
           </div>
           <Typography
