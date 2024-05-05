@@ -1,5 +1,6 @@
 import { Progress } from "@mantine/core";
 import classes from "./Carousel.module.css";
+import calculateTimeRemaining from "../../utils/formatDate.jsx";
 import creditIcon from "../../assets/creditIcon.svg";
 import coverArtistImage from "../../assets/coverDonation.svg";
 import Typography from "../Typography";
@@ -7,13 +8,7 @@ import Typography from "../Typography";
 const CarouselCard = ({ card }) => {
   const percentAchieved = (card.receivedDonations / card.targetDonation) * 100;
 
-  const calculateTimeRemaining = (deadline) => {
-    const diffMs = deadline - new Date();
-    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-    return diffDays > 0 ? `${diffDays}일 남음` : "달성";
-  };
-
-  const timeRemaining = calculateTimeRemaining(new Date(card.deadline));
+  const timeRemaining = calculateTimeRemaining(card.deadline);
 
   return (
     <div>

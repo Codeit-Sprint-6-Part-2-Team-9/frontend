@@ -3,7 +3,7 @@ import CarouselCard from "./CarouselCard";
 import mockData from "./donationMockData.json";
 
 const Carousel = () => {
-  const [cardData, setCardData] = useState(null);
+  const [cardData, setCardData] = useState([]);
 
   useEffect(() => {
     setCardData(mockData.list);
