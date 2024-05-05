@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 30px;
 }
 
 .CreditImg {
@@ -11,4 +10,7 @@
 
 .accent {
   color: var(--mantine-color-brand-0);
+}
+.btn {
+  margin-top: 30px;
 }

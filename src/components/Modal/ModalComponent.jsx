@@ -28,13 +28,12 @@ const ModalComponent = ({ opened, close, modalDataState }) => {
         </Modal.Header>
         <Modal.Body className={classes.ModalBody}>
           {modalDataState === "creditWarn" ? (
-            <CreditWarnModalBody />
+            <CreditWarnModalBody close={close} />
           ) : modalDataState === "creditCharge" ? (
             <CreditChargeModalBody />
           ) : (
             <CreditDonationModalBody />
           )}
-          <Button style={{ width: "100%" }}>확인</Button>
         </Modal.Body>
       </Modal.Content>
     </Modal.Root>

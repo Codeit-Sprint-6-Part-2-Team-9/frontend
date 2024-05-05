@@ -1,0 +1,34 @@
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.radioWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.radioLeft {
+  display: flex;
+  align-items: center;
+}
+.selected {
+  border-color: var(--mantine-color-brand-0);
+}
+
+.creditText {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  margin-top: 22px;
+  color: #828282;
+}
+.creditSelected {
+  color: white;
+}
