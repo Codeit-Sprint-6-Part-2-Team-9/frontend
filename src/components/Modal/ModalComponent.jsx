@@ -6,6 +6,8 @@ import CreditChargeModalBody from "./CreditChargeModalBody";
 import CreditWarnModalBody from "./CreditWarnModalBody";
 import CreditDonationModalBody from "./CreditDonationModalBody";
 
+import amber from "../amber.png";
+
 const ModalComponent = ({ opened, close, modalDataState }) => {
   return (
     <Modal.Root
@@ -32,7 +34,13 @@ const ModalComponent = ({ opened, close, modalDataState }) => {
           ) : modalDataState === "creditCharge" ? (
             <CreditChargeModalBody />
           ) : (
-            <CreditDonationModalBody />
+            <CreditDonationModalBody
+              props={{
+                profileImg: amber,
+                subtitle : "강남역 광고",
+                title : "민지 2023 첫 광고"
+              }}
+            />
           )}
         </Modal.Body>
       </Modal.Content>
