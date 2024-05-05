@@ -20,7 +20,8 @@
   opacity: 0.6;
 }
 
-.name {
+.name,
+.group {
   font-size: 16px;
   font-weight: 500;
   line-height: 19px;
@@ -44,7 +45,8 @@
     font-size: 14px;
     line-height: 17px;
   }
-  .name {
+  .name,
+  .group {
     font-size: 14px;
     line-height: 17px;
   }
@@ -62,7 +64,8 @@
     font-size: 16px;
     line-height: 19px;
   }
-  .name {
+  .name,
+  .group {
     font-size: 16px;
     line-height: 19px;
   }
