@@ -1,0 +1,130 @@
+.landing {
+  width: 230px;
+  height: 48px;
+  padding: 11px 76px;
+  gap: 8px;
+  border-radius: 3px;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .landing {
+    width: 477px;
+    padding: 11px 0px;
+  }
+}
+
+.donate {
+  width: 142px;
+  height: 31px;
+  padding: 2px 16px;
+  gap: 8px;
+  border-radius: 3px;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .donate {
+    width: 234px;
+    height: 40px;
+  }
+}
+
+.vote {
+  width: 128px;
+  height: 32px;
+  padding: 2px 8px;
+  gap: 4px;
+  border-radius: 3px;
+  border: none;
+}
+
+.more {
+  width: 326px;
+  height: 42px;
+  padding: 8px 136px;
+  gap: 8px;
+  border-radius: 3px;
+  border: 1px solid #f1eef9;
+}
+
+.recharge {
+  width: 295px;
+  height: 42px;
+  padding: 8px 0px;
+  gap: 8px;
+  border-radius: 3px;
+  border: none;
+}
+
+.modalDonate {
+  width: 295px;
+  height: 42px;
+  padding: 8px 0px;
+  gap: 8px;
+  border-radius: 3px;
+  border: none;
+}
+
+.modalVote {
+  width: 327px;
+  height: 42px;
+  padding: 8px 0px;
+  gap: 8px;
+  border-radius: 3px;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .modalVote {
+    width: 477px;
+  }
+}
+
+.confirm {
+  width: 295px;
+  height: 42px;
+  padding: 8px 0px;
+  gap: 8px;
+  border-radius: 3px;
+  border: none;
+}
+
+.add {
+  width: 255px;
+  height: 48px;
+  border-radius: 24px;
+  border: none;
+}
+
+.red {
+  background: linear-gradient(91.18deg, #f77063 3.33%, #fe5790 99.37%);
+}
+
+.grey {
+  background: #828282;
+}
+
+.grey:hover {
+  background: linear-gradient(91.18deg, #f77063 3.33%, #fe5790 99.37%);
+}
+
+.black {
+  background: transparent;
+}
+
+.black:hover {
+  background: transparent;
+}
+
+.chartGap {
+  margin-right: -6px;
+}
+
+.creditGap {
+  margin-right: -10px;
+}
+
+.plusGap {
+  margin-right: -2px;
+}
