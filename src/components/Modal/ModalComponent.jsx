@@ -21,11 +21,13 @@ const ModalComponent = ({ opened, close, modalDataState }) => {
       <Modal.Content className={classes.ModalContent}>
         <Modal.Header className={classes.ModalHeader}>
           <Modal.Title className={classes.ModalTitle}>
-            {modalDataState === "creditWarn"
-              ? ""
-              : modalDataState === "creditCharge"
-              ? "크레딧 충전하기"
-              : "후원하기"}
+            {
+              {
+                creditWarn: "",
+                creditCharge: "크레딧 충전하기",
+                donation: "후원하기",
+              }[modalDataState]
+            }
           </Modal.Title>
           <Modal.CloseButton className={classes.ModalCloseButton} />
         </Modal.Header>
