@@ -52,6 +52,4 @@ function List() {
   );
 }
 
-s;
-
 export default List;
