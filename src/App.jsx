@@ -6,7 +6,6 @@ import MyPage from "./pages/MyPage";
 import NotFound from "./pages/NotFound";
 import Header from "./components/Layout/Header";
 
-
 function App() {
   return (
     <BrowserRouter>

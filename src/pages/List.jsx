@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDisclosure } from "@mantine/hooks";
 import { Button } from "@mantine/core";
 
+import Carousel from "../components/Carousel/Carousel";
 import ModalComponent from "../components/Modal/ModalComponent";
 
 function List() {
@@ -44,8 +45,13 @@ function List() {
           후원하기 모달
         </Button>
       </div>
+      <div>
+        <Carousel />
+      </div>
     </div>
   );
 }
+
+s;
 
 export default List;
