@@ -4,7 +4,7 @@ import CreditIcon from "../assets/credit.svg";
 import PlusIcon from "../assets/plus.svg";
 import classes from "../components/Buttons.module.css";
 
-export default function Test(props) {
+const Buttons = (props) => {
   const { type, icon, children } = props;
 
   const icons = {
@@ -69,4 +69,6 @@ export default function Test(props) {
   };
 
   return BUTTONS[type];
-}
+};
+
+export default Buttons;

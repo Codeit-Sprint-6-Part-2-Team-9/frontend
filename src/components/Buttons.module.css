@@ -33,7 +33,7 @@
 .vote {
   width: 128px;
   height: 32px;
-  padding: 2px 16px;
+  padding: 2px 8px;
   gap: 4px;
   border-radius: 3px;
   border: none;
