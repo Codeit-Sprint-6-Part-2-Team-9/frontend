@@ -1,0 +1,52 @@
+.MycreditButton {
+  width: 327px;
+  height: 87px;
+  border-radius: 8px;
+  border: 1px solid #f1eef9;
+  background: transparent;
+}
+
+.MycreditButton:hover {
+  background: transparent;
+}
+
+@media (min-width: 768px) {
+  .MycreditButton {
+    width: 696px;
+    height: 131px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .MycreditButton {
+    width: 1200px;
+    height: 160px;
+  }
+}
+
+.creditContainer {
+  margin-top: 50px;
+  margin-left: 80px;
+}
+
+.creditTitle {
+  margin-bottom: 20px;
+}
+
+.creditContent {
+  display: flex;
+  align-items: center;
+}
+
+.creditIcon {
+  margin-right: 3px;
+  margin-bottom: 48px;
+}
+
+.creditAmount {
+  margin-bottom: 50px;
+}
+
+.textSection {
+  margin: 30px 80px 30px 0; /* 위 아래 20px, 우측 80px, 좌측 0 */
+}

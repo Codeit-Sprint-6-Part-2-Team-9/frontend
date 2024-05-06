@@ -2,7 +2,7 @@ import { Group, Button } from "@mantine/core";
 import ChartIcon from "../assets/chart.svg";
 import CreditIcon from "../assets/credit.svg";
 import PlusIcon from "../assets/plus.svg";
-import classes from "../components/Buttons.module.css";
+import classes from "./Buttons.module.css";
 
 const Buttons = (props) => {
   const { type, icon, children } = props;
