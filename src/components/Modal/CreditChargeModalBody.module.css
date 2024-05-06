@@ -1,18 +1,18 @@
-.radioGroup {
+.radioWrapper {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
 }
-.radioWrapper {
+.radioBox {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
   border: 1px solid white;
   border-radius: 8px;
-  cursor: pointer;
+  padding: 20px;
   transition: 0.1s;
+  cursor: pointer;
 }
 .radioLeft {
   display: flex;
@@ -21,13 +21,12 @@
 .selected {
   border-color: var(--mantine-color-brand-0);
 }
-
 .creditText {
+  margin-top: 22px;
+  color: var(--mantine-color-gray-1);
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  margin-top: 22px;
-  color: #828282;
 }
 .creditSelected {
   color: white;

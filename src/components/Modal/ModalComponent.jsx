@@ -1,7 +1,7 @@
-import { Modal, Button } from "@mantine/core";
+import { Modal } from "@mantine/core";
 import classes from "./ModalComponent.module.css";
 
-// Modal Content
+// Modal Body
 import CreditChargeModalBody from "./CreditChargeModalBody";
 import CreditWarnModalBody from "./CreditWarnModalBody";
 import CreditDonationModalBody from "./CreditDonationModalBody";
@@ -37,8 +37,8 @@ const ModalComponent = ({ opened, close, modalDataState }) => {
             <CreditDonationModalBody
               props={{
                 profileImg: amber,
-                subtitle : "강남역 광고",
-                title : "민지 2023 첫 광고"
+                subtitle: "강남역 광고",
+                title: "앰버 2015 첫 광고",
               }}
             />
           )}

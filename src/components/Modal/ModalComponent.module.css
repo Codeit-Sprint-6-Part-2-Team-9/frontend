@@ -1,8 +1,6 @@
 .ModalRoot {
   color: var(--mantine-color-white-1);
 }
-.ModalContent {
-}
 .ModalTitle {
   font-weight: 800;
 }

@@ -11,9 +11,9 @@ const CreditChargeModalBody = () => {
 
   return (
     <div className={classes.body}>
-      <div className={classes.radioGroup}>
+      <div className={classes.radioWrapper}>
         <div
-          className={`${classes.radioWrapper} ${
+          className={`${classes.radioBox} ${
             selected === "100" ? classes.selected : ""
           }`}
           onClick={() => handleChange("100")}
@@ -39,7 +39,7 @@ const CreditChargeModalBody = () => {
           />
         </div>
         <div
-          className={`${classes.radioWrapper} ${
+          className={`${classes.radioBox} ${
             selected === "500" ? classes.selected : ""
           }`}
           onClick={() => handleChange("500")}
@@ -69,7 +69,7 @@ const CreditChargeModalBody = () => {
           />
         </div>
         <div
-          className={`${classes.radioWrapper} ${
+          className={`${classes.radioBox} ${
             selected === "1000" ? classes.selected : ""
           }`}
           onClick={() => handleChange("1000")}

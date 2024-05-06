@@ -1,13 +1,11 @@
-.CreditWarnModalBody {
+.creditWarnModalBody {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.CreditImg {
+.creditImg {
   width: 113px;
 }
-
 .accent {
   color: var(--mantine-color-brand-0);
 }
