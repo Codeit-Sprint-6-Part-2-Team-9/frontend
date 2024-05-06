@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Button } from "@mantine/core";
 import classes from "./CreditChargeModalBody.module.css";
-import CREDIT_IMG from "../../assets/credit.svg";
+import CREDIT_IMG from "../../assets/modal_credit.svg";
+import CREDIT_BTN from "../../assets/credit.svg";
 
 const CreditChargeModalBody = () => {
   const [selected, setSelected] = useState("100");
@@ -95,7 +96,14 @@ const CreditChargeModalBody = () => {
           />
         </div>
       </div>
-      <Button style={{ width: "100%" }}>충전하기</Button>
+      <Button
+        style={{ width: "100%" }}
+        variant="gradient"
+        gradient={{ from: "#f96d69", to: "#FE5493", deg: 90 }}
+        leftSection={<img src={CREDIT_BTN} alt="크레딧 아이콘" />}
+      >
+        충전하기
+      </Button>
     </div>
   );
 };

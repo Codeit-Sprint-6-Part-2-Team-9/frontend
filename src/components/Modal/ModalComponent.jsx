@@ -14,6 +14,7 @@ const ModalComponent = ({ opened, close, modalDataState }) => {
       className={classes.ModalRoot}
       opened={opened}
       onClose={close}
+      size={"auto"}
       centered
     >
       <Modal.Overlay className={classes.ModalOverlay} />

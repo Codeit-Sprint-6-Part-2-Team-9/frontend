@@ -8,9 +8,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
+  width: 295px;
   border: 1px solid white;
   border-radius: 8px;
-  padding: 20px;
+  padding: 0 20px;
   transition: 0.1s;
   cursor: pointer;
 }

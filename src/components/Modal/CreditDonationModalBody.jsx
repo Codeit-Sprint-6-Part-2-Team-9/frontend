@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@mantine/core";
-import CREDIT from "../../assets/credit.svg";
+import CREDIT_IMG from "../../assets/modal_credit.svg";
 import classes from "./CreditDonationModalBody.module.css";
 
 const CreditDonationModalBody = ({ props }) => {
@@ -50,12 +50,18 @@ const CreditDonationModalBody = ({ props }) => {
           value={credit}
           onChange={handleChange}
         />
-        <img src={CREDIT} alt="크레딧 아이콘" className={classes.creditIcon} />
+        <img
+          src={CREDIT_IMG}
+          alt="크레딧 아이콘"
+          className={classes.creditIcon}
+        />
       </div>
       {error && <p className={classes.error}>{error}</p>}
       <Button
         disabled={btnDisabled}
         style={{ width: "100%", marginTop: "20px" }}
+        variant="gradient"
+        gradient={{ from: "#f96d69", to: "#FE5493", deg: 90 }}
       >
         후원하기
       </Button>

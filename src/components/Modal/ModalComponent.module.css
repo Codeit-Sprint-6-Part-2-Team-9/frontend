@@ -2,7 +2,8 @@
   color: var(--mantine-color-white-1);
 }
 .ModalTitle {
-  font-weight: 800;
+  font-weight: 600 !important;
+  font-size: 18px !important;
 }
 .ModalCloseButton {
   color: #8b8e92;
