@@ -3,9 +3,10 @@ import { Button } from "@mantine/core";
 import CreditIcon from "../assets/mycredit.svg";
 import classes from "../components/MyCreditButton.module.css";
 
-const MyCreditRechargeButton = () => {
+const MyCreditRechargeButton = ({ ...buttonProps }) => {
   return (
     <Button
+      {...buttonProps}
       justify="space-between"
       className={classes.MycreditButton}
       leftSection={<MyCreditSection />}

@@ -10,27 +10,14 @@
   background: transparent;
 }
 
-@media (min-width: 768px) {
-  .MycreditButton {
-    width: 696px;
-    height: 131px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .MycreditButton {
-    width: 1200px;
-    height: 160px;
-  }
-}
-
 .creditContainer {
-  margin-top: 50px;
-  margin-left: 80px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .creditTitle {
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .creditContent {
@@ -48,5 +35,19 @@
 }
 
 .textSection {
-  margin: 30px 80px 30px 0; /* 위 아래 20px, 우측 80px, 좌측 0 */
+  margin: 30px 80px 30px 0;
+}
+
+@media (min-width: 768px) {
+  .MycreditButton {
+    width: 696px;
+    height: 131px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .MycreditButton {
+    width: 1200px;
+    height: 131px;
+  }
 }
