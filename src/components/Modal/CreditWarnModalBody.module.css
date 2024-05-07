@@ -1,0 +1,20 @@
+.creditWarnModalBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.creditImg {
+  width: 140px;
+  margin: 0;
+}
+.text {
+  font-weight: 500;
+  font-size: 16px;
+}
+.accent {
+  color: var(--mantine-color-brand-0);
+}
+.btn {
+  margin-top: 30px;
+}
