@@ -1,6 +1,17 @@
-.landing {
+.landingButtonWrap {
   width: 230px;
   height: 48px;
+}
+
+@media (min-width: 768px) {
+  .landingButtonWrap {
+    width: 477px;
+  }
+}
+
+.landing {
+  width: 100%;
+  height: 100%;
   padding: 11px 76px;
   gap: 8px;
   border-radius: 3px;
@@ -9,14 +20,26 @@
 
 @media (min-width: 768px) {
   .landing {
-    width: 477px;
+    width: 100%;
     padding: 11px 0px;
   }
 }
 
-.donate {
+.donateButtonWrap {
   width: 142px;
   height: 31px;
+}
+
+@media (min-width: 768px) {
+  .donateButtonWrap {
+    width: 234px;
+    height: 40px;
+  }
+}
+
+.donate {
+  width: 100%;
+  height: 100%;
   padding: 2px 16px;
   gap: 8px;
   border-radius: 3px;
@@ -25,50 +48,81 @@
 
 @media (min-width: 768px) {
   .donate {
-    width: 234px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
   }
 }
 
-.vote {
+.voteButtonWrap {
   width: 128px;
   height: 32px;
+}
+
+.vote {
+  width: 100%;
+  height: 100%;
   padding: 2px 8px;
   gap: 4px;
   border-radius: 3px;
   border: none;
 }
 
-.more {
+.moreButtonWrap {
   width: 326px;
   height: 42px;
+}
+
+.more {
+  width: 100%;
+  height: 100%;
   padding: 8px 136px;
   gap: 8px;
   border-radius: 3px;
   border: 1px solid #f1eef9;
 }
 
-.recharge {
+.rechargeButtonWrap {
   width: 295px;
   height: 42px;
+}
+
+.recharge {
+  width: 100%;
+  height: 100%;
   padding: 8px 0px;
   gap: 8px;
   border-radius: 3px;
   border: none;
+}
+
+.modalDonateButtonWrap {
+  width: 295px;
+  height: 42px;
 }
 
 .modalDonate {
-  width: 295px;
-  height: 42px;
+  width: 100%;
+  height: 100%;
   padding: 8px 0px;
   gap: 8px;
   border-radius: 3px;
   border: none;
 }
 
-.modalVote {
+.modalVoteButtonWrap {
   width: 327px;
   height: 42px;
+}
+
+@media (min-width: 768px) {
+  .modalVoteButtonWrap {
+    width: 477px;
+  }
+}
+
+.modalVote {
+  width: 100%;
+  height: 100%;
   padding: 8px 0px;
   gap: 8px;
   border-radius: 3px;
@@ -77,22 +131,32 @@
 
 @media (min-width: 768px) {
   .modalVote {
-    width: 477px;
+    width: 100%;
   }
 }
 
-.confirm {
+.confirmButtonWrap {
   width: 295px;
   height: 42px;
+}
+
+.confirm {
+  width: 100%;
+  height: 100%;
   padding: 8px 0px;
   gap: 8px;
   border-radius: 3px;
   border: none;
 }
 
-.add {
+.addButtonWrap {
   width: 255px;
   height: 48px;
+}
+
+.add {
+  width: 100%;
+  height: 100%;
   border-radius: 24px;
   border: none;
 }

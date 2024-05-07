@@ -17,67 +17,87 @@ const Buttons = (props) => {
 
   const BUTTONS = {
     landing: (
-      <Button {...buttonProps} className={`${classes[type]} ${classes.red}`}>
-        {children}
-      </Button>
-      // </>
+      <div className={classes.landingButtonWrap}>
+        <Button {...buttonProps} className={`${classes[type]} ${classes.red}`}>
+          {children}
+        </Button>
+      </div>
     ),
     donate: (
-      <Button {...buttonProps} className={`${classes[type]} ${classes.red}`}>
-        {children}
-      </Button>
+      <div className={classes.donateButtonWrap}>
+        <Button {...buttonProps} className={`${classes[type]} ${classes.red}`}>
+          {children}
+        </Button>
+      </div>
     ),
     vote: (
       <Group>
-        <Button
-          {...buttonProps}
-          className={`${classes[type]} ${classes.red}`}
-          leftSection={selectedIcon}
-        >
-          {children}
-        </Button>
+        <div className={classes.voteButtonWrap}>
+          <Button
+            {...buttonProps}
+            className={`${classes[type]} ${classes.red}`}
+            leftSection={selectedIcon}
+          >
+            {children}
+          </Button>
+        </div>
       </Group>
     ),
     more: (
-      <Button {...buttonProps} className={`${classes[type]} ${classes.black}`}>
-        {children}
-      </Button>
+      <div className={classes.moreButtonWrap}>
+        <Button
+          {...buttonProps}
+          className={`${classes[type]} ${classes.black}`}
+        >
+          {children}
+        </Button>
+      </div>
     ),
     recharge: (
       <Group>
-        <Button
-          {...buttonProps}
-          className={`${classes[type]} ${classes.red}`}
-          leftSection={selectedIcon}
-        >
-          {children}
-        </Button>
+        <div className={classes.rechargeButtonWrap}>
+          <Button
+            {...buttonProps}
+            className={`${classes[type]} ${classes.red}`}
+            leftSection={selectedIcon}
+          >
+            {children}
+          </Button>
+        </div>
       </Group>
     ),
     modalDonate: (
-      <Button {...buttonProps} className={`${classes[type]} ${classes.grey}`}>
-        {children}
-      </Button>
+      <div className={classes.modalDonateButtonWrap}>
+        <Button {...buttonProps} className={`${classes[type]} ${classes.grey}`}>
+          {children}
+        </Button>
+      </div>
     ),
     modalVote: (
-      <Button {...buttonProps} className={`${classes[type]} ${classes.red}`}>
-        {children}
-      </Button>
+      <div className={classes.modalVoteButtonWrap}>
+        <Button {...buttonProps} className={`${classes[type]} ${classes.red}`}>
+          {children}
+        </Button>
+      </div>
     ),
     confirm: (
-      <Button {...buttonProps} className={`${classes[type]} ${classes.red}`}>
-        {children}
-      </Button>
+      <div className={classes.confirmButtonWrap}>
+        <Button {...buttonProps} className={`${classes[type]} ${classes.red}`}>
+          {children}
+        </Button>
+      </div>
     ),
     add: (
       <Group>
-        <Button
-          {...buttonProps}
-          className={`${classes[type]} ${classes.red}`}
-          leftSection={selectedIcon}
-        >
-          {children}
-        </Button>
+        <div className={classes.addButtonWrap}>
+          <Button
+            {...buttonProps}
+            className={`${classes[type]} ${classes.red}`}
+            leftSection={selectedIcon}
+          >
+            {children}
+          </Button>
+        </div>
       </Group>
     ),
   };
