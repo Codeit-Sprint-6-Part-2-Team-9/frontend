@@ -1,25 +1,39 @@
+import { Carousel } from "@mantine/carousel";
 import { useState, useEffect } from "react";
-import CarouselCard from "./CarouselCard";
 import mockData from "./donationMockData.json";
+import CarouselCard from "./CarouselCard";
+import "@mantine/carousel/styles.css";
+import classes from "./Carousel.module.css";
 
-const Carousel = () => {
+function Demo() {
   const [cardData, setCardData] = useState([]);
-
   useEffect(() => {
     setCardData(mockData.list);
   }, []);
 
-  if (!cardData) {
-    return <div>Loading..</div>;
-  }
-
   return (
-    <div>
-      {cardData.map((card) => (
-        <CarouselCard key={card.id} card={card} />
-      ))}
-    </div>
+    <section className="carouselWrapper">
+      <Carousel
+        withIndicators
+        height={402}
+        slideSize={282}
+        slideGap={24}
+        loop
+        align="start"
+        slidesToScroll={4}
+        classNames={{
+          root: classes.root,
+          controls: classes.controls,
+        }}
+      >
+        {cardData.map((card, index) => (
+          <Carousel.Slide key={index}>
+            <CarouselCard card={card} />
+          </Carousel.Slide>
+        ))}
+      </Carousel>
+    </section>
   );
-};
+}
 
-export default Carousel;
+export default Demo;

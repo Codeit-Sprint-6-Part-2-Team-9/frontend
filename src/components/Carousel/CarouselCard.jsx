@@ -1,6 +1,7 @@
 import { Progress } from "@mantine/core";
 import classes from "./Carousel.module.css";
 import calculateTimeRemaining from "../../utils/calculateTimeRemaining.jsx";
+import Buttons from "../Buttons";
 import creditIcon from "../../assets/creditIcon.svg";
 import coverArtistImage from "../../assets/coverDonation.svg";
 import Typography from "../Typography";
@@ -25,7 +26,7 @@ const CarouselCard = ({ card }) => {
           alt="cover artist image"
           className={classes.overlayImage}
         />
-        <button className={classes.btn}>후원하기</button>
+        <button type="donate">후원하기</button>
       </div>
 
       <div className={classes.progressbarSection}>
