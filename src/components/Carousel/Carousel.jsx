@@ -5,7 +5,7 @@ import CarouselCard from "./CarouselCard";
 import "@mantine/carousel/styles.css";
 import classes from "./Carousel.module.css";
 
-function Demo() {
+function CarouselSection() {
   const [cardData, setCardData] = useState([]);
   useEffect(() => {
     setCardData(mockData.list);
@@ -18,7 +18,6 @@ function Demo() {
         height={402}
         slideSize={282}
         slideGap={24}
-        loop
         align="start"
         slidesToScroll={4}
         classNames={{
@@ -26,8 +25,8 @@ function Demo() {
           controls: classes.controls,
         }}
       >
-        {cardData.map((card, index) => (
-          <Carousel.Slide key={index}>
+        {cardData.map((card) => (
+          <Carousel.Slide key={card.id}>
             <CarouselCard card={card} />
           </Carousel.Slide>
         ))}
@@ -36,4 +35,4 @@ function Demo() {
   );
 }
 
-export default Demo;
+export default CarouselSection;

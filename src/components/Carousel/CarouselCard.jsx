@@ -26,7 +26,7 @@ const CarouselCard = ({ card }) => {
           alt="cover artist image"
           className={classes.overlayImage}
         />
-        <button type="donate">후원하기</button>
+        <Buttons type="donate">후원하기</Buttons>
       </div>
 
       <div className={classes.progressbarSection}>

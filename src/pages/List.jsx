@@ -1,9 +1,9 @@
-import Demo from "../components/Carousel/Carousel";
+import CarouselSection from "../components/Carousel/Carousel";
 
 function List() {
   return (
     <div>
-      <Demo />
+      <CarouselSection />
     </div>
   );
 }
