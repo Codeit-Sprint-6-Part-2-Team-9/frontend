@@ -1,4 +1,4 @@
-const ClientStateKeys = {
+const clientStateKeys = {
     credits: 'credits',
 };
 
@@ -15,4 +15,4 @@ const serverStateKeys = {
     idol: 'idol',
 };
 
-export { ClientStateKeys, envvars, serverStateKeys };
+export { clientStateKeys, envvars, serverStateKeys };
