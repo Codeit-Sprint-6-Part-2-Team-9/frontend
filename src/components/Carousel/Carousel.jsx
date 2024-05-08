@@ -16,8 +16,8 @@ function CarouselSection() {
     <section className={classes.carouselWrapper}>
       <Carousel
         height={402}
-        slideSize={282}
-        slideGap={24}
+        slideSize={{ lg: "282", sm: "282", xs: "158" }}
+        slideGap={{ lg: "24", sm: "16", xs: "8" }}
         align="start"
         slidesToScroll={4}
         previousControlIcon={
@@ -28,6 +28,7 @@ function CarouselSection() {
           root: classes.root,
           controls: classes.controls,
           control: classes.control,
+          slide: classes.slide,
         }}
       >
         {cardData.map((card) => (
