@@ -1,4 +1,5 @@
 import { Button } from "@mantine/core";
+import theme from "../theme";
 import CreditIcon from "../assets/mycredit.svg";
 import classes from "./MyCreditRechargeButton.module.css";
 
@@ -29,7 +30,14 @@ const MyCreditSection = () => {
 };
 
 const TextSection = () => {
-  return <div className={classes.textSection}>충전하기</div>;
+  return (
+    <div
+      className={classes.textSection}
+      style={{ color: theme.colors.brand[0] }}
+    >
+      충전하기
+    </div>
+  );
 };
 
 export default MyCreditRechargeButton;

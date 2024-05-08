@@ -1,8 +1,9 @@
 .MycreditButton {
+  position: relative;
   width: 327px;
   height: 87px;
   border-radius: 8px;
-  border: 1px solid #f1eef9;
+  border: 1px solid #f1eef9cc;
   background: transparent;
 }
 
@@ -25,11 +26,41 @@
 }
 
 .creditContainer {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+@media (min-width: 768px) {
+  .creditContainer {
+    top: 35px;
+    left: 64px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .creditContainer {
+    top: 30px;
+    left: 78px;
+  }
 }
 
 .creditTitle {
-  margin-top: 20px;
-  margin-left: 20px;
+  font-family: Pretendard;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.32px;
+  color: #ffffff99;
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+@media (min-width: 768px) {
+  .creditTitle {
+    font-size: 16px;
+    line-height: 19.09px;
+    margin-bottom: 14px;
+  }
 }
 
 .creditContent {
@@ -38,14 +69,46 @@
 }
 
 .creditIcon {
-  margin-right: 3px;
-  margin-bottom: 48px;
+  height: 33px;
+  margin-left: -5px;
+  margin-right: -3px;
 }
 
 .creditAmount {
-  margin-bottom: 50px;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: left;
+  color: #ffffffde;
+  margin-bottom: 2px;
+}
+
+@media (min-width: 768px) {
+  .creditAmount {
+    font-size: 24px;
+  }
 }
 
 .textSection {
-  margin: 30px 80px 30px 0;
+  margin: 31px 20px 30px 0;
+  font-family: Pretendard;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .textSection {
+    margin: 52px 64px 53px 0;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .textSection {
+    margin: 30px 80px 30px 0;
+  }
 }
