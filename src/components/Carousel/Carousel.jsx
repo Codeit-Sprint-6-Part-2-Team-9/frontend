@@ -39,7 +39,6 @@ function CarouselSection() {
           </Carousel.Slide>
         ))}
       </Carousel>
-      <div></div>
     </section>
   );
 }

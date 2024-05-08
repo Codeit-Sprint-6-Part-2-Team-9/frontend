@@ -52,6 +52,7 @@
 
 .carouselWrapper {
   width: auto;
+  margin: 40px auto;
 }
 
 .root {
@@ -64,6 +65,10 @@
 }
 
 @media (min-width: 768px) {
+  .carouselWrapper {
+    margin-top: 64px;
+  }
+
   .imageSection {
     width: 282px;
     height: 293px;
@@ -81,7 +86,7 @@
 @media (min-width: 1200px) {
   .carouselWrapper {
     width: 1200px;
-    margin: 0 auto;
+    margin-top: 50px;
   }
 
   .root {
