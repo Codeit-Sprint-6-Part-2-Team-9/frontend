@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
 import { Button } from "@mantine/core";
 import CreditIcon from "../assets/mycredit.svg";
-import classes from "../components/MyCreditButton.module.css";
+import classes from "./MyCreditRechargeButton.module.css";
 
 const MyCreditRechargeButton = ({ ...buttonProps }) => {
   return (
@@ -16,25 +15,14 @@ const MyCreditRechargeButton = ({ ...buttonProps }) => {
 };
 
 const MyCreditSection = () => {
-  const [myCredit, setMyCredit] = useState(0);
-
-  useEffect(() => {
-    const savedCredit = localStorage.getItem("myCredit");
-
-    if (!savedCredit) {
-      localStorage.setItem("myCredit", "36000");
-      setMyCredit(36000);
-    } else {
-      setMyCredit(Number(savedCredit));
-    }
-  }, [myCredit]);
+  const credits = 230000;
 
   return (
     <div className={classes.creditContainer}>
       <div className={classes.creditTitle}>내 크레딧</div>
       <div className={classes.creditContent}>
-        <img src={CreditIcon} alt="Credit" className={classes.creditIcon} />
-        <div className={classes.creditAmount}>{myCredit.toLocaleString()}</div>
+        <img src={CreditIcon} alt="크레딧" className={classes.creditIcon} />
+        <div className={classes.creditAmount}>{credits.toLocaleString()}</div>
       </div>
     </div>
   );
