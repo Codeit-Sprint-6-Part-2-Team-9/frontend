@@ -9,9 +9,11 @@ import nextIcon from "../../assets/btnArrowRight.svg";
 
 function CarouselSection() {
   const [cardData, setCardData] = useState([]);
+
   useEffect(() => {
     setCardData(mockData.list);
   }, []);
+
   return (
     <section className={classes.carouselWrapper}>
       <Carousel

@@ -59,6 +59,10 @@
   margin-left: 24px;
 }
 
+.controls {
+  visibility: hidden;
+}
+
 @media (min-width: 768px) {
   .imageSection {
     width: 282px;
@@ -91,6 +95,7 @@
   }
 
   .controls {
+    visibility: visible;
     width: 1361px;
     margin-left: calc((100% - 1361px) / 2);
     margin-right: calc((100% - 1361px) / 2);
