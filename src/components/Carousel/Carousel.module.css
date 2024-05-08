@@ -50,6 +50,14 @@
   align-items: center;
 }
 
+.carouselWrapper {
+  width: auto;
+}
+
+.root {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   .imageSection {
     width: 282px;
@@ -65,16 +73,25 @@
   }
 }
 
-.root {
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.control {
-  &[data-inactive] {
-    visibility: hidden;
-  }
-}
-
 @media (min-width: 1200px) {
+  .carouselWrapper {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .root {
+    width: 100%;
+  }
+
+  .control {
+    &[data-inactive] {
+      visibility: hidden;
+    }
+  }
+
+  .controls {
+    width: 1361px;
+    margin-left: calc((100% - 1361px) / 2);
+    margin-right: calc((100% - 1361px) / 2);
+  }
 }

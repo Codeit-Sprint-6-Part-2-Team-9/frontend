@@ -4,6 +4,8 @@ import mockData from "./donationMockData.json";
 import CarouselCard from "./CarouselCard";
 import "@mantine/carousel/styles.css";
 import classes from "./Carousel.module.css";
+import prevIcon from "../../assets/btnArrowLeft.svg";
+import nextIcon from "../../assets/btnArrowRight.svg";
 
 function CarouselSection() {
   const [cardData, setCardData] = useState([]);
@@ -11,21 +13,23 @@ function CarouselSection() {
     setCardData(mockData.list);
   }, []);
   return (
-    <section className="carouselWrapper">
+    <section className={classes.carouselWrapper}>
       <Carousel
-        withIndicators
         height={402}
         slideSize={282}
         slideGap={24}
         align="start"
         slidesToScroll={4}
+        previousControlIcon={
+          <img src={prevIcon} className={classes.carouselIcon} />
+        }
+        nextControlIcon={<img src={nextIcon} />}
         classNames={{
           root: classes.root,
           controls: classes.controls,
           control: classes.control,
         }}
       >
-        <div></div>
         {cardData.map((card) => (
           <Carousel.Slide key={card.id}>
             <CarouselCard card={card} />
