@@ -10,9 +10,9 @@ const Buttons = (props) => {
   const activeButtonClasses = `${classes[type]} ${classes.red}`;
 
   const icons = {
-    chart: <img className={classes.chartGap} src={ChartIcon} alt="Chart" />,
-    credit: <img className={classes.creditGap} src={CreditIcon} alt="Credit" />,
-    plus: <img className={classes.plusGap} src={PlusIcon} alt="Plus" />,
+    chart: <img className={classes.chartGap} src={ChartIcon} alt="차트" />,
+    credit: <img className={classes.creditGap} src={CreditIcon} alt="크레딧" />,
+    plus: <img className={classes.plusGap} src={PlusIcon} alt="더보기" />,
   };
 
   const selectedIcon = icons[icon] || null;
