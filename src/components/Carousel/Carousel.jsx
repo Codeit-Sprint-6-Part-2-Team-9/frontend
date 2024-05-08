@@ -7,7 +7,7 @@ import classes from "./Carousel.module.css";
 import prevIcon from "../../assets/btnArrowLeft.svg";
 import nextIcon from "../../assets/btnArrowRight.svg";
 
-function CarouselSection() {
+const CarouselSection = () => {
   const [cardData, setCardData] = useState([]);
 
   useEffect(() => {
@@ -41,6 +41,6 @@ function CarouselSection() {
       </Carousel>
     </section>
   );
-}
+};
 
 export default CarouselSection;
