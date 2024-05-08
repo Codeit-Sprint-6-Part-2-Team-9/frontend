@@ -1,17 +1,37 @@
-import { Button } from "@mantine/core";
+import { useState } from 'react';
+import { Button, Modal  } from "@mantine/core";
 import theme from "../theme";
 import CreditIcon from "../assets/mycredit.svg";
+import ModalComponent from "./Modal/ModalComponent"
 import classes from "./MyCreditRechargeButton.module.css";
 
 const MyCreditRechargeButton = ({ ...buttonProps }) => {
+  const [modalOpened, setModalOpened] = useState(false);
+
+  const handleButtonClick = () => {
+    setModalOpened(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpened(false);
+  };
+
   return (
-    <Button
-      {...buttonProps}
-      justify="space-between"
-      className={classes.MycreditButton}
-      leftSection={<MyCreditSection />}
-      rightSection={<TextSection />}
-    />
+    <>
+      <Button
+        {...buttonProps}
+        onClick={handleButtonClick}
+        justify="space-between"
+        className={classes.MycreditButton}
+        leftSection={<MyCreditSection />}
+        rightSection={<TextSection />}
+      />
+      <ModalComponent 
+        opened={modalOpened} 
+        close={handleCloseModal} 
+        modalDataState="creditCharge"
+      />
+    </>
   );
 };
 
