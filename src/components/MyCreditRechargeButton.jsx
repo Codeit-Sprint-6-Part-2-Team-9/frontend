@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Modal  } from "@mantine/core";
+import { Button } from "@mantine/core";
 import theme from "../theme";
 import CreditIcon from "../assets/mycredit.svg";
 import ModalComponent from "./Modal/ModalComponent"
@@ -36,7 +36,7 @@ const MyCreditRechargeButton = ({ ...buttonProps }) => {
 };
 
 const MyCreditSection = () => {
-  const credits = 230000;
+  const credits = 36000;
 
   return (
     <div className={classes.creditContainer}>
