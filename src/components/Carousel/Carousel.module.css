@@ -70,5 +70,11 @@
   margin: 0 auto;
 }
 
+.control {
+  &[data-inactive] {
+    visibility: hidden;
+  }
+}
+
 @media (min-width: 1200px) {
 }

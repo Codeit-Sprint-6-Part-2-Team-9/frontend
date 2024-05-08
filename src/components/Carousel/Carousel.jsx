@@ -10,7 +10,6 @@ function CarouselSection() {
   useEffect(() => {
     setCardData(mockData.list);
   }, []);
-
   return (
     <section className="carouselWrapper">
       <Carousel
@@ -23,14 +22,17 @@ function CarouselSection() {
         classNames={{
           root: classes.root,
           controls: classes.controls,
+          control: classes.control,
         }}
       >
+        <div></div>
         {cardData.map((card) => (
           <Carousel.Slide key={card.id}>
             <CarouselCard card={card} />
           </Carousel.Slide>
         ))}
       </Carousel>
+      <div></div>
     </section>
   );
 }
