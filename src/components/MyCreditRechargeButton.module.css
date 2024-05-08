@@ -1,28 +1,28 @@
 .MycreditButton {
   position: relative;
-  width: 327px;
-  height: 87px;
-  border-radius: 8px;
-  border: 1px solid #f1eef9cc;
-  background: transparent;
+  width: 327px !important;
+  height: 87px !important;
+  border-radius: 8px !important;
+  border: 1px solid #f1eef9cc !important;
+  background: transparent !important;
 }
 
 @media (min-width: 768px) {
   .MycreditButton {
-    width: 696px;
-    height: 131px;
+    width: 696px !important;
+    height: 131px !important;
   }
 }
 
 @media (min-width: 1280px) {
   .MycreditButton {
-    width: 1200px;
-    height: 131px;
+    width: 1200px !important;
+    height: 131px !important;
   }
 }
 
 .MycreditButton:hover {
-  background: transparent;
+  background: transparent !important;
 }
 
 .creditContainer {
