@@ -1,5 +1,5 @@
 import { Group, Button } from "@mantine/core";
-import ChartIcon from "../assets/chart.svg";
+import ChartIcon from "../assets/Chart.svg";
 import CreditIcon from "../assets/credit.svg";
 import PlusIcon from "../assets/plus.svg";
 import classes from "./Buttons.module.css";

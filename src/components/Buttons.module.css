@@ -1,17 +1,17 @@
 .landingButtonWrap {
-  width: 230px;
-  height: 48px;
+  width: 230px !important;
+  height: 48px !important;
 }
 
 @media (min-width: 768px) {
   .landingButtonWrap {
-    width: 477px;
+    width: 477px !important;
   }
 }
 
 .landing {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   padding: 11px 76px;
   gap: 8px;
   border-radius: 3px;
@@ -20,26 +20,26 @@
 
 @media (min-width: 768px) {
   .landing {
-    width: 100%;
+    width: 100% !important;
     padding: 11px 0px;
   }
 }
 
 .donateButtonWrap {
-  width: 142px;
-  height: 31px;
+  width: 142px !important;
+  height: 31px !important;
 }
 
 @media (min-width: 768px) {
   .donateButtonWrap {
-    width: 234px;
-    height: 40px;
+    width: 234px !important;
+    height: 40px !important;
   }
 }
 
 .donate {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   padding: 2px 16px;
   gap: 8px;
   border-radius: 3px;
@@ -48,61 +48,61 @@
 
 @media (min-width: 768px) {
   .donate {
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
   }
 }
 
 .voteButtonWrap {
-  width: 128px;
-  height: 32px;
+  width: 128px !important;
+  height: 32px !important;
 }
 
 .vote {
-  width: 100%;
-  height: 100%;
-  padding: 2px 8px;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 2px 8px !important;
   gap: 4px;
   border-radius: 3px;
   border: none;
 }
 
 .moreButtonWrap {
-  width: 326px;
-  height: 42px;
+  width: 326px !important;
+  height: 42px !important;
 }
 
 .more {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   padding: 8px 136px;
   gap: 8px;
   border-radius: 3px;
-  border: 1px solid #f1eef9;
+  border: 1px solid #f1eef9 !important;
 }
 
 .rechargeButtonWrap {
-  width: 295px;
-  height: 42px;
+  width: 295px !important;
+  height: 42px !important;
 }
 
 .recharge {
-  width: 100%;
-  height: 100%;
-  padding: 8px 0px;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 8px 0px !important;
   gap: 8px;
   border-radius: 3px;
   border: none;
 }
 
 .modalDonateButtonWrap {
-  width: 295px;
-  height: 42px;
+  width: 295px !important;
+  height: 42px !important;
 }
 
 .modalDonate {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   padding: 8px 0px;
   gap: 8px;
   border-radius: 3px;
@@ -110,19 +110,19 @@
 }
 
 .modalVoteButtonWrap {
-  width: 327px;
-  height: 42px;
+  width: 327px !important;
+  height: 42px !important;
 }
 
 @media (min-width: 768px) {
   .modalVoteButtonWrap {
-    width: 477px;
+    width: 477px !important;
   }
 }
 
 .modalVote {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   padding: 8px 0px;
   gap: 8px;
   border-radius: 3px;
@@ -131,18 +131,18 @@
 
 @media (min-width: 768px) {
   .modalVote {
-    width: 100%;
+    width: 100% !important;
   }
 }
 
 .confirmButtonWrap {
-  width: 295px;
-  height: 42px;
+  width: 295px !important;
+  height: 42px !important;
 }
 
 .confirm {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   padding: 8px 0px;
   gap: 8px;
   border-radius: 3px;
@@ -150,35 +150,43 @@
 }
 
 .addButtonWrap {
-  width: 255px;
-  height: 48px;
+  width: 255px !important;
+  height: 48px !important;
 }
 
 .add {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   border-radius: 24px;
   border: none;
 }
 
 .red {
-  background: linear-gradient(91.18deg, #f77063 3.33%, #fe5790 99.37%);
+  background: linear-gradient(
+    91.18deg,
+    #f77063 3.33%,
+    #fe5790 99.37%
+  ) !important;
 }
 
 .grey {
-  background: #828282;
+  background: #828282 !important;
 }
 
 .grey:hover {
-  background: linear-gradient(91.18deg, #f77063 3.33%, #fe5790 99.37%);
+  background: linear-gradient(
+    91.18deg,
+    #f77063 3.33%,
+    #fe5790 99.37%
+  ) !important;
 }
 
 .black {
-  background: transparent;
+  background: transparent !important;
 }
 
 .black:hover {
-  background: transparent;
+  background: transparent !important;
 }
 
 .chartGap {
