@@ -3,6 +3,7 @@ import { Button } from "@mantine/core";
 import theme from "../theme";
 import CreditIcon from "../assets/mycredit.svg";
 import ModalComponent from "./Modal/ModalComponent"
+import useCredits from '../api/credits/useCredits';
 import classes from "./MyCreditRechargeButton.module.css";
 
 const MyCreditRechargeButton = ({ ...buttonProps }) => {
@@ -36,7 +37,7 @@ const MyCreditRechargeButton = ({ ...buttonProps }) => {
 };
 
 const MyCreditSection = () => {
-  const credits = 36000;
+  const [credits] = useCredits();
 
   return (
     <div className={classes.creditContainer}>
