@@ -54,7 +54,7 @@
   line-height: 26px;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
   .MycreditButton {
     width: 696px !important;
     height: 131px !important;
@@ -81,7 +81,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .MycreditButton {
     width: 1200px !important;
     height: 131px !important;
