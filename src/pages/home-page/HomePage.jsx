@@ -8,7 +8,7 @@ const HomePage = () => {
     <Container>
       <section className={classes.intro}>
         <div style={{ color: 'white' }}> 소개 부분 </div>
-        <div className={classes.test}>
+        <div className={classes.landingButton}>
           <Link to="/list">
             <Buttons type="landing">지금 시작하기</Buttons>
           </Link>

@@ -34,8 +34,20 @@
   }
 }
 
-.test {
+.landingButton {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 664px;
+}
+
+@media (min-width: 768px) {
+  .landingButton {
+    margin-top: 1032px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .landingButton {
+    margin-top: 912px;
+  }
 }
