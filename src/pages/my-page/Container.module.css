@@ -1,3 +1,16 @@
 .Container {
-  width: 328px;
+  max-width: 327px;
+  margin: 24px auto;
+}
+
+@media (min-width: 768px) {
+  .Container {
+    max-width: 696px;
+  }
+}
+@media (min-width: 1280px) {
+  .Container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
