@@ -50,7 +50,7 @@
   height: 100% !important;
   padding: 8px 136px !important;
   gap: 8px;
-  border: 1px solid #f1eef9 !important;
+  border: 1px solid #f1eef9cc !important;
   border-radius: 3px !important;
 }
 
@@ -143,11 +143,11 @@
 }
 
 .black {
-  background: transparent !important;
+  background: #ffffff1a !important;
 }
 
 .black:hover {
-  background: transparent !important;
+  background: #ffffff1a !important;
 }
 
 .chartGap {
