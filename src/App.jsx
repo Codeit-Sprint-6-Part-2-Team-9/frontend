@@ -4,13 +4,18 @@ import HomePage from './pages/HomePage';
 import List from './pages/List';
 import MyPage from './pages/MyPage';
 import NotFound from './pages/NotFound';
-import Header from './components/Layout/Header';
 import Layout from './components/Layout/Layout';
+import TOP_OVERLAY from './assets/top_overlay.svg';
 
 function App() {
   return (
     <BrowserRouter>
       <div className={classes.app}>
+        <img
+          class={classes.topOverlay}
+          src={TOP_OVERLAY}
+          alt="홈페이지 상단 오버레이 이미지"
+        />
         <Routes>
           <Route index element={<HomePage />} />
           <Route element={<Layout />}>
