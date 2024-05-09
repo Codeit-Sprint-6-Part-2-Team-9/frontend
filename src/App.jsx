@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import classes from './App.module.css';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/home-page/HomePage';
 import List from './pages/List';
 import MyPage from './pages/MyPage';
 import NotFound from './pages/NotFound';
@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <div className={classes.app}>
         <img
-          class={classes.topOverlay}
+          className={classes.topOverlay}
           src={TOP_OVERLAY}
           alt="홈페이지 상단 오버레이 이미지"
         />
