@@ -1,3 +1,7 @@
+const clientStateKeys = {
+    credits: 'credits',
+};
+
 const envvars = {
     serverUrl: 'https://fandom-k-api.vercel.app',
     teamName: '6-9',
@@ -11,4 +15,4 @@ const serverStateKeys = {
     idol: 'idol',
 };
 
-export { envvars, serverStateKeys };
+export { clientStateKeys, envvars, serverStateKeys };
