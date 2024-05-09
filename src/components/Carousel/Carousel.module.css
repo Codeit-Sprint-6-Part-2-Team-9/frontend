@@ -51,8 +51,8 @@
 }
 
 .carouselWrapper {
-  width: auto;
-  margin: 40px auto;
+  width: 100%;
+  margin: 40px 0;
 }
 
 .root {
@@ -85,12 +85,14 @@
 
 @media (min-width: 1200px) {
   .carouselWrapper {
-    width: 1200px;
-    margin-top: 50px;
+    width: 100%;
+    margin: 50px 0;
+    overflow: hidden;
   }
 
   .root {
-    width: 100%;
+    width: 1200px;
+    margin: 0 auto;
   }
 
   .control {
@@ -100,9 +102,9 @@
   }
 
   .controls {
-    visibility: visible;
     width: 1361px;
     margin-left: calc((100% - 1361px) / 2);
     margin-right: calc((100% - 1361px) / 2);
+    visibility: visible;
   }
 }

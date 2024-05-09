@@ -1,5 +1,5 @@
-import { Carousel } from "@mantine/carousel";
 import { useState, useEffect } from "react";
+import { Carousel } from "@mantine/carousel";
 import mockData from "./donationMockData.json";
 import CarouselCard from "./CarouselCard";
 import "@mantine/carousel/styles.css";
@@ -7,7 +7,7 @@ import classes from "./Carousel.module.css";
 import prevIcon from "../../assets/btnArrowLeft.svg";
 import nextIcon from "../../assets/btnArrowRight.svg";
 
-const CarouselSection = () => {
+function CarouselSection() {
   const [cardData, setCardData] = useState([]);
 
   useEffect(() => {
@@ -30,7 +30,6 @@ const CarouselSection = () => {
           root: classes.root,
           controls: classes.controls,
           control: classes.control,
-          slide: classes.slide,
         }}
       >
         {cardData.map((card) => (
@@ -41,6 +40,6 @@ const CarouselSection = () => {
       </Carousel>
     </section>
   );
-};
+}
 
 export default CarouselSection;
