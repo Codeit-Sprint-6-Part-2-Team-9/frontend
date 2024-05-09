@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import introimg from '../../assets/introimg.svg';
 import Container from './Container';
 import Buttons from '../../components/Buttons';
 import classes from './HomePage.module.css';
@@ -8,6 +9,7 @@ const HomePage = () => {
     <Container>
       <section className={classes.intro}>
         <div style={{ color: 'white' }}> 소개 부분 </div>
+        <img className={classes.introImg} src={introimg} alt="인트로 이미지" />
         <div className={classes.landingButton}>
           <Link to="/list">
             <Buttons type="landing">지금 시작하기</Buttons>
