@@ -1,9 +1,39 @@
-.homePage {
-  color: black;
+.intro {
+  width: 375px;
+  height: 812px;
+  background-color: red;
 }
 
-.intro {
+@media (min-width: 700px) {
+  .intro {
+    width: 744px;
+    height: 1200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro {
+    width: 1920px;
+    height: 1080px;
+  }
 }
 
 .description {
+  width: 375px;
+  height: 2436px;
+  background-color: blue;
+}
+
+@media (min-width: 700px) {
+  .description {
+    width: 744px;
+    height: 2232px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .description {
+    width: 1920px;
+    height: 3600px;
+  }
 }

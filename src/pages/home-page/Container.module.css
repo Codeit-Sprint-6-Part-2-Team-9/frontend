@@ -1,3 +1,18 @@
 .Container {
-  width: 328px;
+  width: 375px;
+  height: 3248px;
+}
+
+@media (min-width: 700px) {
+  .Container {
+    width: 744px;
+    height: 3432px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .Container {
+    width: 1920px;
+    height: 4680px;
+  }
 }
