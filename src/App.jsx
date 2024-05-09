@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <div className={classes.app}>
         <img
-          class={classes.topOverlay}
+          className={classes.topOverlay}
           src={TOP_OVERLAY}
           alt="홈페이지 상단 오버레이 이미지"
         />
@@ -20,7 +20,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route element={<Layout />}>
             <Route path="/list" element={<List />} />
-            <Route path="/mypage" element={<MyPage />} />
+            <Route path="/my-page" element={<MyPage />} />
           </Route>
           <Route
             path="/*"
