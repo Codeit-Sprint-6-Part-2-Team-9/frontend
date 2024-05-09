@@ -10,7 +10,7 @@ function HomePage() {
   };
 
   const handleAddCredits = () => {
-    chargeCredits(26000);
+    chargeCredits(36000);
   };
 
   return (
@@ -24,7 +24,7 @@ function HomePage() {
       <Button onClick={handleResetLocalStorage}>로컬스토리지 초기화</Button>
       <br />
       <br />
-      <Button onClick={handleAddCredits}>26000 크레딧 추가</Button>
+      <Button onClick={handleAddCredits}>36000 크레딧 추가</Button>
       <br />
     </div>
   );
