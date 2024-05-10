@@ -4,6 +4,8 @@ import { useDisclosure } from "@mantine/hooks";
 import { Button } from "@mantine/core";
 import ModalComponent from "../components/Modal/ModalComponent";
 import IdolsQueryExample from "../api/idols/IdolsQueryExample";
+import IdolsQueryExample from '../api/idols/IdolsQueryExample';
+import MyCreditRechargeButton from '../components/MyCreditRechargeButton';
 
 function List() {
   const [opened, { open, close }] = useDisclosure(false);
@@ -54,7 +56,7 @@ function List() {
       <div>
         <Carousel />
       </div>
-      <IdolsQueryExample/>
+      <IdolsQueryExample />
     </div>
   );
 }
