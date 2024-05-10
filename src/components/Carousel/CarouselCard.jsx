@@ -4,12 +4,10 @@ import { useDisclosure } from '@mantine/hooks';
 import Typography from '../Typography';
 import classes from './Carousel.module.css';
 import calculateTimeRemaining from '../../utils/calculateTimeRemaining.jsx';
-import creditIcon from '../../assets/creditIcon.svg';
 import coverArtistImage from '../../assets/coverDonation.svg';
 import Buttons from '../../components/Buttons';
 import ModalComponent from '../../components/Modal/ModalComponent';
 import creditIcon from "../../assets/creditIcon.svg";
-import coverArtistImage from "../../assets/coverDonation.svg";
 
 const CarouselCard = ({ card }) => {
   const { idol, receivedDonations, targetDonation, deadline, title, subtitle } =

@@ -17,7 +17,6 @@ function List() {
 
   return (
     <div>
-      <CarouselSection />
       List
       <ModalComponent
         opened={opened}
@@ -55,7 +54,6 @@ function List() {
       <div>
         <CarouselSection/>
       </div>
-      <IdolsQueryExample />
     </div>
   );
 }
