@@ -1,4 +1,3 @@
-import { useMemo } from 'react';
 import { useInfiniteQuery } from '@tanstack/react-query';
 
 function useInfiniteQueryForFandomKAPI({

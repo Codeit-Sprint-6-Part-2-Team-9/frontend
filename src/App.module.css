@@ -1,5 +1,13 @@
 .app {
   /*임시로 아무거나 넣었습니다.*/
   margin: auto;
-  background-color: black;
+  background-color: var(--mantine-color-black-0);
+}
+
+.topOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
 }
