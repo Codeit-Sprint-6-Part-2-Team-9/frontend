@@ -55,7 +55,6 @@
 
 @media (min-width: 1280px) {
   .introTitleFont {
-    font-family: Pretendard;
     font-size: 26px;
     font-weight: 700;
     line-height: 31.03px;
@@ -66,13 +65,14 @@
   display: flex;
   width: 393.68px;
   height: 329.84px;
-  margin: 0 auto;
+  margin: -100px auto;
 }
 
 @media (min-width: 768px) {
   .introImgWrap {
     width: 713.98px;
     height: 598.2px;
+    margin-top: -150px;
   }
 }
 
@@ -80,15 +80,46 @@
   .introImgWrap {
     width: 932.4px;
     height: 781.2px;
-    margin-top: 0px;
+    margin-top: -385px;
   }
 }
 
 .introImg {
+  display: block;
   width: 95%;
   height: 100%;
   opacity: 0.7;
   margin: 0 auto;
+}
+
+.logoImgWrap {
+  display: flex;
+  width: 236.64px;
+  height: 45.1px;
+  opacity: 0px;
+  margin: 130px auto;
+}
+
+@media (min-width: 768px) {
+  .logoImgWrap {
+    width: 325.34px;
+    height: 62px;
+    margin-top: 160px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .logoImgWrap {
+    width: 509px;
+    height: 97px;
+    margin-top: 165px;
+  }
+}
+
+.logoImg {
+  width: 100%;
+  object-fit: contain;
+  z-index: 9999;
 }
 
 .description {
@@ -112,17 +143,31 @@
 .landingButton {
   display: flex;
   justify-content: center;
-  margin-top: 664px;
+  margin-top: 150px;
 }
 
 @media (min-width: 768px) {
   .landingButton {
-    margin-top: 1032px;
+    margin-top: 132px;
   }
 }
 
 @media (min-width: 1280px) {
   .landingButton {
-    margin-top: 912px;
+    margin-top: 150px;
+  }
+}
+
+.landingButtonFont {
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .landingButtonFont {
+    font-weight: 700;
   }
 }

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import theme from '../../theme';
+import logoimg from '../../assets/logo.svg';
 import introimg from '../../assets/introimg.svg';
 import Container from './Container';
 import Buttons from '../../components/Buttons';
@@ -17,6 +18,11 @@ const HomePage = () => {
             하는 방법
           </div>
         </div>
+        <Link to="/list">
+          <div className={classes.logoImgWrap}>
+            <img className={classes.logoImg} src={logoimg} alt="로고 이미지" />
+          </div>
+        </Link>
         <div className={classes.introImgWrap}>
           <img
             className={classes.introImg}
@@ -26,7 +32,9 @@ const HomePage = () => {
         </div>
         <div className={classes.landingButton}>
           <Link to="/list">
-            <Buttons type="landing">지금 시작하기</Buttons>
+            <Buttons type="landing">
+              <span className={classes.landingButtonFont}>지금 시작하기</span>
+            </Buttons>
           </Link>
         </div>
       </section>
