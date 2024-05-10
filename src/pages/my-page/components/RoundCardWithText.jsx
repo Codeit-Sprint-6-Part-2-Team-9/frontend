@@ -4,7 +4,13 @@ import classes from './RoundCardWithText.module.css';
 import RoundCard from '../../../components/RoundCard';
 import ICON_CHECKED from '../../../assets/icon_checked.svg';
 
-const RoundCardWithText = ({ name, groupName, profilePicture }) => {
+const RoundCardWithText = ({
+  id,
+  name,
+  groupName,
+  profilePicture,
+  onClick,
+}) => {
   const [checked, setChecked] = useState(false);
 
   return (
@@ -12,10 +18,16 @@ const RoundCardWithText = ({ name, groupName, profilePicture }) => {
       className={classes.RoundCardWithText}
       onClick={() => {
         setChecked(!checked);
+        onClick(id);
       }}
     >
       <div className={classes.roundCardWrapper}>
-        <RoundCard src={profilePicture} alt={name} />
+        {checked && (
+          <div className={classes.checkedWrapper}>
+            <img className={classes.iconChecked} src={ICON_CHECKED} />
+          </div>
+        )}
+        <RoundCard profileUrl={profilePicture} alt={name} />
       </div>
       <p className={classes.name}>{name}</p>
       <p className={classes.groupName}>{groupName}</p>

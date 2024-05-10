@@ -11,8 +11,8 @@ function useFavoriteIdols() {
     setFavoriteIdols([]);
   }
 
-  function addFavoriteIdol(idolId) {
-    setFavoriteIdols([...favoriteIdols, idolId]);
+  function addFavoriteIdol(idolList) {
+    setFavoriteIdols((prevState) => [...prevState, ...idolList]);
   }
 
   function removeFavoriteIdol(idolId) {

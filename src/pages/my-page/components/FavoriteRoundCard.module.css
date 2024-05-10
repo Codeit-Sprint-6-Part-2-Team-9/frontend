@@ -1,0 +1,23 @@
+.FavoriteRoundCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.roundCardWrapper {
+  width: 88px;
+  height: 88px;
+  borderradius: 50%;
+  position: relative;
+}
+.name {
+  margin: 0;
+  font-weight: 700;
+  color: #f4efef;
+}
+
+.groupName {
+  margin: 0;
+  color: white;
+  opacity: 0.6;
+}

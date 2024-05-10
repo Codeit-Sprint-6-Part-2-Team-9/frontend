@@ -5,8 +5,8 @@
   gap: 5px;
 }
 .roundCardWrapper {
-  width: 200px;
-  height: 200px;
+  width: 111px;
+  height: 111px;
   borderradius: 50%;
   position: relative;
 }

@@ -1,10 +1,9 @@
-import CarouselSection from "../components/Carousel/Carousel";
-import { useState } from "react";
-import { useDisclosure } from "@mantine/hooks";
-import { Button } from "@mantine/core";
-import ModalComponent from "../components/Modal/ModalComponent";
-import IdolsQueryExample from "../api/idols/IdolsQueryExample";
-import IdolsQueryExample from '../api/idols/IdolsQueryExample';
+import CarouselSection from '../components/Carousel/Carousel';
+import { useState } from 'react';
+import { useDisclosure } from '@mantine/hooks';
+import { Button } from '@mantine/core';
+import ModalComponent from '../components/Modal/ModalComponent';
+
 import MyCreditRechargeButton from '../components/MyCreditRechargeButton';
 
 function List() {
@@ -53,10 +52,7 @@ function List() {
           후원하기 모달
         </Button>
       </div>
-      <div>
-        <Carousel />
-      </div>
-      <IdolsQueryExample />
+      <div></div>
     </div>
   );
 }
