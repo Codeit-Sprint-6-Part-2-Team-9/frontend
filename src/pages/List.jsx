@@ -1,10 +1,9 @@
+import { useState } from 'react';
+import { useDisclosure } from '@mantine/hooks';
+import { Button } from '@mantine/core';
+import ModalComponent from '../components/Modal/ModalComponent';
+
 import CarouselSection from "../components/Carousel/Carousel";
-import { useState } from "react";
-import { useDisclosure } from "@mantine/hooks";
-import { Button } from "@mantine/core";
-import ModalComponent from "../components/Modal/ModalComponent";
-import IdolsQueryExample from "../api/idols/IdolsQueryExample";
-import IdolsQueryExample from '../api/idols/IdolsQueryExample';
 import MyCreditRechargeButton from '../components/MyCreditRechargeButton';
 
 function List() {
@@ -54,7 +53,7 @@ function List() {
         </Button>
       </div>
       <div>
-        <Carousel />
+        <CarouselSection/>
       </div>
       <IdolsQueryExample />
     </div>
