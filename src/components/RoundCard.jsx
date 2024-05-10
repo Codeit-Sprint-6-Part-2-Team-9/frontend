@@ -1,23 +1,11 @@
 import styles from './RoundCard.module.css';
-import IdolImg from './amber.png';
 
-const RoundCard = ({ src }) => {
+const RoundCard = ({ profileUrl, name }) => {
   return (
     <div className={styles.RoundCard}>
-      <img src={src} alt="amber" />
+      <img src={profileUrl} alt={name} />
     </div>
   );
 };
 
 export default RoundCard;
-
-// const RoundCard = ({src}) => {
-//     return (
-//         <div>
-//             <img src={src} alt={name} />
-//         </div>
-//     )
-// }
-
-// export default RoundCard;
-// <RoundCard src={IdolImg}/>
