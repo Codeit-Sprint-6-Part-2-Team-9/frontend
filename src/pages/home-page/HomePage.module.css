@@ -80,13 +80,13 @@
   .introImgWrap {
     width: 932.4px;
     height: 781.2px;
-    margin-top: -385px;
+    margin-top: -365px;
   }
 }
 
 .introImg {
   display: block;
-  width: 95%;
+
   height: 100%;
   opacity: 0.7;
   margin: 0 auto;
@@ -118,19 +118,18 @@
 
 .logoImg {
   width: 100%;
-  object-fit: contain;
   z-index: 9999;
 }
 
 .landingButton {
   display: flex;
   justify-content: center;
-  margin-top: 150px;
+  margin-top: 130px;
 }
 
 @media (min-width: 768px) {
   .landingButton {
-    margin-top: 132px;
+    margin-top: 162px;
   }
 }
 
