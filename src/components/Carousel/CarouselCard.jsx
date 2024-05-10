@@ -8,6 +8,8 @@ import creditIcon from '../../assets/creditIcon.svg';
 import coverArtistImage from '../../assets/coverDonation.svg';
 import Buttons from '../../components/Buttons';
 import ModalComponent from '../../components/Modal/ModalComponent';
+import creditIcon from "../../assets/creditIcon.svg";
+import coverArtistImage from "../../assets/coverDonation.svg";
 
 const CarouselCard = ({ card }) => {
   const { idol, receivedDonations, targetDonation, deadline, title, subtitle } =
@@ -50,6 +52,8 @@ const CarouselCard = ({ card }) => {
             후원하기
           </Buttons>
         </div>
+
+
       </div>
 
       <div className={classes.progressbarSection}>

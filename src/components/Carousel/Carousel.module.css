@@ -13,6 +13,13 @@
   width: 100%;
 }
 
+.donateButton {
+  position: absolute;
+  margin: 8px 20px;
+  right: 0;
+  bottom: 0;
+}
+
 .progressbarSection {
   width: 158px;
   height: 87px;
@@ -39,11 +46,18 @@
   align-items: center;
 }
 
-.creditIcon {
-  width: 12px;
-  height: 12px;
-  margin: 0;
-  padding: 0;
+.carouselWrapper {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.root {
+  width: 100%;
+  margin-left: 24px;
+}
+
+.controls {
+  visibility: hidden;
 }
 
 .donateBtn {
@@ -72,9 +86,18 @@
 }
 
 @media (min-width: 768px) {
+  .carouselWrapper {
+    margin-top: 64px;
+  }
+
   .imageSection {
     width: 282px;
     height: 293px;
+  }
+
+  .donateButton {
+    margin: 20px 24px;
+
   }
 
   .progressbarSection {
@@ -101,5 +124,31 @@
     font-weight: 500;
     text-align: left;
     margin: 8px 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .carouselWrapper {
+    width: 100%;
+    margin: 50px 0;
+    overflow: hidden;
+  }
+
+  .root {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .control {
+    &[data-inactive] {
+      visibility: hidden;
+    }
+  }
+
+  .controls {
+    width: 1361px;
+    margin-left: calc((100% - 1361px) / 2);
+    margin-right: calc((100% - 1361px) / 2);
+    visibility: visible;
   }
 }
