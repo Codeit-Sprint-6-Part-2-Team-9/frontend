@@ -41,19 +41,22 @@ const HomePage = () => {
 
       <section className={classes.description}>
         <div className={classes.descriptionSection}>
-          <div>후원하기</div>
-          <p>후원하기 설명 내용...</p>
-        </div>
-        <div
-          className={classes.descriptionSection}
-          style={{ background: theme.colors.brand[0] }}
-        >
-          <div>이달의 아티스트</div>
-          <p>이달의 아티스트 설명 내용...</p>
+          <div className={classes.backgroundGradient}>
+            <div>후원하기</div>
+            <p>후원하기 설명 내용...</p>
+          </div>
         </div>
         <div className={classes.descriptionSection}>
-          <div>나만의 아티스트</div>
-          <p>나만의 아티스트 설명 내용...</p>
+          <div className={classes.backgroundGradient}>
+            <div>이달의 아티스트</div>
+            <p>이달의 아티스트 설명 내용...</p>
+          </div>
+        </div>
+        <div className={classes.descriptionSection}>
+          <div className={classes.backgroundGradient}>
+            <div>나만의 아티스트</div>
+            <p>나만의 아티스트 설명 내용...</p>
+          </div>
         </div>
       </section>
     </Container>
