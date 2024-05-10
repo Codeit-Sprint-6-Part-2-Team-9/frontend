@@ -1,0 +1,98 @@
+.MycreditButton {
+  position: relative;
+  width: 327px !important;
+  height: 87px !important;
+  border: 1px solid #f1eef9cc !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+}
+
+.creditContainer {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.creditTitle {
+  margin-bottom: 4px;
+  color: #ffffff99;
+  text-align: left;
+  font-family: Pretendard;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.32px;
+}
+
+.creditContent {
+  display: flex;
+  align-items: center;
+}
+
+.creditIcon {
+  height: 33px;
+  margin-right: 4px;
+  margin-left: -5px;
+}
+
+.creditAmount {
+  margin-bottom: 2px;
+  color: #ffffffde;
+  text-align: left;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.textSection {
+  margin: 31px 20px 30px 0;
+  text-align: left;
+  letter-spacing: 0.05em;
+  font-family: Pretendard;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+@media (min-width: 768px) {
+  .MycreditButton {
+    width: 696px !important;
+    height: 131px !important;
+  }
+
+  .creditContainer {
+    top: 35px;
+    left: 64px;
+  }
+
+  .creditTitle {
+    margin-bottom: 14px;
+    font-size: 16px;
+    line-height: 19.09px;
+  }
+
+  .creditAmount {
+    font-size: 24px;
+  }
+
+  .textSection {
+    margin: 52px 64px 53px 0;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .MycreditButton {
+    width: 1200px !important;
+    height: 131px !important;
+  }
+
+  .creditContainer {
+    top: 30px;
+    left: 78px;
+  }
+
+  .textSection {
+    margin: 30px 80px 30px 0;
+  }
+}

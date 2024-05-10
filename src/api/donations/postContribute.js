@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { envvars } from '../config';
+import { ENV } from '../config';
 
 async function postContribute({ idolId, creditsToDonate }) {
-    const [serverUrl, teamName] = envvars;
+    const [serverUrl, teamName] = ENV;
 
     const res = await axios.post(
         `${serverUrl}/${teamName}/donations/${idolId}/contribute`,
