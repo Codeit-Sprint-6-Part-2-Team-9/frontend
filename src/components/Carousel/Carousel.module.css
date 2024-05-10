@@ -15,8 +15,8 @@
 
 .progressbarSection {
   width: 158px;
-  height: auto;
-  margin-top: 12px;
+  height: 87px;
+  margin-top: 10px;
 }
 
 .artistImage {
@@ -30,10 +30,11 @@
 .progressbarTextSection {
   display: flex;
   justify-content: space-between;
-  margin: 24px 0;
+  margin-top: 24px;
 }
 
 .progressbarCreditSection {
+  margin-top: 24px;
   display: flex;
   align-items: center;
 }
@@ -67,7 +68,7 @@
   font-weight: 500;
   line-height: 16px;
   text-align: left;
-  margin: 8px 0;
+  margin-top: 6px;
 }
 
 @media (min-width: 768px) {
