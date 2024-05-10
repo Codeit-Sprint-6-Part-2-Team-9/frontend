@@ -1,9 +1,9 @@
 import { useState } from "react";
-import useChartQuery from "./useChartQuery";
 import NotFound from "../../pages/NotFound";
+import useIdolsQuery from "./useIdolsQuery";
 
-function ChartQueryExample() {
-    const { data, isLoading, isError, fetchNextPage, hasNextPage } = useChartQuery('female');
+function IdolsQueryExample() {
+    const { data, error, isLoading, isError, fetchNextPage, hasNextPage } = useIdolsQuery();
     const [page, setPage] = useState(0);
 
     const isFetchThrottled = false;
@@ -17,7 +17,7 @@ function ChartQueryExample() {
         return (<NotFound errorMessage={"오류가 발생하였습니다."}/>);
     }
 
-    const idolPage = data.pages[page].idols;
+    const idolPage = data.pages[page].list;
     const isNextPageAvailable = data.pages[data.pages.length - 1].nextCursor !== null || page < data.pages.length - 1;
     const isPreviousPageAvailable = page > 0;
 
@@ -47,4 +47,4 @@ function ChartQueryExample() {
     );
 }
 
-export default ChartQueryExample;
+export default IdolsQueryExample;
