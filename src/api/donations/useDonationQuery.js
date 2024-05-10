@@ -1,4 +1,4 @@
-import { useInfiniteQueryForFandomKAPI } from '../utils';
+import { useInfiniteQueryForFandomKAPI } from '../hooks';
 import { SERVER_STATE_KEYS } from '../config';
 import getDonations from './getDonations';
 
