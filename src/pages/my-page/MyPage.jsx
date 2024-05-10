@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import RoundCardWithText from './RoundCardWithText';
-import Container from './Container.jsx';
+import RoundCardWithText from './components/RoundCardWithText';
+import Container from './components/Container.jsx';
 import classes from './MyPage.module.css';
 import Buttons from '../../components/Buttons';
 

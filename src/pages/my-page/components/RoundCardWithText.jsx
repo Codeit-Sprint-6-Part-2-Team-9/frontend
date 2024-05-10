@@ -1,5 +1,5 @@
 import classes from './RoundCardWithText.module.css';
-import RoundCard from '../../components/RoundCard';
+import RoundCard from '../../../components/RoundCard';
 import DeleteBtn from './DeleteBtn';
 
 const RoundCardWithText = ({ name, groupName, onClick }) => {

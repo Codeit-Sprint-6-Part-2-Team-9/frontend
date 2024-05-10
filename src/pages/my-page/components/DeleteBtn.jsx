@@ -1,5 +1,5 @@
 import classes from './DeleteBtn.module.css';
-import ICON_DELETE from '../../assets/icon_delete.svg';
+import ICON_DELETE from '../../../assets/icon_delete.svg';
 
 const DeleteBtn = ({ onClick }) => {
   return (
