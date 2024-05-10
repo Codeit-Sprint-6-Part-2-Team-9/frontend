@@ -28,10 +28,10 @@ function CarouselSection() {
   return (
     <section className={classes.carouselWrapper}>
       <Carousel
-        height={402}
+        height={{ lg: "402", sm: "402", xs: "302" }}
+        align='start'
         slideSize={{ lg: "282", sm: "282", xs: "158" }}
         slideGap={{ lg: "24", sm: "16", xs: "8" }}
-        align="start"
         slidesToScroll={4}
         previousControlIcon={
           <img src={prevIcon} className={classes.carouselIcon} />
