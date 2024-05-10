@@ -1,9 +1,9 @@
 import { useLocalStorage } from "@mantine/hooks";
-import { clientStateKeys } from "../config";
+import { CLIENT_STATE_KEYS } from "../config";
 
 function useCredits() {
     const [credits, setCredits] = useLocalStorage({
-        key: clientStateKeys.credits,
+        key: CLIENT_STATE_KEYS.credits,
         defaultValue: 0,
     });
 

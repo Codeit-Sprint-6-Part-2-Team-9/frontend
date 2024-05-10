@@ -1,10 +1,10 @@
 import { useInfiniteQueryForFandomKAPI } from '../utils';
-import { serverStateKeys } from '../config';
+import { SERVER_STATE_KEYS } from '../config';
 import getDonations from './getDonations';
 
 function useDonationQuery() {
     return useInfiniteQueryForFandomKAPI({
-        serverStateKey: serverStateKeys.donation,
+        serverStateKey: SERVER_STATE_KEYS.donation,
         queryFunction: getDonations,
     });
 }

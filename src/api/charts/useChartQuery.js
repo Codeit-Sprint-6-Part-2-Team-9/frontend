@@ -1,21 +1,13 @@
-import { useInfiniteQueryForFandomKAPI } from '../utils';
+import { useInfiniteQueryForFandomKAPI } from '../hooks';
 import { serverStateKeys } from '../config';
 import getCharts from './getCharts';
 
-function useFemaleChartQuery() {
+function useChartQuery(gender = 'female') {
     return useInfiniteQueryForFandomKAPI({
-        serverStateKey: serverStateKeys.femaleChart,
-        queryArguments: { gender: 'female' },
+        serverStateKey: serverStateKeys[`${gender}Chart`],
+        queryArguments: { gender },
         queryFunction: getCharts,
     });
 }
 
-function useMaleChartQuery() {
-    return useInfiniteQueryForFandomKAPI({
-        serverStateKey: serverStateKeys.femaleChart,
-        queryArguments: { gender: 'male' },
-        queryFunction: getCharts,
-    });
-}
-
-export { useFemaleChartQuery, useMaleChartQuery };
+export default useChartQuery;

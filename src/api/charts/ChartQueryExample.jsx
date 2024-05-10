@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useFemaleChartQuery } from "../api/charts/useChartQuery";
+import { useChartQuery } from "../api/charts/useChartQuery";
 import NotFound from "../../pages/NotFound";
 
 function ChartQueryExample() {
-    const { data, isLoading, isError, fetchNextPage, hasNextPage } = useFemaleChartQuery();
+    const { data, isLoading, isError, fetchNextPage, hasNextPage } = useChartQuery();
     const [page, setPage] = useState(0);
 
     const isFetchThrottled = false;
@@ -13,6 +13,7 @@ function ChartQueryExample() {
     }
 
     if(isError) {
+        console.error(error);
         return (<NotFound errorMessage={"오류가 발생하였습니다."}/>);
     }
 
