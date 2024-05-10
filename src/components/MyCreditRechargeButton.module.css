@@ -56,7 +56,7 @@
 
 @media (min-width: 768px) {
   .MycreditButton {
-    width: 696px !important;
+    width: 100% !important;
     height: 131px !important;
   }
 
