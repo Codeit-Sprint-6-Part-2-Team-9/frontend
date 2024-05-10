@@ -4,7 +4,7 @@ import useDonationQuery from "./useDonationQuery";
 import useDonationMutation from "./useDonationMutation";
 
 function DonationQueryExample() {
-    const { data, isLoading, isError, fetchNextPage, hasNextPage } = useDonationQuery();
+    const { data, error, isLoading, isError, fetchNextPage, hasNextPage } = useDonationQuery();
     const { sendDonation } = useDonationMutation();
     const [page, setPage] = useState(0);
 
@@ -15,10 +15,11 @@ function DonationQueryExample() {
     }
 
     if(isError) {
+        console.error(error);
         return (<NotFound errorMessage={"오류가 발생하였습니다."}/>);
     }
 
-    const donationPage = data.pages[page].idols;
+    const donationPage = data.pages[page].list;
     const isNextPageAvailable = data.pages[data.pages.length - 1].nextCursor !== null || page < data.pages.length - 1;
     const isPreviousPageAvailable = page > 0;
 
@@ -55,9 +56,10 @@ function DonationQueryExample() {
                 return (
                     <div key={index}>
                         {donation.title}
+                        <br/>
                         {donation.idol.name}
                         {[500, 1000, 2000].map((value) => {
-                            return <button onClick={() => payDonation(value, donation.id)}>{donation.id}에게 {value}만큼 기부하기</button>
+                            return <button onClick={() => payDonation(value, donation.id)}>{donation.idol.name}에게 {value}만큼 기부하기</button>
                         })}
                     </div>
                 );

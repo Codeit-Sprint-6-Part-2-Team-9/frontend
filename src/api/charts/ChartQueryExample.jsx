@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useChartQuery } from "../api/charts/useChartQuery";
+import useChartQuery from "./useChartQuery";
 import NotFound from "../../pages/NotFound";
 
 function ChartQueryExample() {

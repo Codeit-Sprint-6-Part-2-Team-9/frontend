@@ -3,7 +3,7 @@ import NotFound from "../../pages/NotFound";
 import useIdolsQuery from "./useIdolsQuery";
 
 function IdolsQueryExample() {
-    const { data, isLoading, isError, fetchNextPage, hasNextPage } = useIdolsQuery();
+    const { data, error, isLoading, isError, fetchNextPage, hasNextPage } = useIdolsQuery();
     const [page, setPage] = useState(0);
 
     const isFetchThrottled = false;
@@ -13,6 +13,7 @@ function IdolsQueryExample() {
     }
 
     if(isError) {
+        console.error(error);
         return (<NotFound errorMessage={"오류가 발생하였습니다."}/>);
     }
 
