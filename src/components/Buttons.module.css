@@ -162,7 +162,7 @@
   margin-right: -2px;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
   .landingButtonWrap {
     width: 477px !important;
   }

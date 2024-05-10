@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useFemaleChartQuery } from '../charts/useChartQuery.js';
+import useChartQuery from "./useChartQuery";
 import NotFound from '../../pages/NotFound';
 
 function ChartQueryExample() {
@@ -31,10 +31,10 @@ function ChartQueryExample() {
         return;
       }
       await fetchNextPage();
-    }
     setPage(page + 1);
+    }
   };
-
+  
   return (
     <div>
       {idolPage.map((idol, index) => {

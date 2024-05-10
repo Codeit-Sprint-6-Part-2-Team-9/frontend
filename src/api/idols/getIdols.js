@@ -1,11 +1,12 @@
 import axios from 'axios';
-import { envvars } from '../config';
+import { ENV } from '../config';
 
 async function getIdols({ cursor, keyword = '' }) {
-    const [serverUrl, teamName] = envvars;
+    const { serverUrl, pageSize, teamName } = ENV;
 
     const res = await axios.get(`${serverUrl}/${teamName}/idols`, {
-        params: { cursor, keyword },
+        // 임시 페이지 사이즈
+        params: { cursor, keyword, pageSize: 9999 },
     });
     const idols = res.data;
 

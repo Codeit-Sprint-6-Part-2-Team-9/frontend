@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { useDisclosure } from '@mantine/hooks';
 import { Button } from '@mantine/core';
-import ChartQueryExample from '../api/charts/ChartQueryExample';
-
 import Carousel from '../components/Carousel/Carousel';
 import ModalComponent from '../components/Modal/ModalComponent';
+
 
 function List() {
   const [opened, { open, close }] = useDisclosure(false);
@@ -17,12 +16,16 @@ function List() {
 
   return (
     <div>
-      <ChartQueryExample />
       List
       <ModalComponent
         opened={opened}
         close={close}
         modalDataState={modalDataState}
+      />
+      <MyCreditRechargeButton
+        onClick={() => {
+          openModal('creditCharge');
+        }}
       />
       <div style={{ display: 'flex', gap: '10px' }}>
         <Button
@@ -48,8 +51,9 @@ function List() {
         </Button>
       </div>
       <div>
-        <Carousel />
+        <CarouselSection/>
       </div>
+      <IdolsQueryExample/>
     </div>
   );
 }
