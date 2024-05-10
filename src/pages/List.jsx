@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useDisclosure } from '@mantine/hooks';
 import { Button } from '@mantine/core';
 import ModalComponent from '../components/Modal/ModalComponent';
-
 import CarouselSection from "../components/Carousel/Carousel";
 import MyCreditRechargeButton from '../components/MyCreditRechargeButton';
 
