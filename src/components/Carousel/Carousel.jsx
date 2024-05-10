@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import CarouselCard from "./CarouselCard";
-import mockData from "./donationMockData.json";
+import { useState, useEffect } from 'react';
+import CarouselCard from './CarouselCard';
+import mockData from './donationMockData.json';
 
 const Carousel = () => {
   const [cardData, setCardData] = useState([]);
