@@ -1,10 +1,10 @@
-import axios from 'axios';
+import { default as axios } from '../axios';
 import { ENV } from '../config';
 
 async function postVote(idolId) {
     const { serverUrl, teamName } = ENV;
     const res = await axios.post(
-        `${serverUrl}/${teamName}/votes`, {
+        `$/${teamName}/votes`, {
             idolId,
         });
 
