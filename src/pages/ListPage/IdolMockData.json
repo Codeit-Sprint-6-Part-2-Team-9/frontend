@@ -1,0 +1,185 @@
+{
+    "list": [
+      {
+        "id": 41,
+        "name": "혜림",
+        "gender": "female",
+        "group": "원더걸스",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714487893644/wondergirls_hyerim.jpg",
+        "totalVotes": 20000,
+        "teamId": 11
+      },
+      {
+        "id": 42,
+        "name": "선미",
+        "gender": "female",
+        "group": "원더걸스",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714487942722/wondergirls_sunmi.jpg",
+        "totalVotes": 94000,
+        "teamId": 11
+      },
+      {
+        "id": 43,
+        "name": "예은",
+        "gender": "female",
+        "group": "원더걸스",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714487974665/wondergirls_yeeun.jpg",
+        "totalVotes": 84000,
+        "teamId": 11
+      },
+      {
+        "id": 44,
+        "name": "유빈",
+        "gender": "female",
+        "group": "원더걸스",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714488008562/wondergirls_yubin.jpg",
+        "totalVotes": 64000,
+        "teamId": 11
+      },
+      {
+        "id": 45,
+        "name": "유리",
+        "gender": "female",
+        "group": "소녀시대",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714488746255/girls-generation_yuri.png",
+        "totalVotes": 204000,
+        "teamId": 11
+      },
+      {
+        "id": 46,
+        "name": "윤아",
+        "gender": "female",
+        "group": "소녀시대",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714488792011/girls-generation_yoona.png",
+        "totalVotes": 203000,
+        "teamId": 11
+      },
+      {
+        "id": 47,
+        "name": "티파니",
+        "gender": "female",
+        "group": "소녀시대",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714488820928/girls-generation_tiffany.png",
+        "totalVotes": 103000,
+        "teamId": 11
+      },
+      {
+        "id": 48,
+        "name": "태연",
+        "gender": "female",
+        "group": "소녀시대",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714488848152/girls-generation_taeyeon.png",
+        "totalVotes": 83000,
+        "teamId": 11
+      },
+      {
+        "id": 49,
+        "name": "써니",
+        "gender": "female",
+        "group": "소녀시대",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714488909418/girls-generation_sunny.png",
+        "totalVotes": 63000,
+        "teamId": 11
+      },
+      {
+        "id": 50,
+        "name": "수영",
+        "gender": "female",
+        "group": "소녀시대",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714488956406/girls-generation_sooyoung.png",
+        "totalVotes": 79000,
+        "teamId": 11
+      },
+      {
+        "id": 192,
+        "name": "준수",
+        "gender": "male",
+        "group": "2PM",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714636270647/2PM_junsu.png",
+        "totalVotes": 204000,
+        "teamId": 11
+      },
+      {
+        "id": 193,
+        "name": "닉쿤",
+        "gender": "male",
+        "group": "2PM",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714636295159/2PM_nickoon.png",
+        "totalVotes": 76000,
+        "teamId": 11
+      },
+      {
+        "id": 194,
+        "name": "택연",
+        "gender": "male",
+        "group": "2PM",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714636334786/2PM_taecyeon.png",
+        "totalVotes": 88000,
+        "teamId": 11
+      },
+      {
+        "id": 195,
+        "name": "우영",
+        "gender": "male",
+        "group": "2PM",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714636362668/2PM_wooyoung.png",
+        "totalVotes": 45000,
+        "teamId": 11
+      },
+      {
+        "id": 196,
+        "name": "손동운",
+        "gender": "male",
+        "group": "비스트",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714636393634/beast_dongwoon.png",
+        "totalVotes": 37000,
+        "teamId": 11
+      },
+      {
+        "id": 197,
+        "name": "윤두준",
+        "gender": "male",
+        "group": "비스트",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714636434516/beast_dujun.png",
+        "totalVotes": 700000,
+        "teamId": 11
+      },
+      {
+        "id": 198,
+        "name": "이기광",
+        "gender": "male",
+        "group": "비스트",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714636456878/beast_gigwang.png",
+        "totalVotes": 654000,
+        "teamId": 11
+      },
+      {
+        "id": 199,
+        "name": "양요섭",
+        "gender": "male",
+        "group": "비스트",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714636477708/beast_yangyoseop.png",
+        "totalVotes": 445000,
+        "teamId": 11
+      },
+      {
+        "id": 200,
+        "name": "대성",
+        "gender": "male",
+        "group": "빅뱅",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714636502433/bigbang_daesung.png",
+        "totalVotes": 99000,
+        "teamId": 11
+      },
+      {
+        "id": 201,
+        "name": "GD",
+        "gender": "male",
+        "group": "빅뱅",
+        "profilePicture": "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Fandom-K/idol/1714636540819/bigbang_GD.png",
+        "totalVotes": 800000,
+        "teamId": 11
+      }
+    ],
+    "nextCursor": 50
+  }
