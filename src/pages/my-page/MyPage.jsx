@@ -1,9 +1,9 @@
+import { useState } from 'react';
+
 import RoundCardWithText from './RoundCardWithText';
 import Container from './Container.jsx';
 import classes from './MyPage.module.css';
 import Buttons from '../../components/Buttons';
-
-import { useState } from 'react';
 
 const MyPage = () => {
   const [data, setData] = useState([]);
@@ -31,28 +31,7 @@ const MyPage = () => {
           <h1 className={classes.sectionTitle}>
             관심 있는 아이돌을 추가해보세요.
           </h1>
-          <div className={classes.addFavoriteIdolsWrapper}>
-            {/* <RoundCardWithText name="민지" groupName="뉴진스" />
-            <RoundCardWithText name="민지" groupName="뉴진스" />
-            <RoundCardWithText name="민지" groupName="뉴진스" />
-            <RoundCardWithText name="민지" groupName="뉴진스" />
-            <RoundCardWithText name="민지" groupName="뉴진스" />
-            <RoundCardWithText name="민지" groupName="뉴진스" />
-            <RoundCardWithText name="민지" groupName="뉴진스" />
-            <RoundCardWithText name="민지" groupName="뉴진스" />
-            <RoundCardWithText name="민지" groupName="뉴진스" />
-            <RoundCardWithText name="민지" groupName="뉴진스" />
-            <RoundCardWithText name="민지" groupName="뉴진스" />
-            <RoundCardWithText name="민지" groupName="뉴진스" />
-            <RoundCardWithText name="민지" groupName="뉴진스" />
-            <RoundCardWithText name="민지" groupName="뉴진스" />
-            <RoundCardWithText name="민지" groupName="뉴진스" />
-            <RoundCardWithText name="민지" groupName="뉴진스" />
-            <RoundCardWithText name="민지" groupName="뉴진스" />
-            <RoundCardWithText name="민지" groupName="뉴진스" />
-            <RoundCardWithText name="민지" groupName="뉴진스" />
-            <RoundCardWithText name="민지" groupName="뉴진스" /> */}
-          </div>
+          <div className={classes.addFavoriteIdolsWrapper}></div>
         </section>
         <div className={classes.btnWrapper}>
           <Buttons type="add" icon="plus">

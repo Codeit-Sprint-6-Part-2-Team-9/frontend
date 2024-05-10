@@ -20,7 +20,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route element={<Layout />}>
             <Route path="/list" element={<List />} />
-            <Route path="/mypage" element={<MyPage />} />
+            <Route path="/my-page" element={<MyPage />} />
           </Route>
           <Route
             path="/*"
