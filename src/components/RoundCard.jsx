@@ -1,10 +1,10 @@
-import styles from "./RoundCard.module.css";
-import IdolImg from "./amber.png";
+import styles from './RoundCard.module.css';
+import IdolImg from './amber.png';
 
-const RoundCard = () => {
+const RoundCard = ({ src }) => {
   return (
     <div className={styles.RoundCard}>
-      <img src={IdolImg} alt="amber" />
+      <img src={src} alt="amber" />
     </div>
   );
 };

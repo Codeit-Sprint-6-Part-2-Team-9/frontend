@@ -1,29 +1,32 @@
-import { useLocalStorage } from "@mantine/hooks";
-import { clientStateKeys } from "../config";
+import { useLocalStorage } from '@mantine/hooks';
+import { CLIENT_STATE_KEYS } from '../config';
 
 function useFavoriteIdols() {
-    const [favoriteIdols, setFavoriteIdols] = useLocalStorage({
-        key: clientStateKeys.favoriteIdols,
-        defaultValue: [],
-    });
+  const [favoriteIdols, setFavoriteIdols] = useLocalStorage({
+    key: CLIENT_STATE_KEYS.favoriteIdols,
+    defaultValue: [],
+  });
 
-    function resetFavoriteIdols() {
-        setFavoriteIdols([]);
-    }
+  function resetFavoriteIdols() {
+    setFavoriteIdols([]);
+  }
 
-    function addFavoriteIdol(idolId) {
-        setFavoriteIdols([...favoriteIdols, idolId]);
-    }
+  function addFavoriteIdol(idolId) {
+    setFavoriteIdols([...favoriteIdols, idolId]);
+  }
 
-    function removeFavoriteIdol(idolId) {
-        if(favoriteIdols.length === 0) return;
+  function removeFavoriteIdol(idolId) {
+    if (favoriteIdols.length === 0) return;
 
-        setFavoriteIdols(favoriteIdols.filter(
-            (value) => value !== idolId)
-        );
-    }
+    setFavoriteIdols(favoriteIdols.filter((value) => value !== idolId));
+  }
 
-    return [favoriteIdols, resetFavoriteIdols, addFavoriteIdol, removeFavoriteIdol];
+  return [
+    favoriteIdols,
+    resetFavoriteIdols,
+    addFavoriteIdol,
+    removeFavoriteIdol,
+  ];
 }
 
 export default useFavoriteIdols;
