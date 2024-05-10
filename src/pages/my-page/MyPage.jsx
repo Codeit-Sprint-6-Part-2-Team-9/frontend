@@ -13,6 +13,16 @@ import FavoriteRoundCard from './components/FavoriteRoundCard';
 import PREV_BTN from '../../assets/btnArrowLeft.svg';
 import NEXT_BTN from '../../assets/btnArrowRight.svg';
 
+const getPageSize = () => {
+  if (window.innerWidth >= 1280) {
+    return 16;
+  } else if (window.innerWidth >= 780) {
+    return 8;
+  } else {
+    return 6;
+  }
+};
+
 const MyPage = () => {
   const [
     favoriteIdols,
@@ -24,6 +34,9 @@ const MyPage = () => {
   const { data, error, isLoading, isError } = useIdolsQuery();
   const [idolData, setIdolData] = useState([]);
   const [checkedFavoriteId, setCheckedFavoriteId] = useState([]);
+  const [selectableIdols, setSelectableIdols] = useState([]);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [pageSize, setPageSize] = useState(getPageSize());
 
   const handleFavoriteList = (idolId) => {
     if (checkedFavoriteId.includes(idolId)) {
@@ -38,10 +51,40 @@ const MyPage = () => {
     removeFavoriteIdol(idolId);
   };
 
+  // Pagenation
+  const pageCount = Math.ceil(selectableIdols.length / pageSize);
+  const handleNextPage = () => {
+    setCurrentPage((prevPage) => Math.min(prevPage + 1, pageCount - 1));
+  };
+  const handlePrevPage = () => {
+    setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      setPageSize(getPageSize);
+    });
+
+    return () => {
+      window.removeEventListener('resize', () => {
+        setPageSize(getPageSize);
+      });
+    };
+  }, []);
+
   useEffect(() => {
     setIdolData(data?.pages[0].list);
     console.log(idolData);
   }, [data]);
+
+  useEffect(() => {
+    if (idolData?.length > 0) {
+      const selectableData = idolData.filter(
+        (idol) => !favoriteIdols.includes(idol.id),
+      );
+      setSelectableIdols(selectableData);
+    }
+  }, [idolData, favoriteIdols]);
 
   if (isLoading) {
     return <>Loading</>;
@@ -76,9 +119,11 @@ const MyPage = () => {
           <h1 className={classes.sectionTitle}>
             관심 있는 아이돌을 추가해보세요.
           </h1>
-          <div className={classes.addFavoriteIdolsWrapper}>
-            {idolData
-              ?.filter((idol) => !favoriteIdols.includes(idol.id))
+          <div
+            className={`${classes.addFavoriteIdolsWrapper} ${pageSize === 8 ? classes.tablet : ''} ${pageSize === 6 ? classes.mobile : ''}  `}
+          >
+            {selectableIdols
+              ?.slice(currentPage * pageSize, (currentPage + 1) * pageSize)
               .map((idol) => (
                 <RoundCardWithText
                   key={`idol-${idol.id}`}
@@ -90,8 +135,20 @@ const MyPage = () => {
                 />
               ))}
           </div>
-          <img src={PREV_BTN} className={classes.prevBtn} />
-          <img src={NEXT_BTN} className={classes.nextBtn} />
+          {currentPage !== 0 && (
+            <img
+              src={PREV_BTN}
+              className={classes.prevBtn}
+              onClick={handlePrevPage}
+            />
+          )}
+          {currentPage !== pageCount - 1 && (
+            <img
+              src={NEXT_BTN}
+              className={classes.nextBtn}
+              onClick={handleNextPage}
+            />
+          )}
         </section>
         <div className={classes.btnWrapper}>
           <Buttons
