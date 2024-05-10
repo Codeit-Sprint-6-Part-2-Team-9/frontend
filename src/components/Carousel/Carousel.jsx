@@ -44,7 +44,9 @@ function CarouselSection() {
         }}
       >
         {cardData.map((card) => (
-          <Carousel.Slide key={card.id}>
+          <Carousel.Slide
+          className={classes.carouselSlide}
+          key={card.id}>
             <CarouselCard card={card} />
           </Carousel.Slide>
         ))}
