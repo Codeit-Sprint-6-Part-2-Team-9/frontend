@@ -31,7 +31,7 @@ function CarouselSection() {
         height={{ lg: "402", sm: "402", xs: "302" }}
         align='start'
         slideSize={{ lg: "282", sm: "282", xs: "158" }}
-        slideGap={{ lg: "24", sm: "16", xs: "8" }}
+        slideGap={{ lg: "24", sm: "16", xs: "0" }}
         slidesToScroll={{lg: "4", sm: "3", xs: "2"}}
         previousControlIcon={
           <img src={prevIcon} className={classes.carouselIcon} />
