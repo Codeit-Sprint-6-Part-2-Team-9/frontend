@@ -80,8 +80,7 @@ const CarouselCard = ({ card }) => {
         </div>
         <Progress
           value={percentAchieved}
-          mt={10}
-          mb={100}
+          mt={0}
           size={1}
           radius={1}
           color="#F96D69"
