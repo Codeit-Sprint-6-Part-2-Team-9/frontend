@@ -36,6 +36,10 @@
 
 
 @media (min-width: 768px){
+    .creditRechargeButton {
+        margin: 0;
+    }
+
     .carouselSectionWrapper{
         margin-top: 16px;
         margin-left: 24px;
