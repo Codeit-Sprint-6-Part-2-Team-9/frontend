@@ -1,5 +1,6 @@
 const clientStateKeys = {
     credits: 'credits',
+    favoriteIdols: 'favoriteIdols',
 };
 
 const envvars = {
