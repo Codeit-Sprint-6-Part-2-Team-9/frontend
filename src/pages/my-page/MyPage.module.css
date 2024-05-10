@@ -11,14 +11,30 @@
 .favoriteIdols {
 }
 .addFavoriteIdols {
+  position: relative;
 }
 .addFavoriteIdolsWrapper {
+  position: relative;
   display: grid;
   grid-template-rows: 1fr 1fr;
   row-gap: 20px;
   column-gap: 20px;
   grid-template-columns: repeat(10, 1fr);
   overflow-x: scroll;
+}
+.prevBtn {
+  position: absolute;
+  left: -70px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.nextBtn {
+  position: absolute;
+  right: -70px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 .myFavoriteIdolsWrapper {
   display: flex;

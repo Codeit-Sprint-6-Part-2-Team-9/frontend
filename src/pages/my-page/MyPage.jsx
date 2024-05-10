@@ -10,6 +10,9 @@ import useIdolsQuery from '../../api/idols/useIdolsQuery';
 import useFavoriteIdols from '../../api/favoriteIdols/useFavoriteIdols';
 import FavoriteRoundCard from './components/FavoriteRoundCard';
 
+import PREV_BTN from '../../assets/btnArrowLeft.svg';
+import NEXT_BTN from '../../assets/btnArrowRight.svg';
+
 const MyPage = () => {
   const [
     favoriteIdols,
@@ -87,6 +90,8 @@ const MyPage = () => {
                 />
               ))}
           </div>
+          <img src={PREV_BTN} className={classes.prevBtn} />
+          <img src={NEXT_BTN} className={classes.nextBtn} />
         </section>
         <div className={classes.btnWrapper}>
           <Buttons
