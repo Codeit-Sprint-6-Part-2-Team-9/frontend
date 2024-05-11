@@ -2,10 +2,13 @@ import { useState } from "react";
 import NotFound from "../../pages/NotFound";
 import useDonationQuery from "./useDonationQuery";
 import useDonationMutation from "./useDonationMutation";
+import useCredits from "../credits/useCredits";
+import CreditExample from "../credits/CreditExample";
 
 function DonationQueryExample() {
     const { data, error, isLoading, isError, fetchNextPage, hasNextPage } = useDonationQuery();
-    const { sendDonation } = useDonationMutation();
+    const { mutate: sendDonation } = useDonationMutation();
+    const [credits, chargeCredits, payCredits, newCredits] = useCredits();
     const [page, setPage] = useState(0);
 
     const isFetchThrottled = false;
@@ -36,14 +39,13 @@ function DonationQueryExample() {
     }
     const payDonation = (amount, id) => {
         try {
-            function payCredit(value) {
-                if(value < 1000) {
-                    throw Error('not enough');
-                }
-                sendDonation(id);
-            }
-            payCredit(amount);
+            payCredits(amount);
+            sendDonation({
+                donationId: id,
+                creditsToDonate: amount,
+            });
         } catch (e) {
+            console.error(`${id}에 대한 ${amount}의 결제 오류`);
             console.log(e.errorMessage);
         } finally {
             console.log(`${id}에 대한 ${amount}의 결제 종료됨`);
@@ -52,6 +54,7 @@ function DonationQueryExample() {
 
     return (
         <div>
+            <CreditExample/>
             {donationPage.map((donation, index) => {
                 return (
                     <div key={index}>
