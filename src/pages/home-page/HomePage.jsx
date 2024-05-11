@@ -14,8 +14,9 @@ const HomePage = () => {
 
   return (
     <Container>
+      <div className={classes.centerLine}></div>
       <section className={classes.intro}>
-        <div className={classes.introTitle} style={{ color: 'white' }}>
+        <div className={classes.introTitle}>
           <div className={classes.introTitleFont}>
             내가 좋아하는 아이돌을
             <br />

@@ -1,4 +1,5 @@
 .Container {
+  position: relative;
   max-width: 375px;
   height: 3248px;
   margin: 0 auto;
