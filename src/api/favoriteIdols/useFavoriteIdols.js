@@ -1,9 +1,9 @@
 import { useLocalStorage } from "@mantine/hooks";
-import { clientStateKeys } from "../config";
+import { CLIENT_STATE_KEYS } from "../config";
 
 function useFavoriteIdols() {
     const [favoriteIdols, setFavoriteIdols] = useLocalStorage({
-        key: clientStateKeys.favoriteIdols,
+        key: CLIENT_STATE_KEYS.favoriteIdols,
         defaultValue: [],
     });
 

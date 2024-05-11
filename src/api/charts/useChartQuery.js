@@ -6,6 +6,7 @@ function useChartQuery(gender = 'female') {
     return useInfiniteQueryForFandomKAPI({
         serverStateKey: SERVER_STATE_KEYS[`${gender}Chart`],
         queryArguments: { gender },
+        pageName: 'idols',
         queryFunction: getCharts,
     });
 }

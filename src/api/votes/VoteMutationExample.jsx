@@ -4,7 +4,7 @@ function VoteMutationExample() {
     const { mutate: vote } = useVoteMutation();
     const idolId = 50;
     return (
-        <button onClick={() => vote(idolId) }>{idolId}에게 투표하기</button>
+        <button type='button' onClick={() => vote(idolId) }>{idolId}에게 투표하기</button>
     );
 }
 
