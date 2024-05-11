@@ -77,7 +77,7 @@ function CarouselSection() {
       <Carousel
         height={402}
         slideSize={{ lg: '282', sm: '282', xs: '158' }}
-        slideGap={{ lg: '24', sm: '16', xs: '8' }}
+        slideGap={{ lg: '24', sm: '16', xs: '0' }}
         align="start"
         slidesToScroll={4}
         withControls={false}
@@ -87,7 +87,7 @@ function CarouselSection() {
         }}
       >
         {cardData.map((card) => (
-          <Carousel.Slide key={card.id}>
+          <Carousel.Slide className={classes.carouselSlide} key={card.id}>
             <CarouselCard card={card} />
           </Carousel.Slide>
         ))}

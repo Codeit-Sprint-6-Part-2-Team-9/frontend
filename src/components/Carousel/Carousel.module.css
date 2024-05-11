@@ -23,6 +23,7 @@
 .progressbarSection {
   width: 158px;
   height: 97px;
+  height: 97px;
   margin-top: 10px;
 }
 
@@ -66,7 +67,6 @@
 
 .root {
   width: 100%;
-  margin-left: 24px;
 }
 
 .control {
@@ -102,11 +102,11 @@
   margin-top: 6px;
 }
 
-@media (min-width: 768px) {
-  .carouselWrapper {
-    margin-top: 64px;
-  }
+.carouselSlide:not(:last-child) {
+  margin-right: 8px;
+}
 
+@media (min-width: 768px) {
   .imageSection {
     width: 282px;
     height: 293px;
@@ -142,20 +142,23 @@
     margin: 8px 0;
   }
 
-  .control {
-    visibility: visible;
+  .carouselSlide:not(:last-child) {
+    margin-right: 0;
   }
 }
 
 @media (min-width: 1280px) {
   .carouselWrapper {
     width: 100%;
-    margin: 50px 0;
     overflow: hidden;
   }
 
   .root {
     width: 1200px;
     margin: 0 auto;
+  }
+
+  .control {
+    visibility: visible;
   }
 }
