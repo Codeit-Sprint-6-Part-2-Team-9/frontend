@@ -10,6 +10,8 @@ import Buttons from '../../components/Buttons';
 import classes from './HomePage.module.css';
 
 const HomePage = () => {
+  const handleResetClick = () => newCredits();
+
   return (
     <Container>
       <section className={classes.intro}>
@@ -36,7 +38,12 @@ const HomePage = () => {
         <div className={classes.landingButton}>
           <Link to="/list">
             <Buttons type="landing">
-              <span className={classes.landingButtonFont}>지금 시작하기</span>
+              <span
+                className={classes.landingButtonFont}
+                onClick={handleResetClick}
+              >
+                지금 시작하기
+              </span>
             </Buttons>
           </Link>
         </div>
