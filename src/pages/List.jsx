@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { useDisclosure } from '@mantine/hooks';
 import { Button } from '@mantine/core';
-
-import Carousel from "../components/Carousel/Carousel";
-import ModalComponent from "../components/Modal/ModalComponent";
-import IdolsQueryExample from "../api/idols/IdolsQueryExample";
+import ModalComponent from '../components/Modal/ModalComponent';
+import CarouselSection from "../components/Carousel/Carousel";
+import MyCreditRechargeButton from '../components/MyCreditRechargeButton';
 
 function List() {
   const [opened, { open, close }] = useDisclosure(false);
@@ -52,7 +51,7 @@ function List() {
         </Button>
       </div>
       <div>
-        <Carousel />
+        <CarouselSection/>
       </div>
       <IdolsQueryExample/>
     </div>
