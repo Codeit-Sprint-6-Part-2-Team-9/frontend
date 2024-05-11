@@ -23,7 +23,6 @@
 .progressbarSection {
   width: 158px;
   height: 97px;
-  height: 97px;
   margin-top: 10px;
 }
 
@@ -56,13 +55,14 @@
 
 .controlsWrapper {
   max-width: 1361px;
+  height: 0;
   position: relative;
   margin: 0 auto;
 }
 
 .flex {
   position: absolute;
-  top: 250px;
+  top: 170px;
 }
 
 .root {
