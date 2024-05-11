@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-import theme from '../../theme';
 import logoimg from '../../assets/logo.svg';
 import introimg from '../../assets/introimg.svg';
 import donatemobile from '../../assets/donatemobile.svg';
 import mypagemobile from '../../assets/mypagemobile.svg';
 import votemobile from '../../assets/votemobile.svg';
 import Container from './Container';
+import theme from '../../theme';
 import Buttons from '../../components/Buttons';
 import classes from './HomePage.module.css';
 
@@ -49,14 +49,11 @@ const HomePage = () => {
           </Link>
         </div>
       </section>
-
       <section className={classes.description}>
         <div className={classes.descriptionSection}>
           <div className={classes.backgroundGradient1}>
             <div className={classes.mobileLeft}>
-              <div className={`${classes.descriptionTitle} ${classes.r63}`}>
-                후원하기
-              </div>
+              <div className={classes.descriptionTitle1}>후원하기</div>
               <div className={classes.descriptionText}>
                 좋아하는 아이돌에게
                 <br />
@@ -70,13 +67,10 @@ const HomePage = () => {
             />
           </div>
         </div>
-
         <div className={classes.descriptionSection}>
           <div className={classes.backgroundGradient2}>
             <div className={classes.mobileRight}>
-              <div className={`${classes.descriptionTitle} ${classes.l50}`}>
-                이달의 아티스트
-              </div>
+              <div className={classes.descriptionTitle2}>이달의 아티스트</div>
               <div className={classes.descriptionText}>
                 내 아티스트에게 1등의
                 <br />
@@ -90,13 +84,10 @@ const HomePage = () => {
             />
           </div>
         </div>
-
         <div className={classes.descriptionSection}>
           <div className={classes.backgroundGradient3}>
             <div className={classes.mobileLeft}>
-              <div className={`${classes.descriptionTitle} ${classes.r50}`}>
-                나만의 아티스트
-              </div>
+              <div className={classes.descriptionTitle3}>나만의 아티스트</div>
               <div className={classes.descriptionText}>
                 좋아하는 아티스트들의
                 <br />

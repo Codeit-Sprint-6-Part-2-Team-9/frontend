@@ -67,6 +67,7 @@
   width: 393.68px;
   height: 329.84px;
   margin: -100px auto;
+  margin-left: -10px;
 }
 
 @media (min-width: 768px) {
@@ -74,6 +75,7 @@
     width: 713.98px;
     height: 598.2px;
     margin-top: -120px;
+    margin-left: auto;
   }
 }
 
@@ -280,9 +282,11 @@
 }
 
 .mobile {
+  position: relative;
   display: flex;
   width: 240px;
   height: 520.25px;
+  z-index: 2;
   margin: 120px auto;
 }
 
@@ -302,12 +306,14 @@
   }
 }
 
-.descriptionTitle {
+.descriptionTitle1 {
   position: relative;
   display: flex;
   justify-content: center;
   top: 76px;
+  right: 63px;
   font-family: Pretendard;
+  z-index: 1;
   font-size: 14px;
   font-weight: 500;
   line-height: 16.71px;
@@ -315,13 +321,68 @@
 }
 
 @media (min-width: 768px) {
-  .descriptionTitle {
+  .descriptionTitle1 {
     top: 100px;
+    right: auto;
   }
 }
 
 @media (min-width: 1280px) {
-  .descriptionTitle {
+  .descriptionTitle1 {
+    top: 170px;
+  }
+}
+
+.descriptionTitle2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 76px;
+  left: 50px;
+  font-family: Pretendard;
+  z-index: 1;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.71px;
+  color: #d2c030;
+}
+
+@media (min-width: 768px) {
+  .descriptionTitle2 {
+    top: 100px;
+    left: auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .descriptionTitle2 {
+    top: 170px;
+  }
+}
+
+.descriptionTitle3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 76px;
+  right: 50px;
+  font-family: Pretendard;
+  z-index: 1;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.71px;
+  color: #d2c030;
+}
+
+@media (min-width: 768px) {
+  .descriptionTitle3 {
+    top: 100px;
+    right: auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .descriptionTitle3 {
     top: 170px;
   }
 }
@@ -331,6 +392,7 @@
   display: flex;
   justify-content: center;
   top: 80px;
+  z-index: 1;
   font-family: Pretendard;
   font-size: 20px;
   font-weight: 700;
@@ -377,43 +439,13 @@
   }
 }
 
-.r63 {
-  right: 63px;
-}
-
-@media (min-width: 768px) {
-  .r63 {
-    right: auto;
-  }
-}
-
-.l50 {
-  left: 50px;
-}
-
-@media (min-width: 768px) {
-  .l50 {
-    left: auto;
-  }
-}
-
-.r50 {
-  right: 50px;
-}
-
-@media (min-width: 768px) {
-  .r50 {
-    right: auto;
-  }
-}
-
 .centerLine {
   position: absolute;
   display: flex;
   top: 1029px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: -1;
+  z-index: 1;
   width: 117px;
   height: 2133px;
   background-image: linear-gradient(
@@ -429,13 +461,13 @@
 @media (min-width: 768px) {
   .centerLine {
     top: 1450px;
-    height: 2050px;
+    height: 1800px;
   }
 }
 
 @media (min-width: 1280px) {
   .centerLine {
     width: 187px;
-    height: 3091px;
+    height: 2800px;
   }
 }
