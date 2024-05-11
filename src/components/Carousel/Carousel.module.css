@@ -22,8 +22,8 @@
 
 .progressbarSection {
   width: 158px;
-  height: auto;
-  margin-top: 12px;
+  height: 97px;
+  margin-top: 10px;
 }
 
 .artistImage {
@@ -34,25 +34,23 @@
   border-radius: 8px;
 }
 
-.btn {
-  width: 124px;
-  height: 31px;
-  margin: 8px 20px;
-}
-
 .progressbarTextSection {
   display: flex;
   justify-content: space-between;
+  height: 26px;
+  margin-top: 24px;
 }
 
 .progressbarCreditSection {
+  margin-top: 0;
   display: flex;
   align-items: center;
+  height: 18px;
 }
 
 .carouselWrapper {
   width: 100%;
-  margin: 40px 0;
+  margin-top: 40px 
 }
 
 .root {
@@ -62,6 +60,31 @@
 
 .controls {
   visibility: hidden;
+}
+
+.donateBtn {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
+
+.title {
+  color: var(--mantine-color-gray-0);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.16500002145767212px;
+  text-align: left;
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--mantine-color-white-0);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+  margin-top: 6px;
 }
 
 @media (min-width: 768px) {
@@ -76,10 +99,33 @@
 
   .donateButton {
     margin: 20px 24px;
+
   }
 
   .progressbarSection {
     width: 282px;
+    height: 97px;
+  }
+
+  .donateBtn {
+    right: 24px;
+    bottom: 24px;
+  }
+
+  .title {
+    color: var(--mantine-color-gray-0);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    margin: 12px 0;
+  }
+
+  .subtitle {
+    color: var(--mantine-color-white-0);
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    margin: 8px 0;
   }
 }
 
