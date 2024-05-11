@@ -52,7 +52,7 @@ const HomePage = () => {
 
       <section className={classes.description}>
         <div className={classes.descriptionSection}>
-          <div className={classes.backgroundGradient}>
+          <div className={classes.backgroundGradient1}>
             <div className={classes.mobileLeft}>
               <div className={`${classes.descriptionTitle} ${classes.r63}`}>
                 후원하기
@@ -72,7 +72,7 @@ const HomePage = () => {
         </div>
 
         <div className={classes.descriptionSection}>
-          <div className={classes.backgroundGradient}>
+          <div className={classes.backgroundGradient2}>
             <div className={classes.mobileRight}>
               <div className={`${classes.descriptionTitle} ${classes.l50}`}>
                 이달의 아티스트
@@ -92,7 +92,7 @@ const HomePage = () => {
         </div>
 
         <div className={classes.descriptionSection}>
-          <div className={classes.backgroundGradient}>
+          <div className={classes.backgroundGradient3}>
             <div className={classes.mobileLeft}>
               <div className={`${classes.descriptionTitle} ${classes.r50}`}>
                 나만의 아티스트
