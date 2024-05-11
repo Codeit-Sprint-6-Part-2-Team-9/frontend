@@ -2,9 +2,9 @@ import { default as axios } from '../axios';
 import { ENV } from '../config';
 
 async function getCharts({ gender, cursor }) {
-    const { teamName, pageSize } = ENV;
+    const { pageSize } = ENV;
 
-    const res = await axios.get(`/${teamName}/charts/{gender}`, {
+    const res = await axios.get('/charts/{gender}', {
         params: { gender, cursor, pageSize },
     });
 

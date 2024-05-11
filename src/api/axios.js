@@ -2,7 +2,7 @@ import axios from "axios";
 import { ENV } from "./config";
 
 const instance = axios.create({
-    baseURL: ENV.serverUrl,
+    baseURL: `${ENV.serverUrl}/${ENV.teamName}`,
     validateStatus: (status) => status >= 200 && status < 300,
 });
 
