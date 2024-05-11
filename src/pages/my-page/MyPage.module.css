@@ -1,0 +1,76 @@
+.MyPage {
+  color: white;
+}
+.sectionTitle {
+  margin: 30px 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+}
+.horizontalLine {
+  size: 1px;
+  color: white;
+  opacity: 0.1;
+}
+.addFavoriteIdols {
+  position: relative;
+}
+.addFavoriteIdolsWrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(8, 1fr);
+  row-gap: 20px;
+  column-gap: 10px;
+  position: relative;
+  overflow-x: scroll;
+}
+.tablet {
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 0;
+}
+.mobile {
+  grid-template-columns: repeat(3, 1fr);
+}
+.prevBtn,
+.nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.prevBtn {
+  left: -70px;
+}
+.nextBtn {
+  right: -70px;
+}
+.myFavoriteIdolsWrapper {
+  display: flex;
+  gap: 30px;
+  flex-shrink: 0;
+  overflow-x: scroll;
+  width: 100%;
+}
+.myFavoriteIdolsWrapper::-webkit-scrollbar {
+  display: none;
+}
+.btnWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .myFavoriteIdolsWrapper {
+    gap: 20px;
+  }
+  .sectionTitle {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  .sectionTitle {
+    font-size: 24px;
+  }
+}
