@@ -10,6 +10,7 @@ import Container from './components/Container.jsx';
 import Buttons from '../../components/Buttons';
 import NotFound from '../NotFound';
 import FavoriteRoundCard from './components/FavoriteRoundCard';
+import EmptyFavoriteIdols from './components/EmptyFavoriteIdols';
 
 import PREV_BTN from '../../assets/btnArrowLeft.svg';
 import NEXT_BTN from '../../assets/btnArrowRight.svg';
@@ -97,18 +98,22 @@ const MyPage = () => {
         <section className={classes.favoriteIdols}>
           <h1 className={classes.sectionTitle}>내가 관심 있는 아이돌</h1>
           <div className={classes.myFavoriteIdolsWrapper}>
-            {idolData
-              ?.filter((idol) => favoriteIdols.includes(idol.id))
-              .map((idol) => (
-                <FavoriteRoundCard
-                  key={`idol-${idol.id}`}
-                  id={idol.id}
-                  name={idol.name}
-                  groupName={idol.group}
-                  profilePicture={idol.profilePicture}
-                  onClick={handleDeleteBtn}
-                />
-              ))}
+            {favoriteIdols?.length === 0 ? (
+              <EmptyFavoriteIdols />
+            ) : (
+              idolData
+                ?.filter((idol) => favoriteIdols.includes(idol.id))
+                .map((idol) => (
+                  <FavoriteRoundCard
+                    key={`idol-${idol.id}`}
+                    id={idol.id}
+                    name={idol.name}
+                    groupName={idol.group}
+                    profilePicture={idol.profilePicture}
+                    onClick={handleDeleteBtn}
+                  />
+                ))
+            )}
           </div>
         </section>
         <hr className={classes.horizontalLine} />
