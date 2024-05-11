@@ -50,7 +50,18 @@
 
 .carouselWrapper {
   width: 100%;
-  margin-top: 40px 
+  margin-top: 0 auto;
+}
+
+.controlsWrapper {
+  max-width: 1361px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.flex {
+  position: absolute;
+  top: 250px;
 }
 
 .root {
@@ -58,8 +69,12 @@
   margin-left: 24px;
 }
 
-.controls {
+.control {
   visibility: hidden;
+}
+
+.actionIcon {
+  height: 90px;
 }
 
 .donateBtn {
@@ -99,7 +114,6 @@
 
   .donateButton {
     margin: 20px 24px;
-
   }
 
   .progressbarSection {
@@ -127,9 +141,13 @@
     text-align: left;
     margin: 8px 0;
   }
+
+  .control {
+    visibility: visible;
+  }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .carouselWrapper {
     width: 100%;
     margin: 50px 0;
@@ -139,18 +157,5 @@
   .root {
     width: 1200px;
     margin: 0 auto;
-  }
-
-  .control {
-    &[data-inactive] {
-      visibility: hidden;
-    }
-  }
-
-  .controls {
-    width: 1361px;
-    margin-left: calc((100% - 1361px) / 2);
-    margin-right: calc((100% - 1361px) / 2);
-    visibility: visible;
   }
 }
