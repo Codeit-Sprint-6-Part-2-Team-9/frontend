@@ -4,19 +4,15 @@ import CreditIcon from '../assets/mycredit.svg';
 import useCredits from '../api/credits/useCredits';
 import classes from './MyCreditRechargeButton.module.css';
 
-const MyCreditRechargeButton = ({ ...buttonProps }) => {
-  return (
-    <>
-      <Button
-        {...buttonProps}
-        justify="space-between"
-        className={classes.MycreditButton}
-        leftSection={<MyCreditSection />}
-        rightSection={<TextSection />}
-      />
-    </>
-  );
-};
+const MyCreditRechargeButton = ({ ...buttonProps }) => (
+  <Button
+    {...buttonProps}
+    justify="space-between"
+    className={classes.MycreditButton}
+    leftSection={<MyCreditSection />}
+    rightSection={<TextSection />}
+  />
+);
 
 const MyCreditSection = () => {
   const [credits] = useCredits();
@@ -32,15 +28,10 @@ const MyCreditSection = () => {
   );
 };
 
-const TextSection = () => {
-  return (
-    <div
-      className={classes.textSection}
-      style={{ color: theme.colors.brand[0] }}
-    >
-      충전하기
-    </div>
-  );
-};
+const TextSection = () => (
+  <div className={classes.textSection} style={{ color: theme.colors.brand[0] }}>
+    충전하기
+  </div>
+);
 
 export default MyCreditRechargeButton;

@@ -6,10 +6,12 @@ import mypagemobile from '../../assets/mypagemobile.svg';
 import votemobile from '../../assets/votemobile.svg';
 import Container from './Container';
 import theme from '../../theme';
+import useCredits from '../../api/credits/useCredits';
 import Buttons from '../../components/Buttons';
 import classes from './HomePage.module.css';
 
 const HomePage = () => {
+  const [newCredits] = useCredits();
   const handleResetClick = () => newCredits();
 
   return (
@@ -38,13 +40,8 @@ const HomePage = () => {
         </div>
         <div className={classes.landingButton}>
           <Link to="/list">
-            <Buttons type="landing">
-              <span
-                className={classes.landingButtonFont}
-                onClick={handleResetClick}
-              >
-                지금 시작하기
-              </span>
+            <Buttons type="landing" onClick={handleResetClick}>
+              <span className={classes.landingButtonFont}>지금 시작하기</span>
             </Buttons>
           </Link>
         </div>
