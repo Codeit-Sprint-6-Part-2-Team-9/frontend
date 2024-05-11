@@ -72,23 +72,13 @@ function ChartSection() {
       </div>
       <div className={classes.chart}>
         {renderChartCards()}
-        {hasNextPage ? (
-          <div className={classes.moreButtonWrapper}>
-            <Buttons type="more" onClick={loadMoreIdols}>
-              더보기
-            </Buttons>
-          </div>
-        ) : (
-          <div className={classes.moreButtonWrapper}>
-            <Buttons
-              type="more"
-              disabled={true}
-              style={{ pointerEvents: 'none' }}
-            >
-              더보기
-            </Buttons>
-          </div>
-        )}
+        <Buttons
+          type="more"
+          disabled={!hasNextPage}
+          onClick={hasNextPage ? loadMoreIdols : undefined}
+        >
+          더보기
+        </Buttons>
       </div>
     </div>
   );
