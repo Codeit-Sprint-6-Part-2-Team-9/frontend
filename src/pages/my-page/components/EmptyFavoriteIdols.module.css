@@ -1,0 +1,27 @@
+.EmptyFavoriteIdols {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 327px;
+  height: 108px;
+  border: 1px solid #ffffff99;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  background: transparent;
+  opacity: 0.5;
+}
+.text {
+  color: #ffffff99;
+  font-weight: 700;
+  font-size: 22px;
+}
+@media (min-width: 768px) {
+  .EmptyFavoriteIdols {
+    height: 138px;
+  }
+}
+@media (min-width: 1280px) {
+  .EmptyFavoriteIdols {
+  }
+}

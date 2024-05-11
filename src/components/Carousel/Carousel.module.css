@@ -23,6 +23,7 @@
 .progressbarSection {
   width: 158px;
   height: 97px;
+  height: 97px;
   margin-top: 10px;
 }
 
@@ -50,12 +51,10 @@
 
 .carouselWrapper {
   width: 100%;
-  margin-top: 40px 
 }
 
 .root {
   width: 100%;
-  margin-left: 24px;
 }
 
 .controls {
@@ -87,11 +86,11 @@
   margin-top: 6px;
 }
 
-@media (min-width: 768px) {
-  .carouselWrapper {
-    margin-top: 64px;
-  }
+.carouselSlide:not(:last-child) {
+  margin-right: 8px;
+}
 
+@media (min-width: 768px) {
   .imageSection {
     width: 282px;
     height: 293px;
@@ -99,7 +98,6 @@
 
   .donateButton {
     margin: 20px 24px;
-
   }
 
   .progressbarSection {
@@ -127,12 +125,15 @@
     text-align: left;
     margin: 8px 0;
   }
+  
+  .carouselSlide:not(:last-child) {
+    margin-right: 0;
+  }
 }
 
 @media (min-width: 1200px) {
   .carouselWrapper {
     width: 100%;
-    margin: 50px 0;
     overflow: hidden;
   }
 
