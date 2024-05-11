@@ -1,18 +1,19 @@
-const clientStateKeys = {
+const CLIENT_STATE_KEYS = {
   credits: 'credits',
+  favoriteIdols: 'favoriteIdols',
 };
 
-const envvars = {
+const ENV = {
   serverUrl: 'https://fandom-k-api.vercel.app',
   teamName: '6-9',
   pageSize: 10,
 };
 
-const serverStateKeys = {
+const SERVER_STATE_KEYS = {
   femaleChart: 'female',
   maleChart: 'male',
   donation: 'donation',
   idol: 'idol',
 };
 
-export { clientStateKeys, envvars, serverStateKeys };
+export { CLIENT_STATE_KEYS, ENV, SERVER_STATE_KEYS };

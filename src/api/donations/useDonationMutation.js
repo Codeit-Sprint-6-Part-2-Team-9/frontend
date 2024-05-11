@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import postContribute from './postContribute';
-import { serverStateKeys } from '../config';
+import { SERVER_STATE_KEYS } from '../config';
 
 function useDonationMutation() {
     const queryClient = useQueryClient();
@@ -9,7 +9,7 @@ function useDonationMutation() {
         mutationFn: (newDonation) =>
             postContribute(newDonation),
         onSuccess: () =>
-            queryClient.invalidateQueries(serverStateKeys.donation),
+            queryClient.invalidateQueries(SERVER_STATE_KEYS.donation),
     });
 }
 
