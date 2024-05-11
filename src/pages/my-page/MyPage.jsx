@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 
+import useIdolsQuery from '../../api/idols/useIdolsQuery';
+import useFavoriteIdols from '../../api/favoriteIdols/useFavoriteIdols';
+
 import RoundCardWithText from './components/RoundCardWithText';
 import Container from './components/Container.jsx';
 import classes from './MyPage.module.css';
 import Buttons from '../../components/Buttons';
 import NotFound from '../NotFound';
-
-import useIdolsQuery from '../../api/idols/useIdolsQuery';
-import useFavoriteIdols from '../../api/favoriteIdols/useFavoriteIdols';
 import FavoriteRoundCard from './components/FavoriteRoundCard';
 
 import PREV_BTN from '../../assets/btnArrowLeft.svg';
@@ -134,6 +134,7 @@ const MyPage = () => {
                   groupName={idol.group}
                   profilePicture={idol.profilePicture}
                   onClick={handleFavoriteList}
+                  isChecked={checkedFavoriteId.includes(idol.id)}
                 />
               ))}
           </div>

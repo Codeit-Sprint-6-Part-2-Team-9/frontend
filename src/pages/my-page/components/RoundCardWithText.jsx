@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import classes from './RoundCardWithText.module.css';
 import RoundCard from '../../../components/RoundCard';
 import ICON_CHECKED from '../../../assets/icon_checked.svg';
@@ -10,19 +8,17 @@ const RoundCardWithText = ({
   groupName,
   profilePicture,
   onClick,
+  isChecked,
 }) => {
-  const [checked, setChecked] = useState(false);
-
   return (
     <div
       className={classes.RoundCardWithText}
       onClick={() => {
-        setChecked(!checked);
         onClick(id);
       }}
     >
       <div className={classes.roundCardWrapper}>
-        {checked && (
+        {isChecked && (
           <div>
             <div className={classes.checkedWrapper}></div>
             <img className={classes.iconChecked} src={ICON_CHECKED} />
