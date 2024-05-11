@@ -1,9 +1,9 @@
 .Container {
+  overflow: hidden;
   position: relative;
   max-width: 375px;
   height: 3248px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 @media (min-width: 700px) {
