@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import classes from './App.module.css';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/homepage/HomePage';
 import List from './pages/List';
-import MyPage from './pages/my-page/MyPage';
+import MyPage from './pages/MyPage';
 import NotFound from './pages/NotFound';
 import Layout from './components/Layout/Layout';
 import TOP_OVERLAY from './assets/top_overlay.svg';
