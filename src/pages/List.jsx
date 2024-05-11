@@ -1,4 +1,3 @@
-import CarouselSection from '../components/Carousel/Carousel';
 import { useState } from 'react';
 import { useDisclosure } from '@mantine/hooks';
 import { Button } from '@mantine/core';
@@ -54,7 +53,6 @@ function List() {
       <div>
         <CarouselSection />
       </div>
-      <IdolsQueryExample />
     </div>
   );
 }
