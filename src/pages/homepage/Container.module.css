@@ -1,0 +1,21 @@
+.Container {
+  overflow: hidden;
+  position: relative;
+  max-width: 375px;
+  height: 3248px;
+  margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+  .Container {
+    max-width: 744px;
+    height: 3432px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .Container {
+    max-width: 1920px;
+    height: 4680px;
+  }
+}
