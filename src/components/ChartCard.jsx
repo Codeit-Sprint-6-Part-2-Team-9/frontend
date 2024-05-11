@@ -1,18 +1,20 @@
-import RoundCard from "./RoundCard";
-import classes from "./ChartCard.module.css";
+import classes from './ChartCard.module.css';
+import RoundCard from './RoundCard';
 
-const ChartCard = ({ idol }) => {
-  const { rank, group, name, totalVotes } = idol;
+const ChartCard = ({ idol, rank }) => {
+  const { group, name, profilePicture, totalVotes } = idol;
 
   return (
     <div className={classes.ChartCard}>
       <div className={classes.ChartCardWrapper}>
-        <RoundCard />
+        <div className={classes.RoundCardWrapper}>
+          <RoundCard profileUrl={profilePicture} alt={name} />
+        </div>
         <span className={classes.rank}>{rank}</span>
         <p className={classes.group}>{group}</p>
         <p className={classes.name}>{name}</p>
       </div>
-      <p className={classes.totalVotes}>{totalVotes.toLocaleString()}</p>
+      <p className={classes.totalVotes}>{totalVotes.toLocaleString()}표</p>
     </div>
   );
 };

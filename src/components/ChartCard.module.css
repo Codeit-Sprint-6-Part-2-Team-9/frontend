@@ -2,14 +2,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 327px;
+  width: 100%;
   height: 70px;
+  padding: 24px 12px;
+  border-bottom: 1px solid #ffffff10;
 }
 
 .ChartCardWrapper {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.RoundCardWrapper {
+  width: 70px;
+  height: 70px;
 }
 
 .rank {
@@ -39,7 +46,7 @@
 
 @media (min-width: 768px) {
   .ChartCard {
-    width: 700px;
+    width: 100%;
   }
   .rank {
     font-size: 14px;
