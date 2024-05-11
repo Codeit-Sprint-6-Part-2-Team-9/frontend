@@ -53,6 +53,7 @@ function List() {
       <div>
         <CarouselSection/>
       </div>
+      <IdolsQueryExample/>
     </div>
   );
 }

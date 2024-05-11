@@ -1,11 +1,10 @@
-import { useState } from 'react';
+import { useState } from "react";
 import useChartQuery from "./useChartQuery";
-import NotFound from '../../pages/NotFound';
+import NotFound from "../../pages/NotFound";
 
 function ChartQueryExample() {
-  const { data, isLoading, isError, fetchNextPage, hasNextPage } =
-    useFemaleChartQuery();
-  const [page, setPage] = useState(0);
+    const { data, isLoading, isError, fetchNextPage, hasNextPage } = useChartQuery('female');
+    const [page, setPage] = useState(0);
 
   const isFetchThrottled = false;
 
@@ -13,9 +12,10 @@ function ChartQueryExample() {
     return <>Loading</>;
   }
 
-  if (isError) {
-    return <NotFound errorMessage={'오류가 발생하였습니다.'} />;
-  }
+    if(isError) {
+        console.error(error);
+        return (<NotFound errorMessage={"오류가 발생하였습니다."}/>);
+    }
 
   const idolPage = data.pages[page].idols;
   const isNextPageAvailable =
