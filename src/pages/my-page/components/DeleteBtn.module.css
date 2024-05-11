@@ -10,7 +10,7 @@
   border-radius: 50%;
   cursor: pointer;
 }
-@media (min-width: 780px) {
+@media (min-width: 768px) {
   .DeleteBtn {
     width: 30px;
     height: 30px;
