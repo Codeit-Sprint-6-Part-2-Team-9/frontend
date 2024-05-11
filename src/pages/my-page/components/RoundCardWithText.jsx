@@ -23,7 +23,8 @@ const RoundCardWithText = ({
     >
       <div className={classes.roundCardWrapper}>
         {checked && (
-          <div className={classes.checkedWrapper}>
+          <div>
+            <div className={classes.checkedWrapper}></div>
             <img className={classes.iconChecked} src={ICON_CHECKED} />
           </div>
         )}

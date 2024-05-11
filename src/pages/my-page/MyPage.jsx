@@ -98,7 +98,7 @@ const MyPage = () => {
     <div className={classes.MyPage}>
       <Container>
         <section className={classes.favoriteIdols}>
-          <h1 className={classes.sectionTitle}>내가 관심있는 아이돌</h1>
+          <h1 className={classes.sectionTitle}>내가 관심 있는 아이돌</h1>
           <div className={classes.myFavoriteIdolsWrapper}>
             {idolData
               ?.filter((idol) => favoriteIdols.includes(idol.id))
@@ -116,9 +116,11 @@ const MyPage = () => {
         </section>
         <hr className={classes.horizontalLine} />
         <section className={classes.addFavoriteIdols}>
-          <h1 className={classes.sectionTitle}>
-            관심 있는 아이돌을 추가해보세요.
-          </h1>
+          <div className={classes.sectionTitleWrapper}>
+            <h1 className={classes.sectionTitle}>
+              관심 있는 아이돌을 추가해보세요.
+            </h1>
+          </div>
           <div
             className={`${classes.addFavoriteIdolsWrapper} ${pageSize === 8 ? classes.tablet : ''} ${pageSize === 6 ? classes.mobile : ''}  `}
           >
