@@ -4,18 +4,54 @@ function useInfiniteQueryForFandomKAPI({
     serverStateKey, queryFunction, queryArguments = {}, pageName = 'list',
 }) {
     const reduceAllPagesWithListName = (pages, listName) => pages.reduce((accumulator, currentValue) => [...accumulator, ...currentValue[listName]], []);
+    
+    const requestNextPage = async ()=>{
+        if(hasNextPage && !isFetching) {
+            await fetchNextPage();
+        }
+    }
 
-    return useInfiniteQuery({
-        select: (data) => ({
-                pages: [reduceAllPagesWithListName(data.pages, pageName)],
-                pageParams: [data.pageParams[data.pageParams.length - 1]],
-            }),
+    const {
+        data,
+        dataUpdatedAt,
+        error,
+        errorUpdateCount,
+        errorUpdatedAt,
+        failureCount,
+        failureReason,
+        fetchStatus,
+        isError,
+        isFetched,
+        isFetchedAfterMount,
+        isFetching,
+        isLoading,
+        isLoadingError,
+        isPaused,
+        isPlaceholderData,
+        isPreviousData,
+        isRefetchError,
+        isRefetching,
+        isStale,
+        isSuccess,
+        refetch,
+        status,
+        fetchNextPage,
+        fetchPreviousPage,
+        hasNextPage,
+        hasPreviousPage,
+        isFetchingNextPage,
+        isFetchingPreviousPage,
+    } = useInfiniteQuery({
         queryKey: [serverStateKey, queryArguments],
         queryFn: ({ queryKey, pageParam }) => {
             const [, args] = queryKey;
             args.cursor = pageParam;
             return queryFunction(args);
         },
+        select: (multiPageData) => ({
+            pages: [reduceAllPagesWithListName(multiPageData.pages, pageName)],
+            pageParams: [multiPageData.pageParams[multiPageData.pageParams.length - 1]],
+        }),
         initialPageParam: 0,
         // eslint-disable-next-line
         getNextPageParam: (lastPage, _allPages, _lastPageParam, _allPageParams) =>
@@ -30,6 +66,39 @@ function useInfiniteQueryForFandomKAPI({
             }
         },
     });
+
+    return {
+        data,
+        dataUpdatedAt,
+        error,
+        errorUpdateCount,
+        errorUpdatedAt,
+        failureCount,
+        failureReason,
+        fetchStatus,
+        isError,
+        isFetched,
+        isFetchedAfterMount,
+        isFetching,
+        isLoading,
+        isLoadingError,
+        isPaused,
+        isPlaceholderData,
+        isPreviousData,
+        isRefetchError,
+        isRefetching,
+        isStale,
+        isSuccess,
+        refetch,
+        status,
+        fetchNextPage,
+        fetchPreviousPage,
+        hasNextPage,
+        hasPreviousPage,
+        isFetchingNextPage,
+        isFetchingPreviousPage,
+        requestNextPage
+    };
 }
 
 export { useInfiniteQueryForFandomKAPI };

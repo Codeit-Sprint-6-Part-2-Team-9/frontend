@@ -6,7 +6,7 @@ import useCredits from "../credits/useCredits";
 import CreditExample from "../credits/CreditExample";
 
 function DonationQueryExample() {
-    const { data, isFetching, isLoading, isError, fetchNextPage, hasNextPage } = useDonationQuery();
+    const { data, requestNextPage, hasNextPage, isLoading, isError } = useDonationQuery();
     const { mutate: sendDonation } = useDonationMutation();
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [credits, chargeCredits, payCredits, newCredits] = useCredits();
@@ -18,12 +18,6 @@ function DonationQueryExample() {
         return (<NotFound errorMessage="오류가 발생하였습니다."/>);
     }
     const allPage = data.pages[0];
-
-    const requestNextPage = async ()=>{
-        if(hasNextPage && !isFetching) {
-            await fetchNextPage();
-        }
-    }
 
     const payDonation = (amount, id) => {
         try {

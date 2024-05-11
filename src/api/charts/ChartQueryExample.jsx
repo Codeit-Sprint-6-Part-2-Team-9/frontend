@@ -2,7 +2,7 @@ import useChartQuery from "./useChartQuery";
 import NotFound from "../../pages/NotFound";
 
 function ChartQueryExample() {
-    const { data, isFetching, isLoading, isError, fetchNextPage, hasNextPage } = useChartQuery('female');
+    const { data, requestNextPage, isLoading, isError, hasNextPage } = useChartQuery('female');
 
     if (isLoading) {
         return <>Loading</>;
@@ -14,11 +14,6 @@ function ChartQueryExample() {
     
     const allPage = data.pages[0];
 
-    const requestNextPage = async ()=>{
-        if(hasNextPage && !isFetching) {
-            await fetchNextPage();
-        }
-    }
   
     return (
         <div>
