@@ -8,11 +8,12 @@ function ChartSection() {
   const menuArr = ['이달의 여자 아이돌', '이달의 남자 아이돌'];
   const [activeTab, setActiveTab] = useState(0);
   const [page, setPage] = useState(0);
-  const [itemsPerPage, setItemsPerPage] = useState(10);
+  const [itemsPerPage, setItemsPerPage] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
       setItemsPerPage(window.innerWidth < 1280 ? 5 : 10);
+      setPage(0);
     };
 
     handleResize();
@@ -23,16 +24,10 @@ function ChartSection() {
     };
   }, []);
 
-  const {
-    data: femaleData,
-    fetchNextPage: fetchNextFemalePage,
-    hasNextPage: hasNextFemalePage,
-  } = useChartQuery('female', { initialPage: page, pageSize: itemsPerPage });
-  const {
-    data: maleData,
-    fetchNextPage: fetchNextMalePage,
-    hasNextPage: hasNextMalePage,
-  } = useChartQuery('male', { initialPage: page, pageSize: itemsPerPage });
+  const { data, fetchNextPage, hasNextPage } = useChartQuery(
+    activeTab === 0 ? 'female' : 'male',
+    { initialPage: page, pageSize: itemsPerPage },
+  );
 
   const handleTabClick = (index) => {
     setActiveTab(index);
@@ -40,18 +35,12 @@ function ChartSection() {
   };
 
   const loadMoreIdols = () => {
-    if (activeTab === 0) {
-      fetchNextFemalePage(page + 1);
-    } else {
-      fetchNextMalePage(page + 1);
-    }
+    fetchNextPage(page + 1);
     setPage(page + 1);
   };
 
-  const currentData = activeTab === 0 ? femaleData : maleData;
-
   const renderChartCards = () => {
-    return currentData?.pages
+    return data?.pages
       .flatMap((page) => page.idols)
       .sort((a, b) => b.totalVotes - a.totalVotes)
       .map((idol, index) => (
@@ -80,10 +69,19 @@ function ChartSection() {
       </div>
       <div className={classes.chart}>
         {renderChartCards()}
-        {((activeTab === 0 && hasNextFemalePage) ||
-          (activeTab === 1 && hasNextMalePage)) && (
+        {hasNextPage ? (
           <div className={classes.loadMoreButtonWrapper}>
             <Buttons type="more" onClick={loadMoreIdols}>
+              더보기
+            </Buttons>
+          </div>
+        ) : (
+          <div className={classes.loadMoreButtonWrapper}>
+            <Buttons
+              type="more"
+              disabled={true}
+              style={{ pointerEvents: 'none' }}
+            >
               더보기
             </Buttons>
           </div>
