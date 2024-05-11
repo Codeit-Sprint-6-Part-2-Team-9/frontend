@@ -1,3 +1,5 @@
+import classes from './MyPage.module.css';
+
 import { useEffect, useState } from 'react';
 
 import useIdolsQuery from '../../api/idols/useIdolsQuery';
@@ -5,7 +7,6 @@ import useFavoriteIdols from '../../api/favoriteIdols/useFavoriteIdols';
 
 import RoundCardWithText from './components/RoundCardWithText';
 import Container from './components/Container.jsx';
-import classes from './MyPage.module.css';
 import Buttons from '../../components/Buttons';
 import NotFound from '../NotFound';
 import FavoriteRoundCard from './components/FavoriteRoundCard';
@@ -24,12 +25,8 @@ const getPageSize = () => {
 };
 
 const MyPage = () => {
-  const [
-    favoriteIdols,
-    resetFavoriteIdols,
-    addFavoriteIdol,
-    removeFavoriteIdol,
-  ] = useFavoriteIdols();
+  const [favoriteIdols, unUseFunction, addFavoriteIdol, removeFavoriteIdol] =
+    useFavoriteIdols();
 
   const { data, error, isLoading, isError } = useIdolsQuery();
   const [idolData, setIdolData] = useState([]);
