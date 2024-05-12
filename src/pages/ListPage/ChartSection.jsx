@@ -52,9 +52,9 @@ function ChartSection() {
   return (
     <div className={classes.chartSection}>
       <div className={classes.chartButtonWrapper}>
-        <p className={classes.typography}>
+        <div className={classes.typography}>
           <Typography type="bold20lh26">이달의 차트</Typography>
-        </p>
+        </div>
         <Buttons type="vote" icon="chart" style={{ fontSize: '13px' }}>
           차트 투표하기
         </Buttons>
@@ -72,13 +72,15 @@ function ChartSection() {
       </div>
       <div className={classes.chart}>
         {renderChartCards()}
-        <Buttons
-          type="more"
-          disabled={!hasNextPage}
-          onClick={hasNextPage ? loadMoreIdols : undefined}
-        >
-          더보기
-        </Buttons>
+        <div className={classes.moreButtonWrapper}>
+          <Buttons
+            type="more"
+            disabled={!hasNextPage}
+            onClick={hasNextPage ? loadMoreIdols : undefined}
+          >
+            더보기
+          </Buttons>
+        </div>
       </div>
     </div>
   );
