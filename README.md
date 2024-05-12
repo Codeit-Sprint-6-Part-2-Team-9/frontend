@@ -1,8 +1,16 @@
-# React + Vite
+## FANDOM-K
+아이돌 조공 플랫폼
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 배포 주소
 
-Currently, two official plugins are available:
+## 로컬 실행 커맨드
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 핵심 기능
+
+## 시연 영상
+
+## 기술 스택
+
+## 주제 및 배경 소개
+
+## 팀 소개
