@@ -1,17 +1,19 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@mantine/core';
-import CREDIT_IMG from '../../assets/modal_credit.svg';
+
 import classes from './CreditDonationModalBody.module.css';
 import useCredits from '../../api/credits/useCredits';
 import useDonationMutation from '../../api/donations/useDonationMutation';
 
+import CREDIT_IMG from '../../assets/modal_credit.svg';
+
 const CreditDonationModalBody = ({ donationProps, close }) => {
-  const { idolId, profileImg, subtitle, title } = donationProps;
-  const { mutate: sendDonation } = useDonationMutation();
-  const [credits, chargeCredits, payCredits, newCredits] = useCredits();
   const [inputCredit, setInputCredit] = useState('');
   const [error, setError] = useState('');
   const [btnDisabled, setBtnDisabled] = useState(true);
+  const [credits, chargeCredits, payCredits, newCredits] = useCredits();
+  const { donationId, profileImg, subtitle, title } = donationProps;
+  const { mutate: sendDonation } = useDonationMutation();
 
   const handleChange = (e) => {
     const inputValue = e.target.value.trim();
@@ -80,7 +82,7 @@ const CreditDonationModalBody = ({ donationProps, close }) => {
         variant="gradient"
         gradient={{ from: '#f96d69', to: '#FE5493', deg: 90 }}
         onClick={() => {
-          payDonation(inputCredit, idolId);
+          payDonation(parseInt(inputCredit), donationId);
           close();
         }}
       >

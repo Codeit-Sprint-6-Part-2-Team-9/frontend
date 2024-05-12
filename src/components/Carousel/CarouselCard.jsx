@@ -10,8 +10,15 @@ import ModalComponent from '../../components/Modal/ModalComponent';
 import creditIcon from '../../assets/creditIcon.svg';
 
 const CarouselCard = ({ card }) => {
-  const { idol, receivedDonations, targetDonation, deadline, title, subtitle } =
-    card;
+  const {
+    id,
+    idol,
+    receivedDonations,
+    targetDonation,
+    deadline,
+    title,
+    subtitle,
+  } = card;
 
   const percentAchieved = (receivedDonations / targetDonation) * 100;
   const timeRemaining = calculateTimeRemaining(deadline);
@@ -29,7 +36,7 @@ const CarouselCard = ({ card }) => {
         close={close}
         modalDataState={modalDataState}
         donationProps={{
-          idolId: idol.id,
+          donationId: id,
           profileImg: idol.profilePicture,
           subtitle,
           title,
