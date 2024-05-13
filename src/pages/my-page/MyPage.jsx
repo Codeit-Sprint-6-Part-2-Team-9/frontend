@@ -76,7 +76,7 @@ const MyPage = () => {
   }, []);
 
   useEffect(() => {
-    setIdolData(data?.pages[0].list);
+    setIdolData(data?.pages[0]);
     console.log(idolData);
   }, [data]);
 

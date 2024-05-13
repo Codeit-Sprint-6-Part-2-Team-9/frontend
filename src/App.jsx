@@ -16,7 +16,7 @@ function App() {
   useFavicon(favicon);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/frontend">
       <div className={classes.app}>
         <img
           className={classes.topOverlay}
