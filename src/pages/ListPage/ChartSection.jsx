@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { useDisclosure } from '@mantine/hooks';
+import ModalComponent from '../../components/Modal/ModalComponent';
 import useChartQuery from '../../api/charts/useChartQuery';
 import ChartCard from '../../components/ChartCard';
 import Typography from '../../components/Typography';
@@ -6,6 +8,7 @@ import classes from './ChartSection.module.css';
 import Buttons from '../../components/Buttons';
 
 function ChartSection() {
+  const [opened, { open, close }] = useDisclosure(false);
   const menuArr = ['이달의 여자 아이돌', '이달의 남자 아이돌'];
   const [activeTab, setActiveTab] = useState(0);
   const [page, setPage] = useState(0);
@@ -51,11 +54,21 @@ function ChartSection() {
 
   return (
     <div className={classes.chartSection}>
+      <ModalComponent
+        opened={opened}
+        close={close}
+        modalDataState={`${activeTab === 0 ? 'female' : 'male'}Vote`}
+      />
       <div className={classes.chartButtonWrapper}>
-        <p className={classes.typography}>
+        <div className={classes.typography}>
           <Typography type="bold20lh26">이달의 차트</Typography>
-        </p>
-        <Buttons type="vote" icon="chart" style={{ fontSize: '13px' }}>
+        </div>
+        <Buttons
+          type="vote"
+          icon="chart"
+          style={{ fontSize: '13px' }}
+          onClick={open}
+        >
           차트 투표하기
         </Buttons>
       </div>
@@ -72,13 +85,15 @@ function ChartSection() {
       </div>
       <div className={classes.chart}>
         {renderChartCards()}
-        <Buttons
-          type="more"
-          disabled={!hasNextPage}
-          onClick={hasNextPage ? loadMoreIdols : undefined}
-        >
-          더보기
-        </Buttons>
+        <div className={classes.moreButtonWrapper}>
+          <Buttons
+            type="more"
+            disabled={!hasNextPage}
+            onClick={hasNextPage ? loadMoreIdols : undefined}
+          >
+            더보기
+          </Buttons>
+        </div>
       </div>
     </div>
   );

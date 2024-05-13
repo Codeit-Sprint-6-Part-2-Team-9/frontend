@@ -1,31 +1,50 @@
-import { useState, useEffect } from "react";
-import { Button } from "@mantine/core";
-import CREDIT_IMG from "../../assets/modal_credit.svg";
-import classes from "./CreditDonationModalBody.module.css";
+import { useState, useEffect } from 'react';
+import { Button } from '@mantine/core';
 
-const CreditDonationModalBody = ({ props }) => {
-  const { profileImg, subtitle, title } = props;
+import classes from './CreditDonationModalBody.module.css';
+import useCredits from '../../api/credits/useCredits';
+import useDonationMutation from '../../api/donations/useDonationMutation';
 
-  const [myCredit, setMyCredit] = useState(10000);
-  const [credit, setCredit] = useState("");
-  const [error, setError] = useState("");
+import CREDIT_IMG from '../../assets/modal_credit.svg';
+
+const CreditDonationModalBody = ({ donationProps, close }) => {
+  const [inputCredit, setInputCredit] = useState('');
+  const [error, setError] = useState('');
   const [btnDisabled, setBtnDisabled] = useState(true);
+  const [credits, chargeCredits, payCredits, newCredits] = useCredits();
+  const { donationId, profileImg, subtitle, title } = donationProps;
+  const { mutate: sendDonation } = useDonationMutation();
 
   const handleChange = (e) => {
     const inputValue = e.target.value.trim();
-    if (inputValue === "" || !isNaN(parseInt(inputValue))) {
-      setCredit(parseInt(inputValue) || "0");
-      if (parseInt(inputValue) > myCredit) {
-        setError("갖고 있는 크레딧보다 더 많이 후원할 수 없어요");
+    if (inputValue === '' || !isNaN(parseInt(inputValue))) {
+      setInputCredit(parseInt(inputValue) || '0');
+      if (parseInt(inputValue) > credits) {
+        setError('갖고 있는 크레딧보다 더 많이 후원할 수 없어요');
       } else {
-        setError("");
+        setError('');
       }
     }
   };
 
+  const payDonation = (amount, id) => {
+    try {
+      payCredits(amount);
+      sendDonation({
+        donationId: id,
+        creditsToDonate: amount,
+      });
+    } catch (e) {
+      console.error(`${id}에 대한 ${amount}의 결제 오류`);
+      console.log(e.errorMessage);
+    } finally {
+      console.log(`${id}에 대한 ${amount}의 결제 종료됨`);
+    }
+  };
+
   useEffect(() => {
-    setBtnDisabled(credit === "" || error !== "" || credit === "0");
-  }, [credit, error]);
+    setBtnDisabled(inputCredit === '' || error !== '' || inputCredit === '0');
+  }, [inputCredit, error]);
 
   return (
     <div className={classes.body}>
@@ -44,10 +63,10 @@ const CreditDonationModalBody = ({ props }) => {
         <input
           type="text"
           className={`${classes.input} ${
-            error !== "" ? classes.inputError : ""
+            error !== '' ? classes.inputError : ''
           }`}
           placeholder="크레딧 입력"
-          value={credit}
+          value={inputCredit}
           onChange={handleChange}
         />
         <img
@@ -59,9 +78,13 @@ const CreditDonationModalBody = ({ props }) => {
       {error && <p className={classes.error}>{error}</p>}
       <Button
         disabled={btnDisabled}
-        style={{ width: "100%", marginTop: "20px" }}
+        style={{ width: '100%', marginTop: '20px' }}
         variant="gradient"
-        gradient={{ from: "#f96d69", to: "#FE5493", deg: 90 }}
+        gradient={{ from: '#f96d69', to: '#FE5493', deg: 90 }}
+        onClick={() => {
+          payDonation(parseInt(inputCredit), donationId);
+          close();
+        }}
       >
         후원하기
       </Button>

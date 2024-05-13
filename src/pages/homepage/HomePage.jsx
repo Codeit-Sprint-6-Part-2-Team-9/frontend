@@ -11,7 +11,7 @@ import Buttons from '../../components/Buttons';
 import classes from './HomePage.module.css';
 
 const HomePage = () => {
-  const [newCredits] = useCredits();
+  const [unUseFunc1, unUseFunc2, unUseFunc3, newCredits] = useCredits();
   const handleResetClick = () => newCredits();
 
   return (
