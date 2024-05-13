@@ -1,8 +1,6 @@
-import CREDIT_WARN_SVG from "../../assets/credit_warn.svg";
-import Buttons from "../Buttons";
-import classes from "./CreditWarnModalBody.module.css";
-import Typography from "../Typography";
-import { Button } from "@mantine/core";
+import CREDIT_WARN_SVG from '../../assets/credit_warn.svg';
+import classes from './CreditWarnModalBody.module.css';
+import { Button } from '@mantine/core';
 
 const CreditWarnModalBody = ({ close }) => {
   return (
@@ -16,13 +14,10 @@ const CreditWarnModalBody = ({ close }) => {
         앗! 투표하기 위한 <span className={classes.accent}>크레딧</span>이
         부족해요
       </p>
-      {/* <Buttons type={"confirm"} onClick={close}>
-        <Typography>확인</Typography>
-      </Buttons> */}
       <Button
         variant="gradient"
-        gradient={{ from: "#f96d69", to: "#FE5493", deg: 90 }}
-        style={{ width: "100%" }}
+        gradient={{ from: '#f96d69', to: '#FE5493', deg: 90 }}
+        style={{ width: '295px' }}
         onClick={close}
       >
         확인
