@@ -98,13 +98,12 @@ function CarouselSection() {
       </div>
       <Carousel
         height={402}
-        slideSize={{ lg: '282', md: '282', xs: '158' }}
-        slideGap={{ lg: '24', md: '16', xs: '0' }}
+        slideSize={{ xl: '282', md: '282', xs: '158' }}
+        slideGap={{ xl: '24', md: '16', xs: '0' }}
         align="start"
         slidesToScroll={'auto'}
         withControls={false}
         getEmblaApi={setEmbla}
-        // onSlideChange={handleRefetch}
         styles={{
           root: { maxWidth: 1200, margin: 'auto' },
         }}
