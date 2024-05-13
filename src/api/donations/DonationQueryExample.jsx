@@ -26,7 +26,13 @@ function DonationQueryExample() {
                 donationId: id,
                 creditsToDonate: amount,
             });
+            payCredits(amount);
+            sendDonation({
+                donationId: id,
+                creditsToDonate: amount,
+            });
         } catch (e) {
+            console.error(`${id}에 대한 ${amount}의 결제 오류`);
             console.log(e.errorMessage);
         } finally {
             console.log(`${id}에 대한 ${amount}의 결제 종료됨`);

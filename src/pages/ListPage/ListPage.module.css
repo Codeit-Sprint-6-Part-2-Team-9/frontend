@@ -1,0 +1,57 @@
+.listWrapper {
+  width: 100%;
+}
+
+.rechargeButtonwrapper {
+  width: 100%;
+  padding: 0 24px;
+}
+
+.creditRechargeButton {
+  margin-top: 16px;
+}
+
+.carouselSectionWrapper {
+  margin-top: 16px;
+  margin-left: 24px;
+  height: 303px;
+}
+
+.chartSectionWrapper {
+  margin: 40px 24px;
+}
+
+.typography {
+  margin-top: 40px;
+  margin-left: 24px;
+  color: var(--mantine-color-white-0);
+}
+
+@media (min-width: 768px) {
+  .creditRechargeButton {
+    margin: 0;
+  }
+
+  .carouselSectionWrapper {
+    margin-top: 16px;
+    margin-left: 24px;
+    height: 402px;
+  }
+
+  .chartSectionWrapper {
+    margin: 60px 24px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .creditRechargeButton {
+    text-align: center;
+  }
+
+  .typography {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 32px;
+  }
+}

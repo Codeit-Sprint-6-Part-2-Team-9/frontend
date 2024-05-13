@@ -1,4 +1,4 @@
-import useVoteMutation from "./useVoteMutation";
+import useVoteMutation from './useVoteMutation';
 
 function VoteMutationExample() {
     const { mutate: vote } = useVoteMutation();
