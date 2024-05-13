@@ -1,8 +1,7 @@
 import classes from './MyPage.module.css';
 
 import { useEffect, useState } from 'react';
-
-import { useDocumentTitle } from '@mantine/hooks';
+import { Helmet } from 'react-helmet';
 
 import useIdolsQuery from '../../api/idols/useIdolsQuery';
 import useFavoriteIdols from '../../api/favoriteIdols/useFavoriteIdols';
@@ -28,9 +27,6 @@ const getPageSize = () => {
 };
 
 const MyPage = () => {
-  const [title] = useState('Fandom-K/my-page');
-  useDocumentTitle(title);
-
   const [favoriteIdols, unUseFunction, addFavoriteIdol, removeFavoriteIdol] =
     useFavoriteIdols();
 
@@ -100,6 +96,9 @@ const MyPage = () => {
   return (
     <div className={classes.MyPage}>
       <Container>
+        <Helmet>
+          <title>FANDOM-K/my-page</title>
+        </Helmet>
         <section className={classes.favoriteIdols}>
           <h1 className={classes.sectionTitle}>내가 관심 있는 아이돌</h1>
           <div className={classes.myFavoriteIdolsWrapper}>

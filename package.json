@@ -13,11 +13,12 @@
     "@mantine/carousel": "^7.9.1",
     "@mantine/core": "^7.8.1",
     "@mantine/hooks": "^7.8.1",
-    "embla-carousel-react": "^7.1.0",
     "@tanstack/react-query": "^5.32.1",
     "axios": "^1.6.8",
+    "embla-carousel-react": "^7.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-router-dom": "^6.23.0"
   },
   "devDependencies": {
