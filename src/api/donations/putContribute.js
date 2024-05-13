@@ -1,4 +1,4 @@
-import { default as axios } from '../axios';
+import axios from '../axios';
 
 async function putContribute(donationId, creditsToDonate) {
   const res = await axios.put(`/donations/${donationId}/contribute`, {

@@ -1,4 +1,4 @@
-import { default as axios } from '../axios';
+import axios from '../axios';
 
 async function postVote(idolId) {
     const res = await axios.post(

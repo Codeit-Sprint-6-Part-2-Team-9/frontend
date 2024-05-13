@@ -1,20 +1,40 @@
-import { Modal } from "@mantine/core";
-import classes from "./ModalComponent.module.css";
+import { Modal } from '@mantine/core';
+import classes from './ModalComponent.module.css';
 
 // Modal Body
-import CreditChargeModalBody from "./CreditChargeModalBody";
-import CreditWarnModalBody from "./CreditWarnModalBody";
-import CreditDonationModalBody from "./CreditDonationModalBody";
+import CreditChargeModalBody from './CreditChargeModalBody';
+import CreditWarnModalBody from './CreditWarnModalBody';
+import CreditDonationModalBody from './CreditDonationModalBody';
+import VoteModalBody from './VoteModalBody';
 
-import amber from "../amber.png";
+const ModalComponent = ({ opened, close, modalDataState, donationProps }) => {
+  const switchModalState = (modalDataState) => {
+    switch (modalDataState) {
+      case 'creditWarn':
+        return <CreditWarnModalBody close={close} />;
+      case 'creditCharge':
+        return <CreditChargeModalBody close={close} />;
+      case 'donation':
+        return (
+          <CreditDonationModalBody
+            donationProps={donationProps}
+            close={close}
+          />
+        );
+      case 'femaleVote':
+        return <VoteModalBody type="female" />;
+      case 'maleVote':
+        return <VoteModalBody type="male" />;
+      default:
+    }
+  };
 
-const ModalComponent = ({ opened, close, modalDataState }) => {
   return (
     <Modal.Root
       className={classes.ModalRoot}
       opened={opened}
       onClose={close}
-      size={"auto"}
+      size={'auto'}
       centered
     >
       <Modal.Overlay className={classes.ModalOverlay} />
@@ -23,28 +43,18 @@ const ModalComponent = ({ opened, close, modalDataState }) => {
           <Modal.Title className={classes.ModalTitle}>
             {
               {
-                creditWarn: "",
-                creditCharge: "크레딧 충전하기",
-                donation: "후원하기",
+                creditWarn: '',
+                creditCharge: '크레딧 충전하기',
+                donation: '후원하기',
+                femaleVote: '이달의 여자 아이돌',
+                maleVote: '이달의 남자 아이돌',
               }[modalDataState]
             }
           </Modal.Title>
           <Modal.CloseButton className={classes.ModalCloseButton} />
         </Modal.Header>
         <Modal.Body className={classes.ModalBody}>
-          {modalDataState === "creditWarn" ? (
-            <CreditWarnModalBody close={close} />
-          ) : modalDataState === "creditCharge" ? (
-            <CreditChargeModalBody />
-          ) : (
-            <CreditDonationModalBody
-              props={{
-                profileImg: amber,
-                subtitle: "강남역 광고",
-                title: "앰버 2015 첫 광고",
-              }}
-            />
-          )}
+          {switchModalState(modalDataState)}
         </Modal.Body>
       </Modal.Content>
     </Modal.Root>
