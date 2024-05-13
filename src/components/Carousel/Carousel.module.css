@@ -161,4 +161,9 @@
   .control {
     visibility: visible;
   }
+
+  .control [data-inactive] {
+    opacity: 0;
+    cursor: default;
+  }
 }

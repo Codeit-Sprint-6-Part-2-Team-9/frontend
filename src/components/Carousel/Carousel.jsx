@@ -22,6 +22,7 @@ function CarouselSection() {
 
   const [embla, setEmbla] = useState(0);
   const donationPage = data?.pages[0];
+  const [isPrevButtonDisabled, setIsPrevButtonDisabled] = useState(true);
 
   const handleRefetch = async (index) => {
     if (index === Math.floor(data.pages[0].length * 0.33)) {
@@ -36,13 +37,19 @@ function CarouselSection() {
     const { scrollNext, canScrollNext } = embla;
     if (!canScrollNext) return;
     scrollNext();
+    setIsPrevButtonDisabled(false);
   }, [embla]);
 
   const handlePrevBtn = useCallback(() => {
     if (!embla) return;
-    const { scrollPrev, canScrollPrev } = embla;
+    const { scrollPrev, canScrollPrev, selectedScrollSnap } = embla;
     if (!canScrollPrev) return;
+
     scrollPrev();
+    const currentIndex = selectedScrollSnap();
+    if (currentIndex === 0) {
+      setIsPrevButtonDisabled(true);
+    }
   }, [embla]);
 
   if (isLoading) {
@@ -66,6 +73,7 @@ function CarouselSection() {
             h="78px"
             variant="transparent"
             onClick={handlePrevBtn}
+            disabled={isPrevButtonDisabled}
           >
             <img
               src={prevIcon}
