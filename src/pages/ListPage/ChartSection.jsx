@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import useChartQuery from '../../api/charts/useChartQuery';
 import ChartCard from '../../components/ChartCard';
+import Typography from '../../components/Typography';
 import classes from './ChartSection.module.css';
 import Buttons from '../../components/Buttons';
 
@@ -51,7 +52,9 @@ function ChartSection() {
   return (
     <div className={classes.chartSection}>
       <div className={classes.chartButtonWrapper}>
-        <h2>이달의 차트</h2>
+        <p className={classes.typography}>
+          <Typography type="bold20lh26">이달의 차트</Typography>
+        </p>
         <Buttons type="vote" icon="chart" style={{ fontSize: '13px' }}>
           차트 투표하기
         </Buttons>
@@ -69,23 +72,13 @@ function ChartSection() {
       </div>
       <div className={classes.chart}>
         {renderChartCards()}
-        {hasNextPage ? (
-          <div className={classes.loadMoreButtonWrapper}>
-            <Buttons type="more" onClick={loadMoreIdols}>
-              더보기
-            </Buttons>
-          </div>
-        ) : (
-          <div className={classes.loadMoreButtonWrapper}>
-            <Buttons
-              type="more"
-              disabled={true}
-              style={{ pointerEvents: 'none' }}
-            >
-              더보기
-            </Buttons>
-          </div>
-        )}
+        <Buttons
+          type="more"
+          disabled={!hasNextPage}
+          onClick={hasNextPage ? loadMoreIdols : undefined}
+        >
+          더보기
+        </Buttons>
       </div>
     </div>
   );

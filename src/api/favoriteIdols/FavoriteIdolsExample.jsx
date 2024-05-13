@@ -7,27 +7,23 @@ function FavoriteIdolsExample() {
 
     return (
         <div>
-            {favoriteIdols.map((idolId, index) => {
-                return (
+            {favoriteIdols.map((idolId, index) => (
                     <div key={index}>
                         아이돌 번호: {idolId}
-                        <button onClick={() => removeFavoriteIdol(idolId)}>아이돌 {idolId} 제거</button>
+                        <button type='button' onClick={() => removeFavoriteIdol(idolId)}>아이돌 {idolId} 제거</button>
                     </div>
-                );
-            })}
-            <button onClick={() => resetFavoriteIdols()}>아이돌 리셋</button>
+                ))}
+            <button type='button' onClick={() => resetFavoriteIdols()}>아이돌 리셋</button>
             {allIdols.filter(
                 (idolId) => !favoriteIdols.includes(idolId)
             ).map(
-                (idolId, index) => {
-                    return (
+                (idolId, index) => (
                         <div key={index}>
                             아이돌 번호: {idolId}
                             <br/>
-                            <button onClick={() => addFavoriteIdol(idolId)}>아이돌 {idolId} 추가</button>
+                            <button type='button' onClick={() => addFavoriteIdol(idolId)}>아이돌 {idolId} 추가</button>
                         </div>
-                    );
-                }
+                    )
             )}
         </div>
     );

@@ -2,6 +2,10 @@ import { useState } from 'react';
 import { useDisclosure } from '@mantine/hooks';
 import ModalComponent from '../../components/Modal/ModalComponent';
 import CarouselSection from '../../components/Carousel/Carousel';
+<<<<<<< HEAD
+=======
+import ChartSection from './ChartSection';
+>>>>>>> main
 import MyCreditRechargeButton from '../../components/MyCreditRechargeButton';
 import Typography from '../../components/Typography';
 import classes from './ListPage.module.css';
@@ -38,7 +42,11 @@ function List() {
         <CarouselSection />
       </div>
       <div className={classes.chartSectionWrapper}>
+<<<<<<< HEAD
         <p className={classes.chartSection}></p>
+=======
+        <ChartSection />
+>>>>>>> main
       </div>
     </div>
   );
