@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Progress } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import Typography from '../Typography';
@@ -24,10 +24,20 @@ const CarouselCard = ({ card }) => {
   const timeRemaining = calculateTimeRemaining(deadline);
   const [opened, { open, close }] = useDisclosure(false);
   const [modalDataState, setModalDataState] = useState('donation');
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
   const openModal = (modalName) => {
     open();
     setModalDataState(modalName);
   };
+
+  useEffect(() => {
+    if (percentAchieved >= 100) {
+      setIsButtonDisabled(true);
+    } else {
+      setIsButtonDisabled(false);
+    }
+  }, [percentAchieved]);
 
   return (
     <div>
@@ -59,8 +69,14 @@ const CarouselCard = ({ card }) => {
             onClick={() => {
               openModal('donation');
             }}
+            disabled={isButtonDisabled}
+            style={{
+              filter: isButtonDisabled ? 'grayscale(100%)' : 'none',
+              cursor: percentAchieved >= 100 ? 'not-allowed' : 'pointer',
+              color: 'var(--mantine-color-white-0',
+            }}
           >
-            후원하기
+            {percentAchieved >= 100 ? '목표달성' : '후원하기'}{' '}
           </Buttons>
         </div>
       </div>
