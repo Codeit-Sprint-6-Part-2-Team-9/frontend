@@ -1,4 +1,4 @@
-import { default as axios } from '../axios';
+import axios from '../axios';
 import { ENV } from '../config';
 
 async function getCharts({ gender, cursor }) {
