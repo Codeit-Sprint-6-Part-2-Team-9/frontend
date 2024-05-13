@@ -22,30 +22,28 @@ function CarouselSection() {
 
   const [embla, setEmbla] = useState(0);
   const donationPage = data?.pages[0];
+  const lastPageIndex = data?.pages[0].length - 1;
   const [isPrevButtonDisabled, setIsPrevButtonDisabled] = useState(true);
-
-  const handleRefetch = async (index) => {
-    if (index === Math.floor(data.pages[0].length * 0.33)) {
-      if (hasNextPage && !isFetching) {
-        await fetchNextPage();
-      }
-    }
-  };
+  const [isNextButtonDisabled, setIsNextButtonDisabled] = useState(false);
 
   const handleNextBtn = useCallback(() => {
     if (!embla) return;
-    const { scrollNext, canScrollNext } = embla;
+    const { scrollNext, canScrollNext, selectedScrollSnap } = embla;
     if (!canScrollNext) return;
-    scrollNext();
     setIsPrevButtonDisabled(false);
+    scrollNext();
+    const currentIndex = selectedScrollSnap();
+    const isCurrentSlideLastQuarter =
+      currentIndex === Math.floor(lastPageIndex / 4);
+    setIsNextButtonDisabled(isCurrentSlideLastQuarter);
   }, [embla]);
 
   const handlePrevBtn = useCallback(() => {
     if (!embla) return;
     const { scrollPrev, canScrollPrev, selectedScrollSnap } = embla;
     if (!canScrollPrev) return;
-
     scrollPrev();
+    setIsNextButtonDisabled(false);
     const currentIndex = selectedScrollSnap();
     if (currentIndex === 0) {
       setIsPrevButtonDisabled(true);
@@ -74,6 +72,7 @@ function CarouselSection() {
             variant="transparent"
             onClick={handlePrevBtn}
             disabled={isPrevButtonDisabled}
+            style={{ opacity: isPrevButtonDisabled ? 0 : 1 }}
           >
             <img
               src={prevIcon}
@@ -86,6 +85,8 @@ function CarouselSection() {
             h="78px"
             variant="transparent"
             onClick={handleNextBtn}
+            disabled={isNextButtonDisabled}
+            style={{ opacity: isNextButtonDisabled ? 0 : 1 }}
           >
             <img
               src={nextIcon}
@@ -103,7 +104,7 @@ function CarouselSection() {
         slidesToScroll={'auto'}
         withControls={false}
         getEmblaApi={setEmbla}
-        onSlideChange={handleRefetch}
+        // onSlideChange={handleRefetch}
         styles={{
           root: { maxWidth: 1200, margin: 'auto' },
         }}

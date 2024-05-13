@@ -6,7 +6,7 @@ async function getDonations({ cursor }) {
 
   const res = await axios.get('/donations', {
     //임시 페이지 사이즈
-    params: { cursor, pageSize: 5 },
+    params: { cursor, pageSize: 999999 },
   });
 
   const donations = res.data;
