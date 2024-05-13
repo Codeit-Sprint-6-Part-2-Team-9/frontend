@@ -13,7 +13,7 @@ import Buttons from '../../components/Buttons';
 import classes from './HomePage.module.css';
 
 const HomePage = () => {
-  const [title] = useState('Fandom-k');
+  const [title] = useState('Fandom-K');
   useDocumentTitle(title);
 
   const [unUseFunc1, unUseFunc2, unUseFunc3, newCredits] = useCredits();

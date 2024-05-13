@@ -28,7 +28,7 @@ const getPageSize = () => {
 };
 
 const MyPage = () => {
-  const [title] = useState('Fandom-k/my-page');
+  const [title] = useState('Fandom-K/my-page');
   useDocumentTitle(title);
 
   const [favoriteIdols, unUseFunction, addFavoriteIdol, removeFavoriteIdol] =

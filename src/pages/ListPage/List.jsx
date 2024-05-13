@@ -8,7 +8,7 @@ import Typography from '../../components/Typography';
 import classes from './ListPage.module.css';
 
 function List() {
-  const [title] = useState('Fandom-k/list');
+  const [title] = useState('Fandom-K/list');
   useDocumentTitle(title);
 
   const [opened, { open, close }] = useDisclosure(false);
