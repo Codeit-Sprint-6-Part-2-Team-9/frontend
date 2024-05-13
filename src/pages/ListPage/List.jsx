@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useDisclosure } from '@mantine/hooks';
+import { useDisclosure, useDocumentTitle } from '@mantine/hooks';
 import ModalComponent from '../../components/Modal/ModalComponent';
 import CarouselSection from '../../components/Carousel/Carousel';
 import ChartSection from './ChartSection';
@@ -8,6 +8,9 @@ import Typography from '../../components/Typography';
 import classes from './ListPage.module.css';
 
 function List() {
+  const [title] = useState('Fandom-k/list');
+  useDocumentTitle(title);
+
   const [opened, { open, close }] = useDisclosure(false);
   const [modalDataState, setModalDataState] = useState('donation');
 

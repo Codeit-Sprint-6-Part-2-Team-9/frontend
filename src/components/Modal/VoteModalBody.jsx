@@ -75,17 +75,14 @@ const VoteModalBody = ({ type }) => {
   };
 
   const renderVoteOption = () => {
-    return data?.pages
-      .flatMap((page) => page.idols)
-      .sort((a, b) => b.totalVotes - a.totalVotes)
-      .map((idol) => (
-        <VoteOption
-          key={idol.id}
-          idol={idol}
-          onClick={handleSelected}
-          isChecked={idol.id === checked}
-        />
-      ));
+    return data?.pages[0].map((idol) => (
+      <VoteOption
+        key={idol.id}
+        idol={idol}
+        onClick={handleSelected}
+        isChecked={idol.id === checked}
+      />
+    ));
   };
 
   return (

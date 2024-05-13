@@ -44,12 +44,9 @@ function ChartSection() {
   };
 
   const renderChartCards = () => {
-    return data?.pages
-      .flatMap((page) => page.idols)
-      .sort((a, b) => b.totalVotes - a.totalVotes)
-      .map((idol, index) => (
-        <ChartCard key={idol.id} idol={idol} rank={index + 1} />
-      ));
+    return data?.pages[0].map((idol, index) => (
+      <ChartCard key={idol.id} idol={idol} rank={index + 1} />
+    ));
   };
 
   return (

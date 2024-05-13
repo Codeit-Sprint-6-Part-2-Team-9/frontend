@@ -2,6 +2,8 @@ import classes from './MyPage.module.css';
 
 import { useEffect, useState } from 'react';
 
+import { useDocumentTitle } from '@mantine/hooks';
+
 import useIdolsQuery from '../../api/idols/useIdolsQuery';
 import useFavoriteIdols from '../../api/favoriteIdols/useFavoriteIdols';
 
@@ -26,6 +28,9 @@ const getPageSize = () => {
 };
 
 const MyPage = () => {
+  const [title] = useState('Fandom-k/my-page');
+  useDocumentTitle(title);
+
   const [favoriteIdols, unUseFunction, addFavoriteIdol, removeFavoriteIdol] =
     useFavoriteIdols();
 

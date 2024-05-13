@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useDocumentTitle, useFavicon } from '@mantine/hooks';
+import { useFavicon } from '@mantine/hooks';
 import classes from './App.module.css';
 import HomePage from './pages/homepage/HomePage';
 import List from './pages/ListPage/List';
@@ -10,9 +10,6 @@ import Layout from './components/Layout/Layout';
 import TOP_OVERLAY from './assets/top_overlay.svg';
 
 function App() {
-  const [title] = useState('Fandom-K');
-  useDocumentTitle(title);
-
   const [favicon] = useState(
     'https://github.com/JHmeatschool/JHmeatschool.github.io/raw/main/favicon3.ico',
   );

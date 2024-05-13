@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useDocumentTitle } from '@mantine/hooks';
 import logoimg from '../../assets/logo.svg';
 import introimg from '../../assets/introimg.svg';
 import donatemobile from '../../assets/donatemobile.svg';
@@ -11,6 +13,9 @@ import Buttons from '../../components/Buttons';
 import classes from './HomePage.module.css';
 
 const HomePage = () => {
+  const [title] = useState('Fandom-k');
+  useDocumentTitle(title);
+
   const [unUseFunc1, unUseFunc2, unUseFunc3, newCredits] = useCredits();
   const handleResetClick = () => newCredits();
 
