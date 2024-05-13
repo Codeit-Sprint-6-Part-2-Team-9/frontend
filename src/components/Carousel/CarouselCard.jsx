@@ -7,11 +7,18 @@ import calculateTimeRemaining from '../../utils/calculateTimeRemaining.jsx';
 import coverArtistImage from '../../assets/coverDonation.svg';
 import Buttons from '../../components/Buttons';
 import ModalComponent from '../../components/Modal/ModalComponent';
-import creditIcon from "../../assets/creditIcon.svg";
+import creditIcon from '../../assets/creditIcon.svg';
 
 const CarouselCard = ({ card }) => {
-  const { idol, receivedDonations, targetDonation, deadline, title, subtitle } =
-    card;
+  const {
+    id,
+    idol,
+    receivedDonations,
+    targetDonation,
+    deadline,
+    title,
+    subtitle,
+  } = card;
 
   const percentAchieved = (receivedDonations / targetDonation) * 100;
   const timeRemaining = calculateTimeRemaining(deadline);
@@ -28,6 +35,12 @@ const CarouselCard = ({ card }) => {
         opened={opened}
         close={close}
         modalDataState={modalDataState}
+        donationProps={{
+          donationId: id,
+          profileImg: idol.profilePicture,
+          subtitle,
+          title,
+        }}
       />
       <div className={classes.imageSection}>
         <img
@@ -50,8 +63,6 @@ const CarouselCard = ({ card }) => {
             후원하기
           </Buttons>
         </div>
-
-
       </div>
 
       <div className={classes.progressbarSection}>
