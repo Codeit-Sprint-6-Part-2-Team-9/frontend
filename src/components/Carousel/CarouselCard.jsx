@@ -4,6 +4,7 @@ import { useDisclosure } from '@mantine/hooks';
 import Typography from '../Typography';
 import classes from './Carousel.module.css';
 import calculateTimeRemaining from '../../utils/calculateTimeRemaining.jsx';
+import fotmatTargetDonation from '../../utils/fotmatTargetDonation.jsx';
 import coverArtistImage from '../../assets/coverDonation.svg';
 import Buttons from '../../components/Buttons';
 import ModalComponent from '../../components/Modal/ModalComponent';
@@ -22,6 +23,8 @@ const CarouselCard = ({ card }) => {
 
   const percentAchieved = (receivedDonations / targetDonation) * 100;
   const timeRemaining = calculateTimeRemaining(deadline);
+  const formattedTargetDonation = fotmatTargetDonation(receivedDonations);
+  const formattedReceivedDonations = receivedDonations.toLocaleString();
   const [opened, { open, close }] = useDisclosure(false);
   const [modalDataState, setModalDataState] = useState('donation');
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
@@ -95,7 +98,7 @@ const CarouselCard = ({ card }) => {
               type="medium12lh18ls017"
               style={{ color: 'var(--mantine-color-brand-0)' }}
             >
-              {receivedDonations}
+              {formattedReceivedDonations} / {formattedTargetDonation}
             </Typography>
           </div>
           <Typography
