@@ -59,7 +59,7 @@ function useInfiniteQueryForFandomKAPI({
             return queryFunction(args);
         },
         select: (multiPageData) => ({
-            pages: [reduceAllPagesWithListName(multiPageData.pages, pageName)],
+            pages: reduceAllPagesWithListName(multiPageData.pages, pageName),
             pageParams: [multiPageData.pageParams[multiPageData.pageParams.length - 1]],
         }),
         initialPageParam: 0,
