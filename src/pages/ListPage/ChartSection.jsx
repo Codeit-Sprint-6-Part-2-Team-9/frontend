@@ -44,8 +44,7 @@ function ChartSection() {
   };
 
   const renderChartCards = () => {
-    return data?.pages
-      .flatMap((page) => page.idols)
+    return data?.pages[0]
       .sort((a, b) => b.totalVotes - a.totalVotes)
       .map((idol, index) => (
         <ChartCard key={idol.id} idol={idol} rank={index + 1} />
