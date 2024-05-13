@@ -1,12 +1,18 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
+import { useState } from 'react';
+import { ENV } from './config';
 
 function useInfiniteQueryForFandomKAPI({
-    serverStateKey, queryFunction, queryArguments = {}, pageName = 'list',
+    serverStateKey, queryFunction, queryArguments = {}, pageName = 'list', defaultPageSize = ENV.pageSize,
 }) {
-    const reduceAllPagesWithListName = (pages, listName) => pages.reduce((accumulator, currentValue) => [...accumulator, ...currentValue[listName]], []);
+    const [nextDataSize, setNextDataSize] = useState(defaultPageSize);
     
-    const requestNextPage = async ()=>{
+    const reduceAllPagesWithListName = (pages, listName) => pages.reduce((accumulator, currentValue) => [...accumulator, ...currentValue[listName]], []);
+
+    const requestNextPage = async (requestLength = nextDataSize) => {
         if(hasNextPage && !isFetching) {
+            if(requestLength !== nextDataSize)
+                setNextDataSize(requestLength);
             await fetchNextPage();
         }
     }
@@ -44,8 +50,12 @@ function useInfiniteQueryForFandomKAPI({
     } = useInfiniteQuery({
         queryKey: [serverStateKey, queryArguments],
         queryFn: ({ queryKey, pageParam }) => {
-            const [, args] = queryKey;
-            args.cursor = pageParam;
+            let [, args] = queryKey;
+            args = {
+                ...args,
+                cursor: pageParam,
+                nextDataSize,
+            };
             return queryFunction(args);
         },
         select: (multiPageData) => ({
@@ -54,17 +64,8 @@ function useInfiniteQueryForFandomKAPI({
         }),
         initialPageParam: 0,
         // eslint-disable-next-line
-        getNextPageParam: (lastPage, _allPages, _lastPageParam, _allPageParams) =>
-            lastPage.nextCursor,
-        // eslint-disable-next-line
-        getPreviousPageParam: (_firstPage, allPages, _fitstPageParam, _allPageParams) => {
-            switch (allPages.length) {
-                case 0:
-                case 1: return null;
-                case 2: return 0;
-                default: return allPages[allPages.length - 3].nextCursor;
-            }
-        },
+        getNextPageParam: (_lastPage, _allPages, lastPageParam, _allPageParams) =>
+            lastPageParam,
     });
 
     return {
