@@ -1,11 +1,12 @@
 import axios from '../axios';
-import { ENV } from '../config';
 
-async function getCharts({ gender, cursor }) {
-    const { pageSize } = ENV;
-
+async function getCharts({ gender, nextDataSize, cursor }) {
     const res = await axios.get('/charts/{gender}', {
-        params: { gender, cursor, pageSize },
+        params: {
+            gender,
+            cursor,
+            pageSize: nextDataSize,
+        },
     });
 
     const charts = res.data;
