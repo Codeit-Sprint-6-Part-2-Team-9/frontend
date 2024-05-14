@@ -45,7 +45,7 @@ const MyPage = () => {
       setIdolData(list);
       setIsLoading(false);
     };
-    
+
     getData();
 
     return () => {
@@ -85,6 +85,40 @@ const MyPage = () => {
   const handlePrevPage = () => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
   };
+
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      setPageSize(getPageSize);
+    });
+
+    return () => {
+      window.removeEventListener('resize', () => {
+        setPageSize(getPageSize);
+      });
+    };
+  }, []);
+
+  useEffect(() => {
+    setIdolData(data?.pages[0].list);
+    console.log(idolData);
+  }, [data]);
+
+  useEffect(() => {
+    if (idolData?.length > 0) {
+      const selectableData = idolData.filter(
+        (idol) => !favoriteIdols.includes(idol.id),
+      );
+      setSelectableIdols(selectableData);
+    }
+  }, [idolData, favoriteIdols]);
+
+  if (isLoading) {
+    return <>Loading</>;
+  }
+  if (isError) {
+    console.error(error);
+    return <NotFound errorMessage={'오류가 발생하였습니다.'} />;
+  }
 
   return (
     <div className={classes.MyPage}>

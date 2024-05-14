@@ -1,4 +1,5 @@
 import axios from '../axios';
+
 const getIdols = ({ cursor }, pageSizeCallback = () => 9999) =>
   axios
     .get('/idols', {
