@@ -98,10 +98,6 @@ const MyPage = () => {
     };
   }, []);
 
-  useEffect(() => {
-    setIdolData(data?.pages[0].list);
-    console.log(idolData);
-  }, [data]);
 
   useEffect(() => {
     if (idolData?.length > 0) {
@@ -115,10 +111,7 @@ const MyPage = () => {
   if (isLoading) {
     return <>Loading</>;
   }
-  if (isError) {
-    console.error(error);
-    return <NotFound errorMessage={'오류가 발생하였습니다.'} />;
-  }
+  
 
   return (
     <div className={classes.MyPage}>
