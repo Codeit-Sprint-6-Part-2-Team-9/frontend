@@ -1,18 +1,11 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
-import { useState } from 'react';
-import { ENV } from './config';
+import { isNextPageRequestable, reduceAllPagesWithListName } from './utils';
 
 function useInfiniteQueryForFandomKAPI({
-    serverStateKey, queryFunction, queryArguments = {}, pageName = 'list', defaultPageSize = ENV.pageSize,
+    queryKey, queryFn, pageName = 'list',
 }) {
-    const [nextDataSize, setNextDataSize] = useState(defaultPageSize);
-    
-    const reduceAllPagesWithListName = (pages, listName) => pages.reduce((accumulator, currentValue) => [...accumulator, ...currentValue[listName]], []);
-
-    const requestNextPage = async (requestLength = nextDataSize) => {
-        if(hasNextPage && !isFetching) {
-            if(requestLength !== nextDataSize)
-                setNextDataSize(requestLength);
+    const requestNextPage = async () => {
+        if(isNextPageRequestable(hasNextPage, isFetching)) {
             await fetchNextPage();
         }
     }
@@ -48,16 +41,8 @@ function useInfiniteQueryForFandomKAPI({
         isFetchingNextPage,
         isFetchingPreviousPage,
     } = useInfiniteQuery({
-        queryKey: [serverStateKey, queryArguments],
-        queryFn: ({ queryKey, pageParam }) => {
-            let [, args] = queryKey;
-            args = {
-                ...args,
-                cursor: pageParam,
-                nextDataSize,
-            };
-            return queryFunction(args);
-        },
+        queryKey,
+        queryFn,
         select: (multiPageData) => ({
             pages: reduceAllPagesWithListName(multiPageData.pages, pageName),
             pageParams: [multiPageData.pageParams[multiPageData.pageParams.length - 1]],
