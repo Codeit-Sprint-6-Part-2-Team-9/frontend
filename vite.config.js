@@ -17,6 +17,6 @@ export default ({ mode }) => {
         },
       }),
     ],
-    base: process.env.BASE_URL,
+    base: env.VITE_BASE_URL,
   });
 }
