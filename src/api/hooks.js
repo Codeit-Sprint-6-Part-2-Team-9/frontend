@@ -64,8 +64,8 @@ function useInfiniteQueryForFandomKAPI({
         }),
         initialPageParam: 0,
         // eslint-disable-next-line
-        getNextPageParam: (_lastPage, _allPages, lastPageParam, _allPageParams) =>
-            lastPageParam,
+        getNextPageParam: (lastPage, _allPages, _lastPageParam, _allPageParams) =>
+            lastPage.nextCursor,
     });
 
     return {
