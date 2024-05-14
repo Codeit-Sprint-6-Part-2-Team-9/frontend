@@ -1,17 +1,11 @@
 import axios from '../axios';
 
-async function getIdols({ cursor, nextDataLength, keyword = '' }) {
-    const res = await axios.get('/idols', {
+const getIdols = ({ cursor }, pageSizeCallback = () => 9999) => axios.get('/idols', {
         params: {
             cursor,
-            keyword,
-            pageSize: nextDataLength
+            pageSize: pageSizeCallback(),
         },
-    });
- 
-    const idols = res.data;
-
-    return idols;
-}
+    }
+).then(res => res.data);
 
 export default getIdols;

@@ -1,13 +1,9 @@
 import axios from '../axios';
 
-async function postVote(idolId) {
-    const res = await axios.post(
+const postVote = (idolId) => axios.post(
         '/votes', {
             idolId,
-        });
-
-    const vote = res.data;
-    return vote;
-}
+        }
+    ).then(res => res.data)
 
 export default postVote;

@@ -6,14 +6,16 @@ const CLIENT_STATE_KEYS = {
 const ENV = {
   serverUrl: 'https://fandom-k-api.vercel.app',
   teamName: '6-9',
-  pageSize: 10,
+  defaultPageSize: 10,
 };
 
-const SERVER_STATE_KEYS = {
-  femaleChart: 'female',
-  maleChart: 'male',
-  donation: 'donation',
-  idol: 'idol',
+const QUERY_KEYS = {
+  femaleChart: ['female'],
+  maleChart: ['male'],
+  femaleMonthChart: ['female', 'month'],
+  maleMonthChart: ['male', 'month'],
+  donations: ['donations'],
+  idols: ['idols'],
 };
 
-export { CLIENT_STATE_KEYS, ENV, SERVER_STATE_KEYS };
+export { CLIENT_STATE_KEYS, ENV, QUERY_KEYS };
