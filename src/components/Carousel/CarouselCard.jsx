@@ -23,7 +23,7 @@ const CarouselCard = ({ card }) => {
 
   const percentAchieved = (receivedDonations / targetDonation) * 100;
   const timeRemaining = calculateTimeRemaining(deadline);
-  const formattedTargetDonation = fotmatTargetDonation(receivedDonations);
+  const formattedTargetDonation = fotmatTargetDonation(targetDonation);
   const formattedReceivedDonations = receivedDonations.toLocaleString();
   const [opened, { open, close }] = useDisclosure(false);
   const [modalDataState, setModalDataState] = useState('donation');

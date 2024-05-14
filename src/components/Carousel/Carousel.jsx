@@ -11,15 +11,7 @@ import useDonationQuery from '../../api/donations/useDonationQuery';
 import NotFound from '../../pages/NotFound';
 
 function CarouselSection() {
-  const {
-    data,
-    error,
-    isError,
-    isFetching,
-    isLoading,
-    fetchNextPage,
-    hasNextPage,
-  } = useDonationQuery();
+  const { data, isError, isLoading } = useDonationQuery();
 
   const [embla, setEmbla] = useState(0);
   const donationPage = data?.pages;
