@@ -39,6 +39,7 @@ function List() {
         <CarouselSection />
       </div>
       <div className={classes.chartSectionWrapper}>
+        <p className={classes.chartSection}></p>
         <ChartSection />
       </div>
     </div>

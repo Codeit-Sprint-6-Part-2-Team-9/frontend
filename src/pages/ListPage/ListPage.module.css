@@ -54,4 +54,8 @@
     margin-top: 50px;
     margin-bottom: 32px;
   }
+
+  .carouselSectionWrapper {
+    margin-left: 0;
+  }
 }
