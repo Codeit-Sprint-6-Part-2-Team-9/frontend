@@ -9,7 +9,7 @@ import TOP_OVERLAY from './assets/top_overlay.svg';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.VITE_BASE_URL}>
       <div className={classes.app}>
         <img
           className={classes.topOverlay}
