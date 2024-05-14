@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useDisclosure } from '@mantine/hooks';
 import ModalComponent from '../../components/Modal/ModalComponent';
 import useChartQuery from '../../api/charts/useChartQuery';
@@ -7,50 +7,33 @@ import Typography from '../../components/Typography';
 import classes from './ChartSection.module.css';
 import Buttons from '../../components/Buttons';
 
+const setPageSizeBasedOnWidth = () => {
+  const isWidthLargerThan1280px = window.matchMedia('(min-width: 1280px)').matches
+  return isWidthLargerThan1280px ? 10 : 5;
+};
+
 function ChartSection() {
   const [opened, { open, close }] = useDisclosure(false);
   const menuArr = ['이달의 여자 아이돌', '이달의 남자 아이돌'];
   const [activeTab, setActiveTab] = useState(0);
-  const [page, setPage] = useState(0);
-  const [itemsPerPage, setItemsPerPage] = useState(0);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setItemsPerPage(window.innerWidth < 1280 ? 5 : 10);
-      setPage(0);
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   const { data, fetchNextPage, hasNextPage } = useChartQuery(
-    activeTab === 0 ? 'female' : 'male',
-    { initialPage: page, pageSize: itemsPerPage },
+    activeTab === 0 ? 'female' : 'male', setPageSizeBasedOnWidth
   );
 
   const handleTabClick = (index) => {
     setActiveTab(index);
-    setPage(0);
   };
 
   const loadMoreIdols = () => {
-    fetchNextPage(page + 1);
-    setPage(page + 1);
+    fetchNextPage();
   };
 
-  const renderChartCards = () => {
-    return data?.pages
-      .flatMap((page) => page.idols)
+  const renderChartCards = () => data?.pages
       .sort((a, b) => b.totalVotes - a.totalVotes)
       .map((idol, index) => (
         <ChartCard key={idol.id} idol={idol} rank={index + 1} />
       ));
-  };
 
   return (
     <div className={classes.chartSection}>

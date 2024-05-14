@@ -1,17 +1,11 @@
 import axios from '../axios';
 
-async function getDonations({ cursor, nextDataLength }) {
-
-    const res = await axios.get('/donations', {
+const getDonations = ({ cursor }, pageSizeCallback) => axios.get('/donations', {
         params: {
             cursor,
-            pageSize: nextDataLength
+            pageSize: pageSizeCallback(),
         },
-    });
-
-    const donations = res.data;
-
-    return donations;
-}
+    }
+).then(res => res.data);
 
 export default getDonations;

@@ -1,17 +1,12 @@
 import axios from '../axios';
 
-async function getCharts({ gender, nextDataSize, cursor }) {
-    const res = await axios.get('/charts/{gender}', {
+const getCharts = ({ gender, cursor }, pageSizeCallback) => axios.get('/charts/{gender}', {
         params: {
             gender,
             cursor,
-            pageSize: nextDataSize,
+            pageSize: pageSizeCallback()
         },
-    });
-
-    const charts = res.data;
-
-    return charts;
-}
+    }
+).then(res => res.data);
 
 export default getCharts;
