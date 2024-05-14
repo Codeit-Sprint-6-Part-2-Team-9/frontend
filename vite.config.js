@@ -17,6 +17,6 @@ export default ({ mode }) => {
         },
       }),
     ],
-    base: env.BASE_URL,
+    base: env.VITE_BASE_URL,
   });
 }

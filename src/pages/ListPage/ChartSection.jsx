@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useDisclosure } from '@mantine/hooks';
+import { useState, useEffect, useCallback } from 'react';
+import { useDisclosure, useMediaQuery, usePrevious } from '@mantine/hooks';
 import ModalComponent from '../../components/Modal/ModalComponent';
 import useChartQuery from '../../api/charts/useChartQuery';
 import ChartCard from '../../components/ChartCard';
@@ -14,20 +14,38 @@ const setPageSizeBasedOnWidth = () => {
 
 function ChartSection() {
   const [opened, { open, close }] = useDisclosure(false);
-  const menuArr = ['이달의 여자 아이돌', '이달의 남자 아이돌'];
+  const isWidthLargerThan1280px = useMediaQuery('(min-width: 1280px)', {
+    getInitialValueInEffect: false,
+  });
+  const wasWidthLargerThan1280px = usePrevious(isWidthLargerThan1280px);
   const [activeTab, setActiveTab] = useState(0);
+  const [currentDataLength, setCurrentDataLength] = useState(0);
+  const tabs = ['female', 'male'];
+  const menus = ['이달의 여자 아이돌', '이달의 남자 아이돌'];
 
-  const { data, fetchNextPage, hasNextPage } = useChartQuery(
-    activeTab === 0 ? 'female' : 'male', setPageSizeBasedOnWidth
+  const { data, fetchNextPage, hasNextPage, refetchForDesktopSize } = useChartQuery(
+    tabs[activeTab], setPageSizeBasedOnWidth
   );
+  const ifIsLargerThenRefetch = useCallback(() => {
+    if(typeof(wasWidthLargerThan1280px) === 'undefined') return;
+    if(isWidthLargerThan1280px && !wasWidthLargerThan1280px) refetchForDesktopSize(currentDataLength);
+  }, [currentDataLength, isWidthLargerThan1280px, wasWidthLargerThan1280px, refetchForDesktopSize]);
+
+  useEffect(() => {
+    setCurrentDataLength(data?.pages?.length);
+  }, [data?.pages?.length]);
+
+  useEffect(() => {
+    ifIsLargerThenRefetch();
+  }, [ifIsLargerThenRefetch]);
 
   const handleTabClick = (index) => {
     setActiveTab(index);
   };
 
-  const loadMoreIdols = () => {
+  const loadMoreIdols = useCallback(() => {
     fetchNextPage();
-  };
+  }, [fetchNextPage]);
 
   const renderChartCards = () => data?.pages
       .sort((a, b) => b.totalVotes - a.totalVotes)
@@ -40,7 +58,7 @@ function ChartSection() {
       <ModalComponent
         opened={opened}
         close={close}
-        modalDataState={`${activeTab === 0 ? 'female' : 'male'}Vote`}
+        modalDataState={`${tabs[activeTab]}Vote`}
       />
       <div className={classes.chartButtonWrapper}>
         <div className={classes.typography}>
@@ -56,7 +74,7 @@ function ChartSection() {
         </Buttons>
       </div>
       <div className={classes.chartWrapper}>
-        {menuArr.map((element, index) => (
+        {menus.map((element, index) => (
           <li
             key={index}
             className={`${classes.tab} ${activeTab === index ? classes.focused : ''}`}
