@@ -6,6 +6,7 @@ import ChartCard from '../../components/ChartCard';
 import Typography from '../../components/Typography';
 import classes from './ChartSection.module.css';
 import Buttons from '../../components/Buttons';
+import ChartSectionSkeleton from '../../components/Skeletons/ChartCardSkeleton';
 
 const setPageSizeBasedOnWidth = () => {
   const isWidthLargerThan1280px = window.matchMedia(
@@ -19,7 +20,7 @@ function ChartSection() {
   const menuArr = ['이달의 여자 아이돌', '이달의 남자 아이돌'];
   const [activeTab, setActiveTab] = useState(0);
 
-  const { data, fetchNextPage, hasNextPage } = useChartQuery(
+  const { data, fetchNextPage, hasNextPage, isLoading } = useChartQuery(
     activeTab === 0 ? 'female' : 'male',
     setPageSizeBasedOnWidth,
   );
@@ -39,6 +40,8 @@ function ChartSection() {
       .map((idol, index) => (
         <ChartCard key={idol.id} idol={idol} rank={index + 1} />
       ));
+
+  const skeletonCount = setPageSizeBasedOnWidth();
 
   return (
     <div className={classes.chartSection}>
@@ -72,7 +75,8 @@ function ChartSection() {
         ))}
       </div>
       <div className={classes.chart}>
-        {renderChartCards()}
+        {isLoading && <ChartSectionSkeleton count={skeletonCount} />}
+        {!isLoading && renderChartCards()}
         <div className={classes.moreButtonWrapper}>
           <Buttons
             type="more"

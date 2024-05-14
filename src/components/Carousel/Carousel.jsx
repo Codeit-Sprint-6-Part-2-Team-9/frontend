@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { Carousel } from '@mantine/carousel';
 import { ActionIcon, Box, Flex } from '@mantine/core';
+import CarouselSlideSkeleton from '../Skeletons/CarouselSlideSkeleton';
 import CarouselCard from './CarouselCard';
 import '@mantine/carousel/styles.css';
 import classes from './Carousel.module.css';
@@ -21,8 +22,8 @@ function CarouselSection() {
   } = useDonationQuery();
 
   const [embla, setEmbla] = useState(0);
-  const donationPage = data?.pages[0];
-  const lastPageIndex = data?.pages[0].length - 1;
+  const donationPage = data?.pages;
+  const lastPageIndex = data?.pages.length - 1;
   const [isPrevButtonDisabled, setIsPrevButtonDisabled] = useState(true);
   const [isNextButtonDisabled, setIsNextButtonDisabled] = useState(false);
 
@@ -51,7 +52,11 @@ function CarouselSection() {
   }, [embla]);
 
   if (isLoading) {
-    return <>Loading</>;
+    return (
+      <Box className={classes.carouselWrapper}>
+        <CarouselSlideSkeleton />
+      </Box>
+    );
   }
 
   if (isError) {
@@ -72,7 +77,7 @@ function CarouselSection() {
             variant="transparent"
             onClick={handlePrevBtn}
             disabled={isPrevButtonDisabled}
-            style={{ opacity: isPrevButtonDisabled ? 0 : 1 }}
+            style={{ opacity: isPrevButtonDisabled ? 0 : 1, cursor: 'none' }}
           >
             <img
               src={prevIcon}
@@ -86,7 +91,7 @@ function CarouselSection() {
             variant="transparent"
             onClick={handleNextBtn}
             disabled={isNextButtonDisabled}
-            style={{ opacity: isNextButtonDisabled ? 0 : 1 }}
+            style={{ opacity: isNextButtonDisabled ? 0 : 1, cursor: 'none' }}
           >
             <img
               src={nextIcon}
