@@ -26,12 +26,18 @@ function ChartSection() {
   const tabs = ['female', 'male'];
   const menus = ['이달의 여자 아이돌', '이달의 남자 아이돌'];
 
-  const { data, fetchNextPage, hasNextPage, refetchForDesktopSize } = useChartQuery(
-    tabs[activeTab], setPageSizeBasedOnWidth  );
+  const { data, fetchNextPage, hasNextPage, refetchForDesktopSize, isLoading } =
+    useChartQuery(tabs[activeTab], setPageSizeBasedOnWidth);
   const ifIsLargerThenRefetch = useCallback(() => {
-    if(typeof(wasWidthLargerThan1280px) === 'undefined') return;
-    if(isWidthLargerThan1280px && !wasWidthLargerThan1280px) refetchForDesktopSize(currentDataLength);
-  }, [currentDataLength, isWidthLargerThan1280px, wasWidthLargerThan1280px, refetchForDesktopSize]);
+    if (typeof wasWidthLargerThan1280px === 'undefined') return;
+    if (isWidthLargerThan1280px && !wasWidthLargerThan1280px)
+      refetchForDesktopSize(currentDataLength);
+  }, [
+    currentDataLength,
+    isWidthLargerThan1280px,
+    wasWidthLargerThan1280px,
+    refetchForDesktopSize,
+  ]);
 
   useEffect(() => {
     setCurrentDataLength(data?.pages?.length);
@@ -50,11 +56,9 @@ function ChartSection() {
   }, [fetchNextPage]);
 
   const renderChartCards = () =>
-    data?.pages
-      .sort((a, b) => b.totalVotes - a.totalVotes)
-      .map((idol, index) => (
-        <ChartCard key={idol.id} idol={idol} rank={index + 1} />
-      ));
+    data?.pages.map((idol, index) => (
+      <ChartCard key={idol.id} idol={idol} rank={index + 1} />
+    ));
 
   const skeletonCount = setPageSizeBasedOnWidth();
 
