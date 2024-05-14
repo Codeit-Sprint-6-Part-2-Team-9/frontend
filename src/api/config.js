@@ -4,8 +4,8 @@ const CLIENT_STATE_KEYS = {
 };
 
 const ENV = {
-  serverUrl: 'https://fandom-k-api.vercel.app',
-  teamName: '6-9',
+  serverUrl: import.meta.env.VITE_SERVER_URL,
+  teamName: import.meta.env.VITE_TEAM_NAME,
   defaultPageSize: 10,
 };
 
