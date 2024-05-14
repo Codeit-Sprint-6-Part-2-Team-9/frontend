@@ -168,7 +168,7 @@
 
 .centerLine {
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 1029px;
   left: 50%;
   z-index: 1;

@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom";
-import logoimg from "../../assets/logo.svg";
-import introimg from "../../assets/introimg.svg";
-import donatemobile from "../../assets/donatemobile.svg";
-import mypagemobile from "../../assets/mypagemobile.svg";
-import votemobile from "../../assets/votemobile.svg";
-import Container from "./Container";
-import theme from "../../theme";
-import useCredits from "../../api/credits/useCredits";
-import Buttons from "../../components/Buttons";
-import classes from "./HomePage.module.css";
-import { motion, spring } from "framer-motion";
+import { Link } from 'react-router-dom';
+import logoimg from '../../assets/logo.svg';
+import introimg from '../../assets/introimg.svg';
+import donatemobile from '../../assets/donatemobile.svg';
+import mypagemobile from '../../assets/mypagemobile.svg';
+import votemobile from '../../assets/votemobile.svg';
+import Container from './Container';
+import theme from '../../theme';
+import useCredits from '../../api/credits/useCredits';
+import Buttons from '../../components/Buttons';
+import classes from './HomePage.module.css';
+import { motion, spring } from 'framer-motion';
 
 const HomePage = () => {
   const [unUseFunc1, unUseFunc2, unUseFunc3, newCredits] = useCredits();
@@ -31,20 +31,18 @@ const HomePage = () => {
       <motion.section
         {...variants}
         transition={{
-          ease: "easeInOut",
+          ease: 'easeInOut',
           duration: 2,
           y: { duration: 1 },
         }}
       >
-        <motion.div initial={"fixed"}>
-          <div className={classes.centerLine}></div>
-        </motion.div>
+        <div className={classes.centerLine}></div>
         <section className={classes.intro}>
           <div className={classes.introTitle}>
             <div className={classes.introTitleFont}>
               내가 좋아하는 아이돌을
               <br />
-              가장{" "}
+              가장{' '}
               <span style={{ color: theme.colors.brand[0] }}>쉽게 덕질</span>
               하는 방법
             </div>
