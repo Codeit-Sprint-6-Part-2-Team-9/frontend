@@ -15,7 +15,7 @@ function CardSkeleton() {
       />
       <Skeleton
         h={{ xl: '18', md: '18', xs: '15' }}
-        w={{ xl: '168', md: '160', xs: '55' }}
+        w={{ xl: '168', md: '160', xs: '110' }}
         mt={12}
       />
       <Skeleton
