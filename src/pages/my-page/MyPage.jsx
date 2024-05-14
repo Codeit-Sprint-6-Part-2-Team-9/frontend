@@ -1,14 +1,11 @@
-import classes from './MyPage.module.css';
-
 import { useEffect, useState } from 'react';
-
-import useIdolsQuery from '../../api/idols/useIdolsQuery';
+import classes from './MyPage.module.css';
 import useFavoriteIdols from '../../api/favoriteIdols/useFavoriteIdols';
+import getIdols from '../../api/idols/getIdols';
 
 import RoundCardWithText from './components/RoundCardWithText';
 import Container from './components/Container.jsx';
 import Buttons from '../../components/Buttons';
-import NotFound from '../NotFound';
 import FavoriteRoundCard from './components/FavoriteRoundCard';
 import EmptyFavoriteIdols from './components/EmptyFavoriteIdols';
 
@@ -26,15 +23,46 @@ const getPageSize = () => {
 };
 
 const MyPage = () => {
-  const [favoriteIdols, unUseFunction, addFavoriteIdol, removeFavoriteIdol] =
-    useFavoriteIdols();
-
-  const { data, error, isLoading, isError } = useIdolsQuery();
   const [idolData, setIdolData] = useState([]);
   const [checkedFavoriteId, setCheckedFavoriteId] = useState([]);
   const [selectableIdols, setSelectableIdols] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
   const [pageSize, setPageSize] = useState(getPageSize());
+  const [isLoading, setIsLoading] = useState(false);
+
+  // LocalStorage
+  const [favoriteIdols, unUseFunction, addFavoriteIdol, removeFavoriteIdol] =
+    useFavoriteIdols();
+
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      setPageSize(getPageSize);
+    });
+
+    const getData = async () => {
+      setIsLoading(true);
+      const { list } = await getIdols({ cursor: 0 }, () => 9999);
+      setIdolData(list);
+      setIsLoading(false);
+    };
+    
+    getData();
+
+    return () => {
+      window.removeEventListener('resize', () => {
+        setPageSize(getPageSize);
+      });
+    };
+  }, []);
+
+  useEffect(() => {
+    if (idolData?.length > 0) {
+      const selectableData = idolData.filter(
+        (idol) => !favoriteIdols.includes(idol.id),
+      );
+      setSelectableIdols(selectableData);
+    }
+  }, [idolData, favoriteIdols]);
 
   const handleFavoriteList = (idolId) => {
     if (checkedFavoriteId.includes(idolId)) {
@@ -57,40 +85,6 @@ const MyPage = () => {
   const handlePrevPage = () => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
   };
-
-  useEffect(() => {
-    window.addEventListener('resize', () => {
-      setPageSize(getPageSize);
-    });
-
-    return () => {
-      window.removeEventListener('resize', () => {
-        setPageSize(getPageSize);
-      });
-    };
-  }, []);
-
-  useEffect(() => {
-    setIdolData(data?.pages[0].list);
-    console.log(idolData);
-  }, [data]);
-
-  useEffect(() => {
-    if (idolData?.length > 0) {
-      const selectableData = idolData.filter(
-        (idol) => !favoriteIdols.includes(idol.id),
-      );
-      setSelectableIdols(selectableData);
-    }
-  }, [idolData, favoriteIdols]);
-
-  if (isLoading) {
-    return <>Loading</>;
-  }
-  if (isError) {
-    console.error(error);
-    return <NotFound errorMessage={'오류가 발생하였습니다.'} />;
-  }
 
   return (
     <div className={classes.MyPage}>
