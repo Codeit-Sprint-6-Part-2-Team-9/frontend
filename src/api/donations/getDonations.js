@@ -1,17 +1,13 @@
 import axios from '../axios';
-// import { ENV } from '../config';
 
-async function getDonations({ cursor }) {
-  // const { pageSize } = ENV;
-
-  const res = await axios.get('/donations', {
-    //임시 페이지 사이즈
-    params: { cursor, pageSize: 999999 },
-  });
-
-  const donations = res.data;
-
-  return donations;
-}
+const getDonations = ({ cursor }, pageSizeCallback) =>
+  axios
+    .get('/donations', {
+      params: {
+        cursor,
+        pageSize: pageSizeCallback(),
+      },
+    })
+    .then((res) => res.data);
 
 export default getDonations;
