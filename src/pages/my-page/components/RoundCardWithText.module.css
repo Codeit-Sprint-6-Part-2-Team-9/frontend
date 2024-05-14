@@ -29,13 +29,11 @@
 }
 
 .name {
-  margin: 0;
   color: #f4efef;
   font-weight: 700;
 }
 
 .groupName {
-  margin: 0;
   color: white;
   opacity: 0.6;
 }

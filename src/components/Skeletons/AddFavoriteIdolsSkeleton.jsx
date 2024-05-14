@@ -19,25 +19,12 @@ const AddFavoriteIdolsSkeletonItem = () => {
   );
 };
 
-const AddFavoriteIdolsSkeleton = () => {
+const AddFavoriteIdolsSkeleton = ({ pageSize }) => {
   return (
     <div className={classes.AddFavoriteIdolSkeletonWrapper}>
-      <AddFavoriteIdolsSkeletonItem />
-      <AddFavoriteIdolsSkeletonItem />
-      <AddFavoriteIdolsSkeletonItem />
-      <AddFavoriteIdolsSkeletonItem />
-      <AddFavoriteIdolsSkeletonItem />
-      <AddFavoriteIdolsSkeletonItem />
-      <AddFavoriteIdolsSkeletonItem />
-      <AddFavoriteIdolsSkeletonItem />
-      <AddFavoriteIdolsSkeletonItem />
-      <AddFavoriteIdolsSkeletonItem />
-      <AddFavoriteIdolsSkeletonItem />
-      <AddFavoriteIdolsSkeletonItem />
-      <AddFavoriteIdolsSkeletonItem />
-      <AddFavoriteIdolsSkeletonItem />
-      <AddFavoriteIdolsSkeletonItem />
-      <AddFavoriteIdolsSkeletonItem />
+      {Array.from({ length: pageSize }, (_, index) => (
+        <AddFavoriteIdolsSkeletonItem key={`addFavoriteSkeleton-${index}`} />
+      ))}
     </div>
   );
 };

@@ -19,15 +19,13 @@ const FavoriteIdolSkeletonItem = () => {
   );
 };
 
-const FavoriteIdolSkeleton = () => {
+const FavoriteIdolSkeleton = ({ pageSize }) => {
+  const count = pageSize === 16 ? 9 : pageSize === 8 ? 5 : 2;
   return (
     <div className={classes.favoriteIdolSkeletonWrapper}>
-      <FavoriteIdolSkeletonItem />
-      <FavoriteIdolSkeletonItem />
-      <FavoriteIdolSkeletonItem />
-      <FavoriteIdolSkeletonItem />
-      <FavoriteIdolSkeletonItem />
-      <FavoriteIdolSkeletonItem />
+      {Array.from({ length: count }, (_, index) => (
+        <FavoriteIdolSkeletonItem key={`favoriteSkeleton-${index}`} />
+      ))}
     </div>
   );
 };

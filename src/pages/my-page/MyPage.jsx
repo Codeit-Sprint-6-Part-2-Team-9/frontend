@@ -45,7 +45,7 @@ const MyPage = () => {
       setIsLoading(true);
       const { list } = await getIdols({ cursor: 0 }, () => 9999);
       setIdolData(list);
-      setIsLoading(true);
+      setIsLoading(false);
     };
 
     getData();
@@ -100,10 +100,6 @@ const MyPage = () => {
     };
   }, []);
 
-  // if (isLoading) {
-  //   return <>Loading</>;
-  // }
-
   return (
     <div className={classes.MyPage}>
       <Container>
@@ -113,7 +109,7 @@ const MyPage = () => {
             {favoriteIdols?.length === 0 ? (
               <EmptyFavoriteIdols />
             ) : isLoading ? (
-              <FavoriteIdolSkeleton />
+              <FavoriteIdolSkeleton pageSize={pageSize} />
             ) : (
               idolData
                 ?.filter((idol) => favoriteIdols.includes(idol.id))
@@ -138,7 +134,7 @@ const MyPage = () => {
             </h1>
           </div>
           {isLoading ? (
-            <AddFavoriteIdolsSkeleton />
+            <AddFavoriteIdolsSkeleton pageSize={pageSize} />
           ) : (
             <div
               className={`${classes.addFavoriteIdolsWrapper} ${pageSize === 8 ? classes.tablet : ''} ${pageSize === 6 ? classes.mobile : ''}  `}

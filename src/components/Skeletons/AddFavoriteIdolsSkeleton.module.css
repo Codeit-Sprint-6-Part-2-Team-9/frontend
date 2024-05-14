@@ -1,18 +1,19 @@
 .AddFavoriteIdolSkeletonWrapper {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   row-gap: 20px;
   column-gap: 10px;
   position: relative;
   overflow-x: scroll;
+  height: 382px;
 }
 
 .AddFavoriteIdolsSkeletonItem {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 }
 
 .profileWrapper {
@@ -31,6 +32,10 @@
 }
 
 @media (min-width: 768px) {
+  .AddFavoriteIdolSkeletonWrapper {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 0;
+  }
   .profileWrapper {
     width: 128px;
     height: 128px;
@@ -46,4 +51,8 @@
   }
 }
 @media (min-width: 1280px) {
+  .AddFavoriteIdolSkeletonWrapper {
+    grid-template-columns: repeat(8, 1fr);
+    column-gap: 0;
+  }
 }
