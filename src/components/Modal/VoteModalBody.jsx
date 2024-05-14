@@ -63,7 +63,7 @@ const VoteModalBody = ({ type }) => {
 
   const [credit, chargeCredit, payCredit] = useCredits();
   const { mutate: vote } = useVoteMutation();
-  const { data, fetchNextPage, hasNextPage } = useChartQuery(type);
+  const { data, fetchNextPage, hasNextPage } = useChartQuery(`${type}Month`);
 
   const handleSelected = (id) => {
     setChecked(id);
@@ -75,14 +75,16 @@ const VoteModalBody = ({ type }) => {
   };
 
   const renderVoteOption = () => {
-    return data?.pages[0].map((idol) => (
-      <VoteOption
-        key={idol.id}
-        idol={idol}
-        onClick={handleSelected}
-        isChecked={idol.id === checked}
-      />
-    ));
+    return data?.pages
+      .sort((a, b) => b.totalVotes - a.totalVotes)
+      .map((idol) => (
+        <VoteOption
+          key={idol.id}
+          idol={idol}
+          onClick={handleSelected}
+          isChecked={idol.id === checked}
+        />
+      ));
   };
 
   return (

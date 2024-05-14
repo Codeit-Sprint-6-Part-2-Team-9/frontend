@@ -16,7 +16,7 @@ function App() {
   useFavicon(favicon);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.VITE_BASE_URL}>
       <div className={classes.app}>
         <img
           className={classes.topOverlay}

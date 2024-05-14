@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Helmet } from 'react-helmet';
 import { useDisclosure } from '@mantine/hooks';
 import ModalComponent from '../../components/Modal/ModalComponent';
 import CarouselSection from '../../components/Carousel/Carousel';
@@ -19,9 +18,6 @@ function List() {
 
   return (
     <div className={classes.listWrapper}>
-      <Helmet>
-        <title>FANDOM-K/list</title>
-      </Helmet>
       <ModalComponent
         opened={opened}
         close={close}

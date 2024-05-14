@@ -1,5 +1,3 @@
-import { Helmet } from 'react-helmet';
-
 function NotFound({ errorMessage }) {
   return (
     <div
@@ -10,9 +8,6 @@ function NotFound({ errorMessage }) {
         height: '100vh',
       }}
     >
-      <Helmet>
-        <title>Page Not Found</title>
-      </Helmet>
       <div style={{ color: 'white', fontSize: '20px' }}>{errorMessage}</div>
     </div>
   );
