@@ -77,7 +77,10 @@ function CarouselSection() {
             variant="transparent"
             onClick={handlePrevBtn}
             disabled={isPrevButtonDisabled}
-            style={{ opacity: isPrevButtonDisabled ? 0 : 1, cursor: 'none' }}
+            style={{
+              opacity: isPrevButtonDisabled ? 0 : 1,
+              cursor: isPrevButtonDisabled ? 'default' : 'pointer',
+            }}
           >
             <img
               src={prevIcon}
@@ -91,7 +94,10 @@ function CarouselSection() {
             variant="transparent"
             onClick={handleNextBtn}
             disabled={isNextButtonDisabled}
-            style={{ opacity: isNextButtonDisabled ? 0 : 1, cursor: 'none' }}
+            style={{
+              opacity: isNextButtonDisabled ? 0 : 1,
+              cursor: isNextButtonDisabled ? 'default' : 'pointer',
+            }}
           >
             <img
               src={nextIcon}

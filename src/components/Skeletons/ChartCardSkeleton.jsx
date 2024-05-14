@@ -1,4 +1,4 @@
-import { Skeleton, Flex } from '@mantine/core';
+import { Skeleton } from '@mantine/core';
 import classes from './ChartCardSkeleton.module.css';
 
 function ChartCardSkeleton() {
@@ -26,7 +26,7 @@ const ChartSectionSkeleton = ({ count }) => {
   return (
     <div className={classes.ChartSectionSkeleton}>
       {Array.from({ length: count }).map((_, index) => (
-        <ChartCardSkeleton />
+        <ChartCardSkeleton key={index} />
       ))}
     </div>
   );

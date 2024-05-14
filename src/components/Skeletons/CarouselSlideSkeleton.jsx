@@ -10,7 +10,7 @@ function CardSkeleton() {
         w={{ xl: '282', md: '282', xs: '157' }}
         bt={10}
         mr={{ xl: '-10', md: '-20', xs: '9' }}
-        solid
+        solid="true"
         radius={8}
       />
       <Skeleton
