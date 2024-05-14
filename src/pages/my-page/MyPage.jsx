@@ -8,6 +8,7 @@ import Container from './components/Container.jsx';
 import Buttons from '../../components/Buttons';
 import FavoriteRoundCard from './components/FavoriteRoundCard';
 import EmptyFavoriteIdols from './components/EmptyFavoriteIdols';
+import FavoriteIdolSkeleton from '../../components/Skeletons/FavoriteIdolSkeleton';
 
 import PREV_BTN from '../../assets/btnArrowLeft.svg';
 import NEXT_BTN from '../../assets/btnArrowRight.svg';
@@ -98,20 +99,9 @@ const MyPage = () => {
     };
   }, []);
 
-
-  useEffect(() => {
-    if (idolData?.length > 0) {
-      const selectableData = idolData.filter(
-        (idol) => !favoriteIdols.includes(idol.id),
-      );
-      setSelectableIdols(selectableData);
-    }
-  }, [idolData, favoriteIdols]);
-
-  if (isLoading) {
-    return <>Loading</>;
-  }
-  
+  // if (isLoading) {
+  //   return <>Loading</>;
+  // }
 
   return (
     <div className={classes.MyPage}>
@@ -121,6 +111,8 @@ const MyPage = () => {
           <div className={classes.myFavoriteIdolsWrapper}>
             {favoriteIdols?.length === 0 ? (
               <EmptyFavoriteIdols />
+            ) : isLoading ? (
+              <FavoriteIdolSkeleton />
             ) : (
               idolData
                 ?.filter((idol) => favoriteIdols.includes(idol.id))
@@ -147,19 +139,23 @@ const MyPage = () => {
           <div
             className={`${classes.addFavoriteIdolsWrapper} ${pageSize === 8 ? classes.tablet : ''} ${pageSize === 6 ? classes.mobile : ''}  `}
           >
-            {selectableIdols
-              ?.slice(currentPage * pageSize, (currentPage + 1) * pageSize)
-              .map((idol) => (
-                <RoundCardWithText
-                  key={`idol-${idol.id}`}
-                  id={idol.id}
-                  name={idol.name}
-                  groupName={idol.group}
-                  profilePicture={idol.profilePicture}
-                  onClick={handleFavoriteList}
-                  isChecked={checkedFavoriteId.includes(idol.id)}
-                />
-              ))}
+            {isLoading ? (
+              <div style={{ color: 'white', fontSize: '50px' }}>ISLOADING</div>
+            ) : (
+              selectableIdols
+                ?.slice(currentPage * pageSize, (currentPage + 1) * pageSize)
+                .map((idol) => (
+                  <RoundCardWithText
+                    key={`idol-${idol.id}`}
+                    id={idol.id}
+                    name={idol.name}
+                    groupName={idol.group}
+                    profilePicture={idol.profilePicture}
+                    onClick={handleFavoriteList}
+                    isChecked={checkedFavoriteId.includes(idol.id)}
+                  />
+                ))
+            )}
           </div>
           {currentPage !== 0 && (
             <img
