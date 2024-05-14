@@ -6,7 +6,8 @@
   column-gap: 10px;
   position: relative;
   overflow-x: scroll;
-  height: 382px;
+  box-sizing: border-box;
+  height: 380px;
 }
 
 .AddFavoriteIdolsSkeletonItem {
@@ -35,6 +36,8 @@
   .AddFavoriteIdolSkeletonWrapper {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 0;
+    width: 696px;
+    height: 380px;
   }
   .profileWrapper {
     width: 128px;
@@ -54,5 +57,7 @@
   .AddFavoriteIdolSkeletonWrapper {
     grid-template-columns: repeat(8, 1fr);
     column-gap: 0;
+    width: 1200px;
+    height: 380px;
   }
 }
