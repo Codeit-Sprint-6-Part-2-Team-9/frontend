@@ -9,6 +9,7 @@ import Buttons from '../../components/Buttons';
 import FavoriteRoundCard from './components/FavoriteRoundCard';
 import EmptyFavoriteIdols from './components/EmptyFavoriteIdols';
 import FavoriteIdolSkeleton from '../../components/Skeletons/FavoriteIdolSkeleton';
+import AddFavoriteIdolsSkeleton from '../../components/Skeletons/AddFavoriteIdolsSkeleton';
 
 import PREV_BTN from '../../assets/btnArrowLeft.svg';
 import NEXT_BTN from '../../assets/btnArrowRight.svg';
@@ -44,7 +45,7 @@ const MyPage = () => {
       setIsLoading(true);
       const { list } = await getIdols({ cursor: 0 }, () => 9999);
       setIdolData(list);
-      setIsLoading(false);
+      setIsLoading(true);
     };
 
     getData();
@@ -136,13 +137,13 @@ const MyPage = () => {
               관심 있는 아이돌을 추가해보세요.
             </h1>
           </div>
-          <div
-            className={`${classes.addFavoriteIdolsWrapper} ${pageSize === 8 ? classes.tablet : ''} ${pageSize === 6 ? classes.mobile : ''}  `}
-          >
-            {isLoading ? (
-              <div style={{ color: 'white', fontSize: '50px' }}>ISLOADING</div>
-            ) : (
-              selectableIdols
+          {isLoading ? (
+            <AddFavoriteIdolsSkeleton />
+          ) : (
+            <div
+              className={`${classes.addFavoriteIdolsWrapper} ${pageSize === 8 ? classes.tablet : ''} ${pageSize === 6 ? classes.mobile : ''}  `}
+            >
+              {selectableIdols
                 ?.slice(currentPage * pageSize, (currentPage + 1) * pageSize)
                 .map((idol) => (
                   <RoundCardWithText
@@ -154,9 +155,9 @@ const MyPage = () => {
                     onClick={handleFavoriteList}
                     isChecked={checkedFavoriteId.includes(idol.id)}
                   />
-                ))
-            )}
-          </div>
+                ))}
+            </div>
+          )}
           {currentPage !== 0 && (
             <img
               src={PREV_BTN}
