@@ -85,8 +85,8 @@ const CarouselCard = ({ card }) => {
       </div>
 
       <div className={classes.progressbarSection}>
-        <p className={classes.title}>{subtitle}</p>
-        <p className={classes.subtitle}>{title}</p>
+        <p className={classes.subtitle}>{subtitle}</p>
+        <p className={classes.title}>{title}</p>
         <div className={classes.progressbarTextSection}>
           <div className={classes.progressbarCreditSection}>
             <img
@@ -94,19 +94,11 @@ const CarouselCard = ({ card }) => {
               alt="credit icon"
               className={classes.creditIcon}
             />
-            <Typography
-              type="medium12lh18ls017"
-              style={{ color: 'var(--mantine-color-brand-0)' }}
-            >
+            <p className={classes.creditNumber}>
               {formattedReceivedDonations} / {formattedTargetDonation}
-            </Typography>
+            </p>
           </div>
-          <Typography
-            type="medium12lh18ls017"
-            style={{ color: 'var(--mantine-color-white-0)' }}
-          >
-            {timeRemaining}
-          </Typography>
+          <p className={classes.timeRemaining}>{timeRemaining}</p>
         </div>
         <Progress
           value={percentAchieved}
