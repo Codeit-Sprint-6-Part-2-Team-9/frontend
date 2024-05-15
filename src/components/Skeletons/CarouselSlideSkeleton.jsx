@@ -1,11 +1,12 @@
 import { Skeleton } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
-// import classes from './CarouselSlideSkeleton.module.css';
+import classes from './ChartCardSkeleton.module.css';
 
 function CardSkeleton() {
   return (
     <div>
       <Skeleton
+        className={classes.skeletonColor}
         h={{ xl: '293', md: '293', xs: '206' }}
         w={{ xl: '282', md: '282', xs: '157' }}
         bt={10}
@@ -14,16 +15,19 @@ function CardSkeleton() {
         radius={8}
       />
       <Skeleton
+        className={classes.skeletonColor}
         h={{ xl: '18', md: '18', xs: '15' }}
         w={{ xl: '168', md: '160', xs: '110' }}
         mt={12}
       />
       <Skeleton
+        className={classes.skeletonColor}
         h={{ xl: '18', md: '18', xs: '15' }}
         w={{ xl: '168', md: '140', xs: '120' }}
         mt={10}
       />
       <Skeleton
+        className={classes.skeletonColor}
         h={{ xl: '26', md: '26', xs: '26' }}
         w={{ xl: '282', md: '282', xs: '154' }}
         mt={24}

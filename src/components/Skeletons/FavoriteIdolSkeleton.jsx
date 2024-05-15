@@ -7,13 +7,26 @@ const FavoriteIdolSkeletonItem = () => {
   return (
     <div className={classes.favoriteIdolSkeletonItem}>
       <div className={classes.profileWrapper}>
-        <Skeleton h={ONE_HUNDRED_PERCENT} w={ONE_HUNDRED_PERCENT} circle />
+        <Skeleton
+          className={classes.skeletonColor}
+          h={ONE_HUNDRED_PERCENT}
+          w={ONE_HUNDRED_PERCENT}
+          circle
+        />
       </div>
       <div className={classes.nameWrapper}>
-        <Skeleton h={ONE_HUNDRED_PERCENT} w={ONE_HUNDRED_PERCENT} />
+        <Skeleton
+          className={classes.skeletonColor}
+          h={ONE_HUNDRED_PERCENT}
+          w={ONE_HUNDRED_PERCENT}
+        />
       </div>
       <div className={classes.groupNameWrapper}>
-        <Skeleton h={ONE_HUNDRED_PERCENT} w={ONE_HUNDRED_PERCENT} />
+        <Skeleton
+          className={classes.skeletonColor}
+          h={ONE_HUNDRED_PERCENT}
+          w={ONE_HUNDRED_PERCENT}
+        />
       </div>
     </div>
   );
