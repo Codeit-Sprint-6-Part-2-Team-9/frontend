@@ -63,12 +63,9 @@ function CarouselSection() {
               opacity: isPrevButtonDisabled ? 0 : 1,
               cursor: isPrevButtonDisabled ? 'default' : 'pointer',
             }}
+            className={classes.carouselButton}
           >
-            <img
-              src={prevIcon}
-              className={`${classes.control}`}
-              alt="캐러셀이전버튼"
-            />
+            <img src={prevIcon} alt="캐러셀이전버튼" />
           </ActionIcon>
           <ActionIcon
             w="40"
@@ -80,12 +77,9 @@ function CarouselSection() {
               opacity: isNextButtonDisabled ? 0 : 1,
               cursor: isNextButtonDisabled ? 'default' : 'pointer',
             }}
+            className={classes.carouselButton}
           >
-            <img
-              src={nextIcon}
-              className={`${classes.control}`}
-              alt="캐러셀이후버튼"
-            />
+            <img src={nextIcon} alt="캐러셀이후버튼" />
           </ActionIcon>
         </Flex>
       </div>
