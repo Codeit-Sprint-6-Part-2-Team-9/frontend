@@ -46,13 +46,16 @@
 }
 
 .moreButtonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 51px;
-  margin-bottom: 59px;
+  padding-bottom: 59px;
 }
 
 @media (min-width: 768px) {
   .moreButtonWrapper {
-    margin-bottom: 330px;
+    padding-bottom: 330px;
   }
 }
 
@@ -61,6 +64,6 @@
     max-width: 1200px;
   }
   .moreButtonWrapper {
-    margin-bottom: 243px;
+    padding-bottom: 243px;
   }
 }

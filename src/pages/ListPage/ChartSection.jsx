@@ -96,15 +96,15 @@ function ChartSection() {
       <div className={classes.chart}>
         {isLoading && <ChartSectionSkeleton count={skeletonCount} />}
         {!isLoading && renderChartCards()}
-        <div className={classes.moreButtonWrapper}>
-          <Buttons
-            type="more"
-            disabled={!hasNextPage}
-            onClick={hasNextPage ? loadMoreIdols : undefined}
-          >
-            더보기
-          </Buttons>
-        </div>
+      </div>
+      <div className={classes.moreButtonWrapper}>
+        <Buttons
+          type="more"
+          disabled={!hasNextPage}
+          onClick={hasNextPage ? loadMoreIdols : undefined}
+        >
+          더보기
+        </Buttons>
       </div>
     </div>
   );
