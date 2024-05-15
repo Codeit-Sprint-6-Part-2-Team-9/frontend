@@ -4,12 +4,20 @@
   justify-content: center;
   position: absolute;
   right: 0;
-  width: 22px;
-  height: 22px;
+  width: 15px;
+  height: 15px;
   border: 2px solid white;
   border-radius: 50%;
   cursor: pointer;
 }
+
+@media (min-width: 400px) {
+  .DeleteBtn {
+    width: 22px;
+    height: 22px;
+  }
+}
+
 @media (min-width: 768px) {
   .DeleteBtn {
     width: 30px;
