@@ -1,0 +1,63 @@
+.AddFavoriteIdolSkeletonWrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
+  column-gap: 10px;
+  position: relative;
+  overflow-x: scroll;
+  box-sizing: border-box;
+  height: 380px;
+}
+
+.AddFavoriteIdolsSkeletonItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.profileWrapper {
+  width: 98px;
+  height: 98px;
+}
+
+.nameWrapper {
+  width: 98px;
+  height: 26px;
+}
+
+.groupNameWrapper {
+  width: 98px;
+  height: 17px;
+}
+
+@media (min-width: 768px) {
+  .AddFavoriteIdolSkeletonWrapper {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 0;
+    width: 696px;
+    height: 380px;
+  }
+  .profileWrapper {
+    width: 128px;
+    height: 128px;
+  }
+  .nameWrapper {
+    width: 128px;
+    height: 26px;
+  }
+
+  .groupNameWrapper {
+    width: 128px;
+    height: 17px;
+  }
+}
+@media (min-width: 1280px) {
+  .AddFavoriteIdolSkeletonWrapper {
+    grid-template-columns: repeat(8, 1fr);
+    column-gap: 0;
+    width: 1200px;
+    height: 380px;
+  }
+}

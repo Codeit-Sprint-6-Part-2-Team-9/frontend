@@ -8,6 +8,8 @@ import Container from './components/Container.jsx';
 import Buttons from '../../components/Buttons';
 import FavoriteRoundCard from './components/FavoriteRoundCard';
 import EmptyFavoriteIdols from './components/EmptyFavoriteIdols';
+import FavoriteIdolSkeleton from '../../components/Skeletons/FavoriteIdolSkeleton';
+import AddFavoriteIdolsSkeleton from '../../components/Skeletons/AddFavoriteIdolsSkeleton';
 
 import PREV_BTN from '../../assets/btnArrowLeft.svg';
 import NEXT_BTN from '../../assets/btnArrowRight.svg';
@@ -45,7 +47,7 @@ const MyPage = () => {
       setIdolData(list);
       setIsLoading(false);
     };
-    
+
     getData();
 
     return () => {
@@ -86,6 +88,18 @@ const MyPage = () => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
   };
 
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      setPageSize(getPageSize);
+    });
+
+    return () => {
+      window.removeEventListener('resize', () => {
+        setPageSize(getPageSize);
+      });
+    };
+  }, []);
+
   return (
     <div className={classes.MyPage}>
       <Container>
@@ -94,6 +108,8 @@ const MyPage = () => {
           <div className={classes.myFavoriteIdolsWrapper}>
             {favoriteIdols?.length === 0 ? (
               <EmptyFavoriteIdols />
+            ) : isLoading ? (
+              <FavoriteIdolSkeleton pageSize={pageSize} />
             ) : (
               idolData
                 ?.filter((idol) => favoriteIdols.includes(idol.id))
@@ -117,23 +133,27 @@ const MyPage = () => {
               관심 있는 아이돌을 추가해보세요.
             </h1>
           </div>
-          <div
-            className={`${classes.addFavoriteIdolsWrapper} ${pageSize === 8 ? classes.tablet : ''} ${pageSize === 6 ? classes.mobile : ''}  `}
-          >
-            {selectableIdols
-              ?.slice(currentPage * pageSize, (currentPage + 1) * pageSize)
-              .map((idol) => (
-                <RoundCardWithText
-                  key={`idol-${idol.id}`}
-                  id={idol.id}
-                  name={idol.name}
-                  groupName={idol.group}
-                  profilePicture={idol.profilePicture}
-                  onClick={handleFavoriteList}
-                  isChecked={checkedFavoriteId.includes(idol.id)}
-                />
-              ))}
-          </div>
+          {isLoading ? (
+            <AddFavoriteIdolsSkeleton pageSize={pageSize} />
+          ) : (
+            <div
+              className={`${classes.addFavoriteIdolsWrapper} ${pageSize === 8 ? classes.tablet : ''} ${pageSize === 6 ? classes.mobile : ''}  `}
+            >
+              {selectableIdols
+                ?.slice(currentPage * pageSize, (currentPage + 1) * pageSize)
+                .map((idol) => (
+                  <RoundCardWithText
+                    key={`idol-${idol.id}`}
+                    id={idol.id}
+                    name={idol.name}
+                    groupName={idol.group}
+                    profilePicture={idol.profilePicture}
+                    onClick={handleFavoriteList}
+                    isChecked={checkedFavoriteId.includes(idol.id)}
+                  />
+                ))}
+            </div>
+          )}
           {currentPage !== 0 && (
             <img
               src={PREV_BTN}

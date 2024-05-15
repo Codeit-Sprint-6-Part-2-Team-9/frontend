@@ -1,0 +1,35 @@
+.favoriteIdolSkeletonWrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.favoriteIdolSkeletonItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.profileWrapper {
+  width: 70px;
+  height: 70px;
+}
+
+.nameWrapper {
+  width: 98px;
+  height: 26px;
+}
+
+.groupNameWrapper {
+  width: 98px;
+  height: 17px;
+}
+
+@media (min-width: 768px) {
+  .profileWrapper {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (min-width: 1280px) {
+}

@@ -12,7 +12,7 @@ export default ({ mode }) => {
         minify: true,
         inject: {
           data: {
-            VITE_APP_URL : env.VITE_APP_URL,
+            VITE_APP_URL: env.VITE_APP_URL,
           },
         },
       }),
