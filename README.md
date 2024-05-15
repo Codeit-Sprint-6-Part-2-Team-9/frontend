@@ -21,18 +21,34 @@ yarn preview    # build 버전 실행
 
 
 ## 기술 스택
-<div align=center> 
+### 데이터 관리
+<div> 
+<img src="https://img.shields.io/badge/reactquery-FF4154?style=for-the-badge&logo=reactquery&logoColor=black">
+<img src="https://img.shields.io/badge/axios-5A29E4?style=for-the-badge&logo=axios&logoColor=black">
+</div>  
+
+### 개발 환경
+<div> 
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">
-<img src="https://img.shields.io/badge/reactquery-FF4154?style=for-the-badge&logo=reactquery&logoColor=black">
 <img src="https://img.shields.io/badge/reactrouter-CA4245?style=for-the-badge&logo=reactrouter&logoColor=black">
-<img src="https://img.shields.io/badge/axios-5A29E4?style=for-the-badge&logo=axios&logoColor=black">
+</div>
+
+### 빌드 환경
+<div> 
 <img src="https://img.shields.io/badge/vite-646CFF?style=for-the-badge&logo=vite&logoColor=black"> 
 <img src="https://img.shields.io/badge/yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=black"> 
+</div>
+
+### UI 라이브러리
+<div> 
 <img src="https://img.shields.io/badge/mantine-339AF0?style=for-the-badge&logo=mantine&logoColor=black">
 </div>
 
 ## 주제
+### 아이돌 조공 플랫폼
+내가 좋아하는 아이돌을 가장 쉽게 덕질하는 방법!
+
 당신의 훼이보릿 아이돌에게 쉽게 조공해보세요!
 
 ## 팀 소개
@@ -85,3 +101,6 @@ yarn preview    # build 버전 실행
         </tr>
     </tbody>
 </table>
+
+## 팀 노션
+https://maize-cylinder-f5e.notion.site/2-9-b8ff68160f3d4232a7831180ae4e88d8?pvs=4
