@@ -11,9 +11,32 @@
 .ModalCloseButton:hover {
   background-color: transparent !important;
 }
+.ModalContent {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  pointer-events: none;
+  width: 100vw;
+  z-index: 9999;
+}
 .ModalHeader {
   background-color: var(--mantine-color-black-1) !important;
 }
+.arrowLeft {
+  position: absolute;
+  left: 34px;
+  top: 24px;
+  cursor: pointer;
+}
 .ModalBody {
   background-color: var(--mantine-color-black-1);
+}
+
+.ModalHeader.mobile {
+  background-color: var(--mantine-color-black-0) !important;
+  justify-content: center !important;
+}
+.ModalBody.mobile {
+  background-color: var(--mantine-color-black-0);
 }
