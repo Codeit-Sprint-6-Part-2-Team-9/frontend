@@ -85,8 +85,8 @@ const CarouselCard = ({ card }) => {
       </div>
 
       <div className={classes.progressbarSection}>
-        <p className={classes.title}>{subtitle}</p>
-        <p className={classes.subtitle}>{title}</p>
+        <p className={classes.subtitle}>{subtitle}</p>
+        <p className={classes.title}>{title}</p>
         <div className={classes.progressbarTextSection}>
           <div className={classes.progressbarCreditSection}>
             <img
