@@ -1,21 +1,20 @@
 .DeleteBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   right: 0;
-  width: 15px;
-  height: 15px;
+  width: 22px;
+  height: 22px;
   border: 2px solid white;
   border-radius: 50%;
   cursor: pointer;
 }
 
-@media (min-width: 400px) {
-  .DeleteBtn {
-    width: 22px;
-    height: 22px;
-  }
+.deleteBtnImg {
+  width: 75%;
+  height: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media (min-width: 768px) {
