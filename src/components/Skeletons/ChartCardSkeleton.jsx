@@ -13,11 +13,30 @@ function ChartCardSkeleton() {
           gap: '12px',
         }}
       >
-        <Skeleton height={70} circle />
-        <Skeleton h="19px" w="8px" radius="sm" />
-        <Skeleton h="19px" w="101px" radius="sm" />
+        <Skeleton className={classes.skeletonColor} height={70} circle />
+        <Skeleton
+          className={classes.skeletonColor}
+          h="19px"
+          w="8px"
+          radius="sm"
+        />
+        <Skeleton
+          className={classes.skeletonColor}
+          h="19px"
+          w="101px"
+          radius="sm"
+        />
       </div>
-      <Skeleton h="19" w="30" mt={29} ml={20} mr={20} mb={34} radius="sm" />
+      <Skeleton
+        className={classes.skeletonColor}
+        h="19"
+        w="30"
+        mt={29}
+        ml={20}
+        mr={20}
+        mb={34}
+        radius="sm"
+      />
     </div>
   );
 }
