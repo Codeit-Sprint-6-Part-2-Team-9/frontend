@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import { createHtmlPlugin } from 'vite-plugin-html';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 
+
 export default ({ mode }) => {
   const env = loadEnv(mode, process.cwd());
 
@@ -28,4 +29,4 @@ export default ({ mode }) => {
     ],
     base: env.VITE_BASE_URL,
   });
-}
+};

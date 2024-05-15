@@ -1,15 +1,10 @@
 import axios from '../axios';
 
-async function putContribute(donationId, creditsToDonate) {
-    const res = await axios.put(
-        `/donations/${donationId}/contribute`, {
-            amount: creditsToDonate,
-        }
-    );
-
-    const donation = res.data;
-
-    return donation;
-}
+const putContribute = (donationId, creditsToDonate) =>
+  axios
+    .put(`/donations/${donationId}/contribute`, {
+      amount: creditsToDonate,
+    })
+    .then((res) => res.data);
 
 export default putContribute;
