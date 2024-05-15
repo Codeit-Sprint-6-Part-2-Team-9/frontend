@@ -1,25 +1,24 @@
 ## FANDOM-K
-아이돌 조공 플랫폼
-내가 좋아하는 아이돌을 가장 쉽게 덕질하는 방법
+![image](https://github.com/Codeit-Sprint-6-Part-2-Team-9/frontend/assets/83871696/a972ffa7-b7e0-4446-851f-f198e1013bb8)
+
 
 ## 배포 주소
+https://codeit-sprint-6-part-2-team-9.github.io/frontend/
+
 
 ## 로컬 실행 커맨드
 ```sh
-yarn
-yarn dev 
-yarn build
-yarn lint
-yarn preview
+yarn    # 패키지 설치
+yarn dev    # 개발 서버 실행
+yarn build    # Build 실행
+yarn lint    # lint 도구 실행
+yarn preview    # build 버전 실행
 ```
 
-## 핵심 기능 + 시연 영상
-### 1. 후원하기
- 좋아하는 아이돌에게 쉽게 조공해보세요
-### 3. 이달의 아티스트
- 내 아티스트에게 1등의 영예를 선물하세요
-### 5. 나만의 아티스트
- 좋아하는 아티스트들의 소식을 모아보세요
+## 핵심 기능
+![image](https://github.com/Codeit-Sprint-6-Part-2-Team-9/frontend/assets/83871696/34be97c0-e178-4235-8c8f-07047625b680)
+
+
 
 ## 기술 스택
 <div align=center> 
@@ -33,9 +32,8 @@ yarn preview
 <img src="https://img.shields.io/badge/mantine-339AF0?style=for-the-badge&logo=mantine&logoColor=black">
 </div>
 
-## 주제 및 배경 소개
-당신의 훼이보릿 아이돌에게 후원하세요~
-코드잇 스프린트 6기 기초프로젝트
+## 주제
+당신의 훼이보릿 아이돌에게 쉽게 조공해보세요!
 
 ## 팀 소개
 
@@ -70,19 +68,19 @@ yarn preview
         </tr>
         <tr>
             <th>
-                <a href="https://github.com/bbearcookie">이대양</a>
+                <a href="https://github.com/oceanlee-seoul">이대양</a>
             </th>
             <th>
-                <a href="https://github.com/easyhyun00">최태중</a>
+                <a href="https://github.com/dotw0xff">최태중</a>
             </th>
             <th>
-                <a href="https://github.com/Dongwoongkim">이재혁</a>
+                <a href="https://github.com/JHmeatschool">이재혁</a>
             </th>
             <th>
-                <a href="https://github.com/shinjaewon99">유예하</a>
+                <a href="https://github.com/YehaYoo">유예하</a>
             </th>
             <th>
-                <a href="https://github.com/shinjiye">이도요</a>
+                <a href="https://github.com/doh-yo">이도요</a>
             </th>
         </tr>
     </tbody>
