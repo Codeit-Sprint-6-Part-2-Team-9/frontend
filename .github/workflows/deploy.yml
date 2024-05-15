@@ -1,4 +1,4 @@
-name: 본 프로젝트의 main 브랜치가 업데이트 될 때마다 프로젝트를 빌드하여 Github Pages를 통해 배포하기
+name: main 브랜치가 업데이트 될 때마다 프로젝트와 팀 페이지를 빌드하여 Github Pages에 배포하기
 
 on:
   push:
@@ -29,10 +29,20 @@ jobs:
         with:
           node-version: 20
           cache: 'yarn'
-      - name: Install dependencies
+      - name: Install dependencies of Fandom-K project
         run: yarn install --immutable --immutable-cache --check-cache
-      - name: Build
+      - name: Build Fandom-K project
         run: yarn build
+      - name: Make directory to include team page
+        run: mkdir ./dist/team-page
+      - name: Change directory to build team page
+        run: cd team-page
+      - name: Install dependencies of team page
+        run: yarn install --immutable --immutable-cache --check-cache
+      - name: Build team page
+        run: yarn build
+      - name: Move built team page to dist directory
+        run: mv build/* ../dist/team-page/
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
