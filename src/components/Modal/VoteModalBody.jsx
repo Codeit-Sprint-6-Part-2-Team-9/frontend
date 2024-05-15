@@ -19,12 +19,12 @@ import { useDisclosure } from '@mantine/hooks';
 
 import ICON_CHECKED from '../../assets/icon_checked.svg';
 
-const VoteOption = ({ idol, onClick, isChecked }) => {
+const VoteOption = ({ index, idol, onClick, isChecked, isMobile }) => {
   const { id, profilePicture, rank, group, name, totalVotes } = idol;
 
   return (
     <div
-      className={classes.VoteOption}
+      className={`${classes.VoteOption} ${isMobile ? classes.mobile : ''}`}
       onClick={() => {
         onClick(id);
       }}
@@ -39,7 +39,7 @@ const VoteOption = ({ idol, onClick, isChecked }) => {
           )}
           <RoundCard profileUrl={profilePicture} alt={name} />
         </div>
-        <span className={classes.rank}>{rank}</span>
+        <span className={classes.rank}>{index + 1}</span>
         <div className={classes.textWrapper}>
           <p className={classes.idolInfo}>{group + ' ' + name}</p>
           <p className={classes.totalVotes}>{totalVotes.toLocaleString()}표</p>
@@ -54,7 +54,7 @@ const VoteOption = ({ idol, onClick, isChecked }) => {
     </div>
   );
 };
-const VoteModalBody = ({ type }) => {
+const VoteModalBody = ({ type, isMobile }) => {
   const [checked, setChecked] = useState('');
   const [btnDisabled, setBtnDisabled] = useState(false);
   const [page, setPage] = useState(0);
@@ -77,12 +77,14 @@ const VoteModalBody = ({ type }) => {
   const renderVoteOption = () => {
     return data?.pages
       .sort((a, b) => b.totalVotes - a.totalVotes)
-      .map((idol) => (
+      .map((idol, i) => (
         <VoteOption
+          index={i}
           key={idol.id}
           idol={idol}
           onClick={handleSelected}
           isChecked={idol.id === checked}
+          isMobile={isMobile}
         />
       ));
   };
