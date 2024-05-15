@@ -30,8 +30,9 @@
 
 .creditIcon {
   height: 33px;
-  margin-right: 4px;
+  margin-right: 0;
   margin-left: -5px;
+  margin-top: -6px;
 }
 
 .creditAmount {
