@@ -6,6 +6,8 @@ import classes from './VoteModalBody.module.css';
 import RoundCard from '../RoundCard';
 import Buttons from '../Buttons';
 
+import VoteModalSkeleton from '../Skeletons/VoteModalSkeleton';
+
 // APIS
 import useChartQuery from '../../api/charts/useChartQuery';
 import useVoteMutation from '../../api/votes/useVoteMutation';
@@ -74,21 +76,6 @@ const VoteModalBody = ({ type, isMobile }) => {
     setPage(page + 1);
   };
 
-  const renderVoteOption = () => {
-    return data?.pages
-      .sort((a, b) => b.totalVotes - a.totalVotes)
-      .map((idol, i) => (
-        <VoteOption
-          index={i}
-          key={idol.id}
-          idol={idol}
-          onClick={handleSelected}
-          isChecked={idol.id === checked}
-          isMobile={isMobile}
-        />
-      ));
-  };
-
   return (
     <div className={classes.VoteModalBody}>
       <ModalComponent
@@ -96,7 +83,26 @@ const VoteModalBody = ({ type, isMobile }) => {
         close={close}
         modalDataState={'creditWarn'}
       />
-      <div className={classes.radioWrapper}>{renderVoteOption()}</div>
+      <div
+        className={`${classes.radioWrapper} ${isMobile ? classes.mobile : ''}`}
+      >
+        {!data?.pages ? (
+          <VoteModalSkeleton isMobile={isMobile} />
+        ) : (
+          data?.pages
+            .sort((a, b) => b.totalVotes - a.totalVotes)
+            .map((idol, i) => (
+              <VoteOption
+                index={i}
+                key={idol.id}
+                idol={idol}
+                onClick={handleSelected}
+                isChecked={idol.id === checked}
+                isMobile={isMobile}
+              />
+            ))
+        )}
+      </div>
       <div className={classes.moreButtonWrapper}>
         <Buttons
           type="more"
