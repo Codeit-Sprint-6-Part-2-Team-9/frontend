@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { Carousel } from '@mantine/carousel';
 import { ActionIcon, Box, Flex } from '@mantine/core';
 import CarouselSlideSkeleton from '../Skeletons/CarouselSlideSkeleton';
@@ -12,36 +12,26 @@ import NotFound from '../../pages/NotFound';
 
 function CarouselSection() {
   const { data, isError, isLoading } = useDonationQuery();
-
   const [embla, setEmbla] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const donationPage = data?.pages;
   const lastPageIndex = data?.pages.length - 1;
   const [isPrevButtonDisabled, setIsPrevButtonDisabled] = useState(true);
   const [isNextButtonDisabled, setIsNextButtonDisabled] = useState(false);
 
-  const handleNextBtn = useCallback(() => {
-    if (!embla) return;
-    const { scrollNext, canScrollNext, selectedScrollSnap } = embla;
-    if (!canScrollNext) return;
-    setIsPrevButtonDisabled(false);
-    scrollNext();
-    const currentIndex = selectedScrollSnap();
-    const isCurrentSlideLastQuarter =
-      currentIndex === Math.floor(lastPageIndex / 4);
-    setIsNextButtonDisabled(isCurrentSlideLastQuarter);
-  }, [embla]);
-
-  const handlePrevBtn = useCallback(() => {
-    if (!embla) return;
-    const { scrollPrev, canScrollPrev, selectedScrollSnap } = embla;
-    if (!canScrollPrev) return;
-    scrollPrev();
-    setIsNextButtonDisabled(false);
-    const currentIndex = selectedScrollSnap();
-    if (currentIndex === 0) {
+  const handleSlideChange = (index) => {
+    setCurrentSlide(index);
+    if (index === 0) {
       setIsPrevButtonDisabled(true);
+    } else {
+      setIsPrevButtonDisabled(false);
     }
-  }, [embla]);
+    if (index === Math.floor(lastPageIndex / 4)) {
+      setIsNextButtonDisabled(true);
+    } else {
+      setIsNextButtonDisabled(false);
+    }
+  };
 
   if (isLoading) {
     return (
@@ -67,7 +57,7 @@ function CarouselSection() {
             w="40"
             h="78px"
             variant="transparent"
-            onClick={handlePrevBtn}
+            onClick={() => embla.scrollPrev()}
             disabled={isPrevButtonDisabled}
             style={{
               opacity: isPrevButtonDisabled ? 0 : 1,
@@ -84,7 +74,7 @@ function CarouselSection() {
             w="40"
             h="78px"
             variant="transparent"
-            onClick={handleNextBtn}
+            onClick={() => embla.scrollNext()}
             disabled={isNextButtonDisabled}
             style={{
               opacity: isNextButtonDisabled ? 0 : 1,
@@ -107,17 +97,16 @@ function CarouselSection() {
         slidesToScroll={'auto'}
         withControls={false}
         getEmblaApi={setEmbla}
+        onSlideChange={handleSlideChange}
         styles={{
           root: { maxWidth: 1200, margin: 'auto' },
         }}
       >
-        {donationPage.map((donation, index) => {
-          return (
-            <Carousel.Slide className={classes.carouselSlide} key={index}>
-              <CarouselCard card={donation} />
-            </Carousel.Slide>
-          );
-        })}
+        {donationPage.map((donation, index) => (
+          <Carousel.Slide className={classes.carouselSlide} key={index}>
+            <CarouselCard card={donation} />
+          </Carousel.Slide>
+        ))}
       </Carousel>
     </Box>
   );
