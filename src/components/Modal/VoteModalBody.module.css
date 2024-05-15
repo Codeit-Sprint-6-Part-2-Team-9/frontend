@@ -5,6 +5,10 @@
   overflow-y: scroll;
 }
 
+.radioWrapper.mobile {
+  width: 100%;
+}
+
 .text {
   margin-top: 16px;
   text-align: center;
