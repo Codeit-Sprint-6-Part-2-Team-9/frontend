@@ -17,6 +17,7 @@
 .overlay {
   position: absolute;
   pointer-events: none;
+  width: 100vw;
   z-index: 9999;
 }
 .ModalHeader {
