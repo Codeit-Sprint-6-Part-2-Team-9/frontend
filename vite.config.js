@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import { createHtmlPlugin } from 'vite-plugin-html';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default ({ mode }) => {
   const env = loadEnv(mode, process.cwd());
@@ -16,7 +17,15 @@ export default ({ mode }) => {
           },
         },
       }),
+      viteStaticCopy({
+        targets: [
+          {
+            src: 'public/404.html',
+            dest: '',
+          },
+        ],
+      }),
     ],
-    base: env.BASE_URL,
+    base: env.VITE_BASE_URL,
   });
 }
