@@ -19,12 +19,12 @@ import { useDisclosure } from '@mantine/hooks';
 
 import ICON_CHECKED from '../../assets/icon_checked.svg';
 
-const VoteOption = ({ index, idol, onClick, isChecked }) => {
+const VoteOption = ({ index, idol, onClick, isChecked, isMobile }) => {
   const { id, profilePicture, rank, group, name, totalVotes } = idol;
 
   return (
     <div
-      className={classes.VoteOption}
+      className={`${classes.VoteOption} ${isMobile ? classes.mobile : ''}`}
       onClick={() => {
         onClick(id);
       }}
@@ -54,7 +54,7 @@ const VoteOption = ({ index, idol, onClick, isChecked }) => {
     </div>
   );
 };
-const VoteModalBody = ({ type }) => {
+const VoteModalBody = ({ type, isMobile }) => {
   const [checked, setChecked] = useState('');
   const [btnDisabled, setBtnDisabled] = useState(false);
   const [page, setPage] = useState(0);
@@ -84,6 +84,7 @@ const VoteModalBody = ({ type }) => {
           idol={idol}
           onClick={handleSelected}
           isChecked={idol.id === checked}
+          isMobile={isMobile}
         />
       ));
   };
