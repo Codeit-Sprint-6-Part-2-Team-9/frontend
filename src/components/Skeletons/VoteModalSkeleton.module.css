@@ -1,0 +1,43 @@
+.VoteModalSkeletonWrapper {
+  width: 100%;
+}
+.VoteModalSkeletonItem {
+  display: flex;
+  justify-content: space-between;
+  width: 477px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 0;
+  cursor: pointer;
+  align-items: center;
+}
+.VoteModalSkeletonItem.mobile {
+  width: 100%;
+}
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.profileWrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.textWrapper {
+  width: 120px;
+  height: 60px;
+}
+.inputWrapper {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.skeletonColor::before {
+  background-color: #101010 !important;
+}
+
+.skeletonColor::after {
+  animation-duration: 800ms !important;
+  background-color: #1e1e1e !important;
+}
