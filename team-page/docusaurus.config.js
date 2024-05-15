@@ -116,7 +116,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/Codeit-Sprint-6-Part-2-Team-9/',
               },
             ],
           },
