@@ -57,6 +57,7 @@ function ChartSection() {
 
   const renderChartCards = () =>
     data?.pages
+
       .sort((a, b) => b.totalVotes - a.totalVotes)
       .map((idol, index) => (
         <ChartCard key={idol.id} idol={idol} rank={index + 1} />
