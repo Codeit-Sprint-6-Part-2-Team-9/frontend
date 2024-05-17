@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useFavicon } from '@mantine/hooks';
 import classes from './App.module.css';
-import HomePage from './pages/homepage/HomePage';
-import List from './pages/ListPage/List';
+import HomePage from './pages/index/HomePage';
+import Dashboard from './pages/dashboard/Dashboard';
 import MyPage from './pages/my-page/MyPage';
 import NotFound from './pages/NotFound';
 import Layout from './components/Layout/Layout';
@@ -26,7 +26,7 @@ function App() {
         <Routes>
           <Route index element={<HomePage />} />
           <Route element={<Layout />}>
-            <Route path="/list" element={<List />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/my-page" element={<MyPage />} />
           </Route>
           <Route

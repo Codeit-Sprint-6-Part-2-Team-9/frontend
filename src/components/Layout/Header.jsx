@@ -8,7 +8,7 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.wrapper}>
-        <Link to="/list">
+        <Link to="/dashboard">
           <img className={styles.logo} src={logo} alt="Logo" />
         </Link>
         <Link to="/my-Page">

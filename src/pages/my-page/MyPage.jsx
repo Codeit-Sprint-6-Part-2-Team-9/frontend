@@ -3,11 +3,11 @@ import classes from './MyPage.module.css';
 import useFavoriteIdols from '../../api/favoriteIdols/useFavoriteIdols';
 import getIdols from '../../api/idols/getIdols';
 
-import RoundCardWithText from './components/RoundCardWithText';
-import Container from './components/Container.jsx';
+import RoundCardWithText from '../../components/my-page/RoundCardWithText';
+import Container from './Container.jsx';
 import Buttons from '../../components/Buttons';
-import FavoriteRoundCard from './components/FavoriteRoundCard';
-import EmptyFavoriteIdols from './components/EmptyFavoriteIdols';
+import FavoriteRoundCard from '../../components/my-page/FavoriteRoundCard';
+import EmptyFavoriteIdols from '../../components/my-page/EmptyFavoriteIdols';
 import FavoriteIdolSkeleton from '../../components/Skeletons/FavoriteIdolSkeleton';
 import AddFavoriteIdolsSkeleton from '../../components/Skeletons/AddFavoriteIdolsSkeleton';
 

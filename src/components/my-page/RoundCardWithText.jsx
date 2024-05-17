@@ -1,6 +1,6 @@
 import classes from './RoundCardWithText.module.css';
-import RoundCard from '../../../components/RoundCard';
-import ICON_CHECKED from '../../../assets/icon_checked.svg';
+import RoundCard from '../RoundCard';
+import ICON_CHECKED from '../../assets/icon_checked.svg';
 
 const RoundCardWithText = ({
   id,

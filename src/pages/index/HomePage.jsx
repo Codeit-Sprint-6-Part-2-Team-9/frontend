@@ -47,7 +47,7 @@ const HomePage = () => {
               하는 방법
             </div>
           </div>
-          <Link to="/list">
+          <Link to="/dashboard">
             <div className={classes.logoImgWrap}>
               <img
                 className={classes.logoImg}
@@ -64,7 +64,7 @@ const HomePage = () => {
             />
           </div>
           <div className={classes.landingButton}>
-            <Link to="/list">
+            <Link to="/dashboard">
               <Buttons type="landing" onClick={handleResetClick}>
                 <span className={classes.landingButtonFont}>지금 시작하기</span>
               </Buttons>
