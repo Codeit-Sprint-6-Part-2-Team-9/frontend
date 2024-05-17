@@ -1,4 +1,4 @@
-import CREDIT_WARN_SVG from '../../assets/credit_warn.svg';
+import CREDIT_WARN_SVG from '../../assets/img_credit_warn.svg';
 import classes from './CreditWarnModalBody.module.css';
 import { Button } from '@mantine/core';
 

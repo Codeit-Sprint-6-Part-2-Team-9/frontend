@@ -5,10 +5,10 @@ import Typography from '../Typography';
 import classes from './Carousel.module.css';
 import calculateTimeRemaining from '../../utils/calculateTimeRemaining.jsx';
 import fotmatTargetDonation from '../../utils/fotmatTargetDonation.jsx';
-import coverArtistImage from '../../assets/coverDonation.svg';
+import coverArtistImage from '../../assets/overlay_donation_card.svg';
 import Buttons from '../../components/Buttons';
 import ModalComponent from '../../components/Modal/ModalComponent';
-import creditIcon from '../../assets/creditIcon.svg';
+import creditIcon from '../../assets/icon_credit_in_carousel.svg';
 
 const CarouselCard = ({ card }) => {
   const {

@@ -5,7 +5,7 @@ import classes from './CreditDonationModalBody.module.css';
 import useCredits from '../../api/credits/useCredits';
 import useDonationMutation from '../../api/donations/useDonationMutation';
 
-import CREDIT_IMG from '../../assets/modal_credit.svg';
+import CREDIT_IMG from '../../assets/icon_credit_in_modal.svg';
 
 const CreditDonationModalBody = ({ donationProps, close }) => {
   const [inputCredit, setInputCredit] = useState('');

@@ -7,7 +7,7 @@ import List from './pages/ListPage/List';
 import MyPage from './pages/my-page/MyPage';
 import NotFound from './pages/NotFound';
 import Layout from './components/Layout/Layout';
-import TOP_OVERLAY from './assets/top_overlay.svg';
+import TOP_OVERLAY from './assets/overlay_page_top.svg';
 
 function App() {
   const [favicon] = useState(

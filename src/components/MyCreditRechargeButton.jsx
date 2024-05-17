@@ -1,6 +1,6 @@
 import { Button } from '@mantine/core';
 import theme from '../theme';
-import CreditIcon from '../assets/mycredit.svg';
+import CreditIcon from '../assets/img_credit_in_recharge_btn.svg';
 import useCredits from '../api/credits/useCredits';
 import classes from './MyCreditRechargeButton.module.css';
 

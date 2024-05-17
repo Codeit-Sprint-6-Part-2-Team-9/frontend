@@ -11,8 +11,8 @@ import EmptyFavoriteIdols from './components/EmptyFavoriteIdols';
 import FavoriteIdolSkeleton from '../../components/Skeletons/FavoriteIdolSkeleton';
 import AddFavoriteIdolsSkeleton from '../../components/Skeletons/AddFavoriteIdolsSkeleton';
 
-import PREV_BTN from '../../assets/btnArrowLeft.svg';
-import NEXT_BTN from '../../assets/btnArrowRight.svg';
+import PREV_BTN from '../../assets/img_arrow_left_button.svg';
+import NEXT_BTN from '../../assets/img_arrow_right_button.svg';
 
 const getPageSize = () => {
   if (window.innerWidth >= 1280) {
