@@ -15,11 +15,6 @@ yarn lint    # lint 도구 실행
 yarn preview    # build 버전 실행
 ```
 
-## 핵심 기능
-![image](https://github.com/Codeit-Sprint-6-Part-2-Team-9/frontend/assets/83871696/34be97c0-e178-4235-8c8f-07047625b680)
-
-
-
 ## 기술 스택
 ### 데이터 관리
 <div> 
@@ -45,11 +40,49 @@ yarn preview    # build 버전 실행
 <img src="https://img.shields.io/badge/mantine-339AF0?style=for-the-badge&logo=mantine&logoColor=black">
 </div>
 
+## 폴더 구조
+📦src <br />
+ ┣ 📂api <br />
+ ┃ ┣ 📂charts <br />
+ ┃ ┣ 📂credits <br />
+ ┃ ┣ 📂donations <br />
+ ┃ ┣ 📂favoriteIdols <br />
+ ┃ ┣ 📂idols <br />
+ ┃ ┣ 📂votes <br />
+ ┃ ┣ 📜axios.js <br />
+ ┃ ┣ 📜config.js <br />
+ ┃ ┗ 📜utils.js <br />
+ ┣ 📂assets <br />
+ ┣ 📂components <br />
+ ┃ ┣ 📂Buttons <br />
+ ┃ ┣ 📂Cards <br />
+ ┃ ┣ 📂Carousel <br />
+ ┃ ┣ 📂Layout <br />
+ ┃ ┣ 📂Modal <br />
+ ┃ ┣ 📂Skeletons <br />
+ ┃ ┣ 📂Typography <br />
+ ┃ ┣ 📂my-page <br />
+ ┣ 📂pages <br />
+ ┃ ┣ 📂dashboard <br />
+ ┃ ┣ 📂index <br />
+ ┃ ┣ 📂my-page <br />
+ ┃ ┗ 📜NotFound.jsx <br />
+ ┣ 📂utils <br />
+ ┣ 📜App.jsx <br />
+ ┣ 📜App.module.css <br />
+ ┣ 📜main.jsx <br />
+ ┗ 📜theme.js <br />
+
+
+
 ## 주제
 ### 아이돌 조공 플랫폼
-내가 좋아하는 아이돌을 가장 쉽게 덕질하는 방법!
+내가 좋아하는 아이돌을 가장 쉽게 덕질하는 방법! 
 
 당신의 훼이보릿 아이돌에게 쉽게 조공해보세요!
+
+## 핵심 기능
+![image](https://github.com/Codeit-Sprint-6-Part-2-Team-9/frontend/assets/83871696/34be97c0-e178-4235-8c8f-07047625b680)
 
 ## 팀 소개
 
