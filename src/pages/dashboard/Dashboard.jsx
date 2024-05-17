@@ -3,11 +3,11 @@ import { useDisclosure } from '@mantine/hooks';
 import ModalComponent from '../../components/Modal/ModalComponent';
 import CarouselSection from '../../components/Carousel/Carousel';
 import ChartSection from './ChartSection';
-import MyCreditRechargeButton from '../../components/MyCreditRechargeButton';
-import Typography from '../../components/Typography';
-import classes from './ListPage.module.css';
+import MyCreditRechargeButton from '../../components/Buttons/MyCreditRechargeButton';
+import Typography from '../../components/Typography/Typography';
+import classes from './Dashboard.module.css';
 
-function List() {
+function Dashboard() {
   const [opened, { open, close }] = useDisclosure(false);
   const [modalDataState, setModalDataState] = useState('donation');
 
@@ -46,4 +46,4 @@ function List() {
   );
 }
 
-export default List;
+export default Dashboard;

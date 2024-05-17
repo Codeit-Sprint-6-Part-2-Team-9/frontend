@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom';
 
 import styles from './Header.module.css';
 import logo from '../../assets/logo.svg';
-import myProfile from '../../assets/myProfile.png';
+import myProfile from '../../assets/img_temp_profile.png';
 
 function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.wrapper}>
-        <Link to="/list">
+        <Link to="/dashboard">
           <img className={styles.logo} src={logo} alt="Logo" />
         </Link>
         <Link to="/my-Page">

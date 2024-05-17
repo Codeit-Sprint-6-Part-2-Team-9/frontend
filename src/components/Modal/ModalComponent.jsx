@@ -8,8 +8,8 @@ import CreditWarnModalBody from './CreditWarnModalBody';
 import CreditDonationModalBody from './CreditDonationModalBody';
 import VoteModalBody from './VoteModalBody';
 
-import TOP_OVERLAY from '../../assets/top_overlay.svg';
-import ICON_ARROW_LEFT from '../../assets/arrow-left-icon.svg';
+import TOP_OVERLAY from '../../assets/overlay_page_top.svg';
+import ICON_ARROW_LEFT from '../../assets/icon_arrow_left.svg';
 
 const ModalComponent = ({ opened, close, modalDataState, donationProps }) => {
   function isMobileSize() {

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Button } from '@mantine/core';
 import classes from './CreditChargeModalBody.module.css';
-import CREDIT_IMG from '../../assets/modal_credit.svg';
-import CREDIT_BTN from '../../assets/credit.svg';
+import CREDIT_IMG from '../../assets/icon_credit_in_modal.svg';
+import CREDIT_BTN from '../../assets/icon_credit.svg';
 
 import useCredits from '../../api/credits/useCredits';
 

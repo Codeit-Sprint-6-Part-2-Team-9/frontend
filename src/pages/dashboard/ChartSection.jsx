@@ -2,10 +2,10 @@ import { useState, useEffect, useCallback } from 'react';
 import { useDisclosure, useMediaQuery, usePrevious } from '@mantine/hooks';
 import ModalComponent from '../../components/Modal/ModalComponent';
 import useChartQuery from '../../api/charts/useChartQuery';
-import ChartCard from '../../components/ChartCard';
-import Typography from '../../components/Typography';
+import ChartCard from '../../components/Cards/ChartCard';
+import Typography from '../../components/Typography/Typography';
 import classes from './ChartSection.module.css';
-import Buttons from '../../components/Buttons';
+import Buttons from '../../components/Buttons/Buttons';
 import ChartSectionSkeleton from '../../components/Skeletons/ChartCardSkeleton';
 
 const setPageSizeBasedOnWidth = () => {

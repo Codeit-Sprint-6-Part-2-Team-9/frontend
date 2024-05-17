@@ -3,8 +3,8 @@ import { Button } from '@mantine/core';
 
 import classes from './VoteModalBody.module.css';
 
-import RoundCard from '../RoundCard';
-import Buttons from '../Buttons';
+import RoundCard from '../Cards/RoundCard';
+import Buttons from '../Buttons/Buttons';
 
 import VoteModalSkeleton from '../Skeletons/VoteModalSkeleton';
 

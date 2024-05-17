@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 import logoimg from '../../assets/logo.svg';
-import introimg from '../../assets/introimg.svg';
-import donatemobile from '../../assets/donatemobile.svg';
-import mypagemobile from '../../assets/mypagemobile.svg';
-import votemobile from '../../assets/votemobile.svg';
+import introimg from '../../assets/img_home_intro.svg';
+import donatemobile from '../../assets/img_donate_mobile.svg';
+import mypagemobile from '../../assets/img_mypage_mobile.svg';
+import votemobile from '../../assets/img_vote_mobile.svg';
 import Container from './Container';
 import theme from '../../theme';
 import useCredits from '../../api/credits/useCredits';
-import Buttons from '../../components/Buttons';
+import Buttons from '../../components/Buttons/Buttons';
 import classes from './HomePage.module.css';
 import { motion, spring } from 'framer-motion';
 
@@ -47,7 +47,7 @@ const HomePage = () => {
               하는 방법
             </div>
           </div>
-          <Link to="/list">
+          <Link to="/dashboard">
             <div className={classes.logoImgWrap}>
               <img
                 className={classes.logoImg}
@@ -64,7 +64,7 @@ const HomePage = () => {
             />
           </div>
           <div className={classes.landingButton}>
-            <Link to="/list">
+            <Link to="/dashboard">
               <Buttons type="landing" onClick={handleResetClick}>
                 <span className={classes.landingButtonFont}>지금 시작하기</span>
               </Buttons>

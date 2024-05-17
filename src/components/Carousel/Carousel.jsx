@@ -5,8 +5,8 @@ import CarouselSlideSkeleton from '../Skeletons/CarouselSlideSkeleton';
 import CarouselCard from './CarouselCard';
 import '@mantine/carousel/styles.css';
 import classes from './Carousel.module.css';
-import prevIcon from '../../assets/btnArrowLeft.svg';
-import nextIcon from '../../assets/btnArrowRight.svg';
+import prevIcon from '../../assets/img_arrow_left_button.svg';
+import nextIcon from '../../assets/img_arrow_right_button.svg';
 import useDonationQuery from '../../api/donations/useDonationQuery';
 import NotFound from '../../pages/NotFound';
 
