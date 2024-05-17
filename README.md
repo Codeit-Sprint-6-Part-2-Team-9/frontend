@@ -51,6 +51,35 @@ yarn preview    # build 버전 실행
 
 당신의 훼이보릿 아이돌에게 쉽게 조공해보세요!
 
+
+## 폴더 구조
+📦src <br />
+ ┣ 📂api <br />
+ ┃ ┣ 📂charts <br />
+ ┃ ┣ 📂credits <br />
+ ┃ ┣ 📂donations <br />
+ ┃ ┣ 📂favoriteIdols <br />
+ ┃ ┣ 📂idols <br />
+ ┃ ┣ 📂votes <br />
+ ┣ 📂assets <br />
+ ┣ 📂components <br />
+ ┃ ┣ 📂Carousel <br />
+ ┃ ┣ 📂Layout <br />
+ ┃ ┣ 📂Modal <br />
+ ┃ ┣ 📂Skeletons <br />
+ ┃ ┣ 📂my-page <br />
+ ┣ 📂pages <br />
+ ┃ ┣ 📂dashboard <br />
+ ┃ ┣ 📂index <br />
+ ┃ ┣ 📂my-page <br />
+ ┃ ┗ 📜NotFound.jsx <br />
+ ┣ 📂utils <br />
+ ┣ 📜App.jsx <br />
+ ┣ 📜App.module.css <br />
+ ┣ 📜main.jsx <br />
+ ┗ 📜theme.js <br />
+
+
 ## 팀 소개
 
 <table align="center">
