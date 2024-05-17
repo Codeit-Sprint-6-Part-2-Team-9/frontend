@@ -3,8 +3,8 @@ import { useDisclosure } from '@mantine/hooks';
 import ModalComponent from '../../components/Modal/ModalComponent';
 import CarouselSection from '../../components/Carousel/Carousel';
 import ChartSection from './ChartSection';
-import MyCreditRechargeButton from '../../components/MyCreditRechargeButton';
-import Typography from '../../components/Typography';
+import MyCreditRechargeButton from '../../components/Buttons/MyCreditRechargeButton';
+import Typography from '../../components/Typography/Typography';
 import classes from './Dashboard.module.css';
 
 function Dashboard() {

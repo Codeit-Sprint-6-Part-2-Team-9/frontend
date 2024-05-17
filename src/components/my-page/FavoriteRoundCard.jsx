@@ -1,5 +1,5 @@
 import classes from './FavoriteRoundCard.module.css';
-import RoundCard from '../RoundCard';
+import RoundCard from '../Cards/RoundCard';
 import DeleteBtn from './DeleteBtn';
 
 const FavoriteRoundCard = ({

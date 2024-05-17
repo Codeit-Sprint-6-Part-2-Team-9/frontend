@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Progress } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import Typography from '../Typography';
+import Typography from '../Typography/Typography';
 import classes from './Carousel.module.css';
 import calculateTimeRemaining from '../../utils/calculateTimeRemaining.jsx';
 import fotmatTargetDonation from '../../utils/fotmatTargetDonation.jsx';
 import coverArtistImage from '../../assets/overlay_donation_card.svg';
-import Buttons from '../../components/Buttons';
+import Buttons from '../Buttons/Buttons';
 import ModalComponent from '../../components/Modal/ModalComponent';
 import creditIcon from '../../assets/icon_credit_in_carousel.svg';
 

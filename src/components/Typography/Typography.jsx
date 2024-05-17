@@ -1,6 +1,6 @@
-import { Text } from "@mantine/core";
+import { Text } from '@mantine/core';
 
-function Typography({ children, type = "bold16lh26", ...textProps }) {
+function Typography({ children, type = 'bold16lh26', ...textProps }) {
   const fontWeightEnum = {
     bold: 700,
     semiBold: 600,
@@ -9,25 +9,25 @@ function Typography({ children, type = "bold16lh26", ...textProps }) {
   };
 
   const fontSizeEnum = {
-    s1: "26px",
-    s2: "20px",
-    s3: "18px",
-    s4: "16px",
-    s5: "15px",
-    s6: "14px",
-    s7: "13px",
-    s8: "12px",
+    s1: '26px',
+    s2: '20px',
+    s3: '18px',
+    s4: '16px',
+    s5: '15px',
+    s6: '14px',
+    s7: '13px',
+    s8: '12px',
   };
 
   const lineHeightEnum = {
-    lh1: "26px",
-    lh2: "18px",
+    lh1: '26px',
+    lh2: '18px',
   };
 
   const letterSpacingEnum = {
-    ls1: "5%",
-    ls2: "2%",
-    ls3: "-0.17px",
+    ls1: '5%',
+    ls2: '2%',
+    ls3: '-0.17px',
   };
 
   const typographyEnum = {

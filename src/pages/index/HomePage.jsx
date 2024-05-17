@@ -7,7 +7,7 @@ import votemobile from '../../assets/img_vote_mobile.svg';
 import Container from './Container';
 import theme from '../../theme';
 import useCredits from '../../api/credits/useCredits';
-import Buttons from '../../components/Buttons';
+import Buttons from '../../components/Buttons/Buttons';
 import classes from './HomePage.module.css';
 import { motion, spring } from 'framer-motion';
 

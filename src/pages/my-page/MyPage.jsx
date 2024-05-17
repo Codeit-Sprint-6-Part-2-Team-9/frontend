@@ -5,7 +5,7 @@ import getIdols from '../../api/idols/getIdols';
 
 import RoundCardWithText from '../../components/my-page/RoundCardWithText';
 import Container from './Container.jsx';
-import Buttons from '../../components/Buttons';
+import Buttons from '../../components/Buttons/Buttons';
 import FavoriteRoundCard from '../../components/my-page/FavoriteRoundCard';
 import EmptyFavoriteIdols from '../../components/my-page/EmptyFavoriteIdols';
 import FavoriteIdolSkeleton from '../../components/Skeletons/FavoriteIdolSkeleton';
